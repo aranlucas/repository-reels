@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-10-02T05:12:09.569Z",
+  "verified_at": "2026-10-02T06:21:01.788Z",
   "complete": true,
   "decoder": "MediaBunny 1.61.0 / Chromium WebCodecs VP8",
   "browser_version": "HeadlessChrome/153.0.8010.12",
@@ -1344,6 +1344,102 @@
           "frame": 108,
           "timestamp": 9,
           "mean_luminance": 42.93
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "trailbraid",
+      "video_sha256": "483e1869d60b93ca57e102915090ea5a402ec31215bde93326c6cba57e744fc7",
+      "frames": 144,
+      "last_end": 12,
+      "samples": [
+        {
+          "frame": 9,
+          "timestamp": 0.75,
+          "mean_luminance": 151.22
+        },
+        {
+          "frame": 60,
+          "timestamp": 5,
+          "mean_luminance": 164.76
+        },
+        {
+          "frame": 108,
+          "timestamp": 9,
+          "mean_luminance": 49.05
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "framebreak",
+      "video_sha256": "bf19c8809165eba7c3da6f3477ab358883d80bf354482d45d2bafef442c1f000",
+      "frames": 144,
+      "last_end": 12,
+      "samples": [
+        {
+          "frame": 9,
+          "timestamp": 0.75,
+          "mean_luminance": 152.28
+        },
+        {
+          "frame": 60,
+          "timestamp": 5,
+          "mean_luminance": 63.4
+        },
+        {
+          "frame": 108,
+          "timestamp": 9,
+          "mean_luminance": 52.76
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "pocket-park",
+      "video_sha256": "19fd839521ce677ea2e9134502ec6c0a6e272cae9f298baa91eeebe782158654",
+      "frames": 144,
+      "last_end": 12,
+      "samples": [
+        {
+          "frame": 9,
+          "timestamp": 0.75,
+          "mean_luminance": 154.68
+        },
+        {
+          "frame": 60,
+          "timestamp": 5,
+          "mean_luminance": 72.5
+        },
+        {
+          "frame": 108,
+          "timestamp": 9,
+          "mean_luminance": 46.21
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "orthogonal-router-rust-lab",
+      "video_sha256": "bc104ccfe46785345773982344a9898c56e81658b7a69fe98be17f53aff538eb",
+      "frames": 144,
+      "last_end": 12,
+      "samples": [
+        {
+          "frame": 9,
+          "timestamp": 0.75,
+          "mean_luminance": 154.42
+        },
+        {
+          "frame": 60,
+          "timestamp": 5,
+          "mean_luminance": 227.3
+        },
+        {
+          "frame": 108,
+          "timestamp": 9,
+          "mean_luminance": 50.94
         }
       ],
       "status": "passed"

@@ -42,10 +42,11 @@
       "poster_url": "/posters/.dotfiles.png",
       "demo_title": "The structure, without the contents.",
       "demo_note": "Metadata and repository structure only. Private content is not shown.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Sensitive contents withheld. This film describes purpose and structure only.",
-      "composition_sha256": "cbe805e14ee68fddb926199e1c57a85ce31d862df3e6ec6a00cf0a8878fe42d6",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 620150,
       "video_sha256": "dc712705527f7f361ff021626135dc0440863815f49e828a8ee96920b2bc60b0",
       "rendered_at": "2026-10-02T04:40:50.970Z",
@@ -57,7 +58,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "cbe805e14ee68fddb926199e1c57a85ce31d862df3e6ec6a00cf0a8878fe42d6"
     },
     {
       "name": "agents",
@@ -118,7 +120,7 @@
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
       "change": "Active-run ownership and atomic saved-list edits.",
-      "change_state": "MERGED SOURCE CHANGE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "MERGED SOURCE CHANGE · DEPLOYMENT UNVERIFIED",
       "pr": {
         "repo": "agents",
         "number": 298,
@@ -132,7 +134,8 @@
         "title": "Fix active-run ownership and atomic saved-list edits"
       },
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "a7c8a70d280fe83481669e477defbcdc1d4cf14b66c633a7ca2c7d47484bbf24",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 708094,
       "video_sha256": "65d54aedf29cda58ad96d7e16e84ec77c11539209dae42d6ada2f33a1e16d323",
       "rendered_at": "2026-10-02T04:40:56.977Z",
@@ -144,7 +147,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "a7c8a70d280fe83481669e477defbcdc1d4cf14b66c633a7ca2c7d47484bbf24"
     },
     {
       "name": "agents-mobile",
@@ -216,7 +220,7 @@
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
       "change": "Resumable sync and visible submission failures.",
-      "change_state": "PROPOSAL \u00b7 UNMERGED",
+      "change_state": "PROPOSAL · UNMERGED",
       "pr": {
         "repo": "agents-mobile",
         "number": 32,
@@ -230,7 +234,8 @@
         "title": "Fix resumable Health Connect sync and visible chat failures"
       },
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "29c7287275d5fda64c25367d6e1f6e0590dde06f816b7e196e597916c4c71e86",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 700537,
       "video_sha256": "29219453c0318e843774512424447565b0764dc7114686a74e779029217a9fc3",
       "rendered_at": "2026-10-02T04:41:03.086Z",
@@ -242,7 +247,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "29c7287275d5fda64c25367d6e1f6e0590dde06f816b7e196e597916c4c71e86"
     },
     {
       "name": "ai-shopping-mcp",
@@ -315,7 +321,7 @@
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
       "change": "Bounded catalog requests and list enrichment.",
-      "change_state": "MERGED SOURCE CHANGE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "MERGED SOURCE CHANGE · DEPLOYMENT UNVERIFIED",
       "pr": {
         "repo": "ai-shopping-mcp",
         "number": 152,
@@ -329,7 +335,8 @@
         "title": "Bound catalog requests and shopping-list enrichment"
       },
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "d3a4469b08b7f483df71d33cabee9d37b6b553fd04cbaffa5901c1034216bfd9",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 696115,
       "video_sha256": "618da11b35be4a14be1ecb0a641d8a75b5da76a12287923ce95932b1314ee34d",
       "rendered_at": "2026-10-02T04:41:09.545Z",
@@ -341,7 +348,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "d3a4469b08b7f483df71d33cabee9d37b6b553fd04cbaffa5901c1034216bfd9"
     },
     {
       "name": "better-bracket",
@@ -400,10 +408,11 @@
       "poster_url": "/posters/better-bracket.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "40bcaa316ce94eec12e0ff6eee888ced2c8ec76bccf9d3d44d3d96f7385ff835",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 585954,
       "video_sha256": "11603f4f9a524a47a59e11feec090938d21c4c09dd449cf716bd7719e7d0ce67",
       "rendered_at": "2026-10-02T04:41:15.529Z",
@@ -415,7 +424,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "40bcaa316ce94eec12e0ff6eee888ced2c8ec76bccf9d3d44d3d96f7385ff835"
     },
     {
       "name": "cavity-game",
@@ -471,10 +481,11 @@
       "poster_url": "/posters/cavity-game.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "b13595d54843ddda5287bb05476d8ec64425781c2022f724383efe26a4770992",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 608022,
       "video_sha256": "b81be8446b6ae082914cd2bfc234f020c176b671940fcbfba91b6b3688e16f5a",
       "rendered_at": "2026-10-02T04:41:21.492Z",
@@ -486,7 +497,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "b13595d54843ddda5287bb05476d8ec64425781c2022f724383efe26a4770992"
     },
     {
       "name": "delivery-dash",
@@ -556,7 +568,7 @@
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
       "change": "Current Cloudflare CLI preserves existing Worker secrets.",
-      "change_state": "MERGED SOURCE CHANGE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "MERGED SOURCE CHANGE · DEPLOYMENT UNVERIFIED",
       "pr": {
         "repo": "delivery-dash",
         "number": 47,
@@ -570,7 +582,8 @@
         "title": "Preserve Worker secrets with the current Cloudflare CLI"
       },
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "95c39c00d9d8477de4dee0346deb0ec91d84b888faf7b336b4900785a71f3d1f",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 852737,
       "video_sha256": "0a18559f8ec8c4849f6b8922f34c4c167a480fe71ca16b7625c41aaae5466346",
       "rendered_at": "2026-10-02T04:41:27.575Z",
@@ -582,7 +595,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "95c39c00d9d8477de4dee0346deb0ec91d84b888faf7b336b4900785a71f3d1f"
     },
     {
       "name": "documentation",
@@ -639,10 +653,11 @@
       "poster_url": "/posters/documentation.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "5a3bf1d8d55151de60c602441f0ee635880ec10cdd7f5359c88734d2e79c7891",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 560104,
       "video_sha256": "836b911225e8dc9c411d558de51040071e8fda95b295f51e69d10c5f04c3109a",
       "rendered_at": "2026-10-02T04:41:33.554Z",
@@ -654,7 +669,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "5a3bf1d8d55151de60c602441f0ee635880ec10cdd7f5359c88734d2e79c7891"
     },
     {
       "name": "elsewhere-by-post",
@@ -719,7 +735,7 @@
       "poster_url": "/posters/elsewhere-by-post.png",
       "demo_title": "The useful moment.",
       "demo_note": "Pinned source screenshot. The film does not run or verify the application.",
-      "change_state": "PROPOSAL \u00b7 UNMERGED",
+      "change_state": "PROPOSAL · UNMERGED",
       "pr": {
         "repo": "elsewhere-by-post",
         "number": 1,
@@ -731,6 +747,8 @@
         "title": "Build Elsewhere, by Post: an impossible postcard puzzle"
       },
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "source_still": {
         "name": "elsewhere-by-post",
         "path": "evidence/desktop-echo-map.png",
@@ -740,7 +758,6 @@
         "url": "https://github.com/aranlucas/elsewhere-by-post/blob/1ce3178449ca80663352022a1df8ef41e009ad76/evidence/desktop-echo-map.png",
         "kind": "Source screenshot; local illustration, not a live application capture"
       },
-      "composition_sha256": "ee46bc53aa6a795b8431b9f3c79e739b84c4fe166829464ff9f530dce184bc82",
       "video_bytes": 1615565,
       "video_sha256": "df29999d3bd7693d107812e80df6acf01355a4b1c9903d28d902219784c8c9c4",
       "rendered_at": "2026-10-02T04:41:40.310Z",
@@ -752,7 +769,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "ee46bc53aa6a795b8431b9f3c79e739b84c4fe166829464ff9f530dce184bc82"
     },
     {
       "name": "garmin-friend-finder",
@@ -811,7 +829,7 @@
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
       "change": "Authenticated ownership proposal. Device migration still required.",
-      "change_state": "PROPOSAL \u00b7 UNMERGED",
+      "change_state": "PROPOSAL · UNMERGED",
       "pr": {
         "repo": "garmin-friend-finder",
         "number": 24,
@@ -825,7 +843,8 @@
         "title": "Authenticate location ownership (device migration required)"
       },
       "limit": "RELEASE BLOCKED: secure account/device migration is missing. No authenticated device flow is demonstrated.",
-      "composition_sha256": "244e0e696a19142fb50dd69bc19439974b22b2603bde2646fe244849b3b2e1cb",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 834299,
       "video_sha256": "053c3b6a248695e92860394d3bf44ef4c3c10a18c65e8f4ff0f268c7aaf03dac",
       "rendered_at": "2026-10-02T04:41:46.786Z",
@@ -837,7 +856,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "244e0e696a19142fb50dd69bc19439974b22b2603bde2646fe244849b3b2e1cb"
     },
     {
       "name": "grocery-agent-mobile",
@@ -907,10 +927,11 @@
       "poster_url": "/posters/grocery-agent-mobile.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "85b455a1c9cdb1f9066bbfbb7e050c394e82d28b568798dc4a0711219a2fc895",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 660144,
       "video_sha256": "5ba3d3e2a0539b62002b4ece4fe267cfc0b9b29784bece14c91e2b2aefea6980",
       "rendered_at": "2026-10-02T04:41:52.950Z",
@@ -922,7 +943,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "85b455a1c9cdb1f9066bbfbb7e050c394e82d28b568798dc4a0711219a2fc895"
     },
     {
       "name": "happy-birthday-yani",
@@ -957,10 +979,11 @@
       "poster_url": "/posters/happy-birthday-yani.png",
       "demo_title": "The structure, without the contents.",
       "demo_note": "Metadata and repository structure only. Private content is not shown.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Sensitive contents withheld. This film describes purpose and structure only.",
-      "composition_sha256": "f9aa20f1de954891e86cfba67d9fb364fa4893842c54073eca9a4a4ee4711409",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 604813,
       "video_sha256": "d5450f4b04c6a37c0555780c9596b15467ef9c3a4a33b8100ae71fa13f1bfc53",
       "rendered_at": "2026-10-02T04:41:59.039Z",
@@ -972,7 +995,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "f9aa20f1de954891e86cfba67d9fb364fa4893842c54073eca9a4a4ee4711409"
     },
     {
       "name": "holdfast-local",
@@ -1030,10 +1054,11 @@
       "poster_url": "/posters/holdfast-local.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "ef7759716aa18605d51d7afcd76362143836da7009b2a44b57cadd76c7001378",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 636810,
       "video_sha256": "4e49629166dea622f485c21b4222467883398b176a9a789baf1600ce9a87a037",
       "rendered_at": "2026-10-02T04:42:05.014Z",
@@ -1045,7 +1070,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "ef7759716aa18605d51d7afcd76362143836da7009b2a44b57cadd76c7001378"
     },
     {
       "name": "janella-cookbook",
@@ -1117,10 +1143,11 @@
       "poster_url": "/posters/janella-cookbook.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "6f2ebd670e17c6aa2d169603b198d3898c537e92d6e78e0d7371be0a263b4602",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 638635,
       "video_sha256": "a8755f55604cabc0d0acbaac2fe86dcd7577c209790a88c3ffec91e171abf986",
       "rendered_at": "2026-10-02T04:36:17.308Z",
@@ -1132,7 +1159,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "6f2ebd670e17c6aa2d169603b198d3898c537e92d6e78e0d7371be0a263b4602"
     },
     {
       "name": "keyboard-studio",
@@ -1181,10 +1209,11 @@
       "poster_url": "/posters/keyboard-studio.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "56944ca3326d447a90c7f9b4d24eb363de2db88c9b6cd9cd532bd468e27794b5",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 654550,
       "video_sha256": "3f2f041ced78261abd56f1857a40e809f484ec88e0c9035b8fe90501979fe303",
       "rendered_at": "2026-10-02T04:42:11.010Z",
@@ -1196,7 +1225,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "56944ca3326d447a90c7f9b4d24eb363de2db88c9b6cd9cd532bd468e27794b5"
     },
     {
       "name": "lanternwake",
@@ -1253,9 +1283,11 @@
       "poster_url": "/posters/lanternwake.png",
       "demo_title": "The useful moment.",
       "demo_note": "Pinned source screenshot. The film does not run or verify the application.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "source_still": {
         "name": "lanternwake",
         "path": "evidence/first-echo.png",
@@ -1265,7 +1297,6 @@
         "url": "https://github.com/aranlucas/lanternwake/blob/d4828e8cad100f2ff6bb10a532d6c1049e3cb7e3/evidence/first-echo.png",
         "kind": "Source screenshot; local illustration, not a live application capture"
       },
-      "composition_sha256": "4187baf02314f80082d20a4eac86841b99a82554a631fb68662fbf101ebab8e6",
       "video_bytes": 1647057,
       "video_sha256": "aa7dfe23887581c70820a973d5fc094b71808206fde92ec0c7ebbe0385977b12",
       "rendered_at": "2026-10-02T04:36:26.817Z",
@@ -1277,7 +1308,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "4187baf02314f80082d20a4eac86841b99a82554a631fb68662fbf101ebab8e6"
     },
     {
       "name": "leavewell-departure-planner",
@@ -1344,7 +1376,7 @@
       "poster_url": "/posters/leavewell-departure-planner.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "PROPOSAL \u00b7 UNMERGED",
+      "change_state": "PROPOSAL · UNMERGED",
       "pr": {
         "repo": "leavewell-departure-planner",
         "number": 1,
@@ -1356,7 +1388,8 @@
         "title": "Build Leavewell departure planner with offline uncertainty modeling"
       },
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "b4929d0fb05172749fcf2358b901d01e8677b500d7a425bd660213985ded3d09",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 677604,
       "video_sha256": "0ea5c070ca2f9b8ea99b546848caac19e7178433b15d471aca3613e124a56b67",
       "rendered_at": "2026-10-02T04:42:16.992Z",
@@ -1368,7 +1401,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "b4929d0fb05172749fcf2358b901d01e8677b500d7a425bd660213985ded3d09"
     },
     {
       "name": "leetcode",
@@ -1418,10 +1452,11 @@
       "poster_url": "/posters/leetcode.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "7f85e42c8d025a9082dce20173343bdc57de3633a62154513b54a5111b8796a3",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 610521,
       "video_sha256": "438b592ec475cdff117b5c2136d27e6e0d87d46dcfbade06ba49eaa0f16d370c",
       "rendered_at": "2026-10-02T04:42:22.972Z",
@@ -1433,7 +1468,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "7f85e42c8d025a9082dce20173343bdc57de3633a62154513b54a5111b8796a3"
     },
     {
       "name": "live-auction",
@@ -1490,10 +1526,11 @@
       "poster_url": "/posters/live-auction.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "e81077b1c9d4bb7b199ca4537ddaae91390e43fc7cdd7a08cee9aa130dc2298b",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 620029,
       "video_sha256": "09feacd64cbf73ae979ba5663a9467517ceeb91d29450e678066482cb8cb583f",
       "rendered_at": "2026-10-02T04:42:28.983Z",
@@ -1505,7 +1542,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "e81077b1c9d4bb7b199ca4537ddaae91390e43fc7cdd7a08cee9aa130dc2298b"
     },
     {
       "name": "lucas-plugins",
@@ -1555,10 +1593,11 @@
       "poster_url": "/posters/lucas-plugins.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "92c6b140b05f17cc7fe5e66d1c95c595fbd5b78c43f71d400e6719f03d35441c",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 613380,
       "video_sha256": "7611ae1652948013183ebc3320834dc400fdd08825837fa4061df9321efb7203",
       "rendered_at": "2026-10-02T04:42:34.978Z",
@@ -1570,7 +1609,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "92c6b140b05f17cc7fe5e66d1c95c595fbd5b78c43f71d400e6719f03d35441c"
     },
     {
       "name": "lucasarango.space",
@@ -1605,10 +1645,11 @@
       "poster_url": "/posters/lucasarango.space.png",
       "demo_title": "The structure, without the contents.",
       "demo_note": "Metadata and repository structure only. Private content is not shown.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Sensitive contents withheld. This film describes purpose and structure only.",
-      "composition_sha256": "233982d2453186cbc58eadf62d5ac7c1b5545f0b150b805fdc75dc5dec4f3ec7",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 625427,
       "video_sha256": "89af06f247f6d4e4fbfbf3810643fd187506e311cb4ee2d9a0ee18e46a2eb83e",
       "rendered_at": "2026-10-02T04:42:41.015Z",
@@ -1620,7 +1661,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "233982d2453186cbc58eadf62d5ac7c1b5545f0b150b805fdc75dc5dec4f3ec7"
     },
     {
       "name": "machine-learning",
@@ -1673,10 +1715,11 @@
       "poster_url": "/posters/machine-learning.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "a7763a1942666c0bbbd771ceece410a9abef3f90138d8e945d5a899ce478d9ad",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 670171,
       "video_sha256": "24483e8c022c98f1ad7b0846a137bfc2e5aaf5c7c0baa115ea3f5e0b86657032",
       "rendered_at": "2026-10-02T04:42:46.995Z",
@@ -1688,7 +1731,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "a7763a1942666c0bbbd771ceece410a9abef3f90138d8e945d5a899ce478d9ad"
     },
     {
       "name": "multiplayer-chat",
@@ -1754,10 +1798,11 @@
       "poster_url": "/posters/multiplayer-chat.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "cf65b668d53a54e77cf44a75bc04a9e33dbfd81b3b2573313114265823b9841b",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 627865,
       "video_sha256": "0e55ffb8a561f7a39067446d47bdec0c5612f7af5eaf8037ccc013108818deef",
       "rendered_at": "2026-10-02T04:42:53.025Z",
@@ -1769,7 +1814,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "cf65b668d53a54e77cf44a75bc04a9e33dbfd81b3b2573313114265823b9841b"
     },
     {
       "name": "neetcode-submissions",
@@ -1810,10 +1856,11 @@
       "poster_url": "/posters/neetcode-submissions.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "6c15bb99919bd55859e5fbe6e86f9aa986e8be948e01d66f968b59d4f178cd10",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 606874,
       "video_sha256": "20199ec8b34967e48121078eac5e4b74b8fef1672db5244e3d6c04676cddf992",
       "rendered_at": "2026-10-02T04:42:59.005Z",
@@ -1825,7 +1872,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "6c15bb99919bd55859e5fbe6e86f9aa986e8be948e01d66f968b59d4f178cd10"
     },
     {
       "name": "obsidian",
@@ -1860,10 +1908,11 @@
       "poster_url": "/posters/obsidian.png",
       "demo_title": "The structure, without the contents.",
       "demo_note": "Metadata and repository structure only. Private content is not shown.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Sensitive contents withheld. This film describes purpose and structure only.",
-      "composition_sha256": "2a362ac02a35a119d128fb4d7e9c1da2849e09550df24a8f28765583d49aeabb",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 661381,
       "video_sha256": "addc1d08dbda83cfe35c175e9f5dfb6442e0d5d27cd8146e5df83a06f6c65eb7",
       "rendered_at": "2026-10-02T04:43:05.188Z",
@@ -1875,7 +1924,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "2a362ac02a35a119d128fb4d7e9c1da2849e09550df24a8f28765583d49aeabb"
     },
     {
       "name": "onsite-lab",
@@ -1935,7 +1985,7 @@
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
       "change": "Autosave retention and serialized completion proposal.",
-      "change_state": "PROPOSAL \u00b7 UNMERGED",
+      "change_state": "PROPOSAL · UNMERGED",
       "pr": {
         "repo": "onsite-lab",
         "number": 29,
@@ -1949,7 +1999,8 @@
         "title": "fix: preserve autosaves across navigation and serialize Written completion"
       },
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "eb85c2be9aca3779a4d1b951a212cdf30c5c5d156b68ef8a9da4f4da42265427",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 702552,
       "video_sha256": "cbda2adaf2c48a665ed05e592c48d2dcb81575f7928f8367235fcdf541923a00",
       "rendered_at": "2026-10-02T04:43:11.167Z",
@@ -1961,7 +2012,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "eb85c2be9aca3779a4d1b951a212cdf30c5c5d156b68ef8a9da4f4da42265427"
     },
     {
       "name": "oral-board-local-lab",
@@ -1996,10 +2048,11 @@
       "poster_url": "/posters/oral-board-local-lab.png",
       "demo_title": "The structure, without the contents.",
       "demo_note": "Metadata and repository structure only. Private content is not shown.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Sensitive contents withheld. This film describes purpose and structure only.",
-      "composition_sha256": "ace1ded54c5482c14bfe77fcd2e32785198813315f1cbb4c72afb0a6f794ee25",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 691608,
       "video_sha256": "feb8d606168c2af06ad5da5c57f5d52246579c97f08f69fafaa6a8271b9a98ec",
       "rendered_at": "2026-10-02T04:43:17.132Z",
@@ -2011,7 +2064,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "ace1ded54c5482c14bfe77fcd2e32785198813315f1cbb4c72afb0a6f794ee25"
     },
     {
       "name": "oral-boards",
@@ -2046,10 +2100,11 @@
       "poster_url": "/posters/oral-boards.png",
       "demo_title": "The structure, without the contents.",
       "demo_note": "Metadata and repository structure only. Private content is not shown.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Sensitive contents withheld. This film describes purpose and structure only.",
-      "composition_sha256": "be1825acdd15c8deb5613491c68c3a2d38a991fee504eaffe880b2d02a89a6c6",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 644735,
       "video_sha256": "d0e944f84d31cde9058dbb40754efbe01132162de91f95bca6626349bc63cfd1",
       "rendered_at": "2026-10-02T04:43:23.089Z",
@@ -2061,7 +2116,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "be1825acdd15c8deb5613491c68c3a2d38a991fee504eaffe880b2d02a89a6c6"
     },
     {
       "name": "pantry-pulse",
@@ -2129,7 +2185,7 @@
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
       "change": "Concurrent inventory corrections guarded atomically.",
-      "change_state": "MERGED SOURCE CHANGE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "MERGED SOURCE CHANGE · DEPLOYMENT UNVERIFIED",
       "pr": {
         "repo": "pantry-pulse",
         "number": 25,
@@ -2143,7 +2199,8 @@
         "title": "fix: preserve concurrent stock changes when linking items"
       },
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "ca00decd9acdfbb0546149c487f63a5824ebd31ce7fd0e286c516f88bb97ebc8",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 758289,
       "video_sha256": "aeebb28e2143df094b0dc3140db300ae2eaa13b467966171bf855c4c589eaecf",
       "rendered_at": "2026-10-02T04:43:29.063Z",
@@ -2155,7 +2212,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "ca00decd9acdfbb0546149c487f63a5824ebd31ce7fd0e286c516f88bb97ebc8"
     },
     {
       "name": "paper-options-lab",
@@ -2200,7 +2258,7 @@
       "poster_url": "/posters/paper-options-lab.png",
       "demo_title": "The structure, without the contents.",
       "demo_note": "Metadata and repository structure only. Private content is not shown.",
-      "change_state": "PROPOSAL \u00b7 UNMERGED",
+      "change_state": "PROPOSAL · UNMERGED",
       "pr": {
         "repo": "paper-options-lab",
         "number": 1,
@@ -2212,7 +2270,8 @@
         "title": "Add paper-only options risk screening and deterministic scenario replay"
       },
       "limit": "Sensitive contents withheld. This film describes purpose and structure only.",
-      "composition_sha256": "e3b1123e1ac0f940c2164735d45029343381b0b5facdf289ff1b154775f424e2",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 691748,
       "video_sha256": "e1a355c052c5e69592f1c0f53c11dd6bc456ca02de0755c5474acfa4d1f68e3a",
       "rendered_at": "2026-10-02T04:43:35.222Z",
@@ -2224,7 +2283,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "e3b1123e1ac0f940c2164735d45029343381b0b5facdf289ff1b154775f424e2"
     },
     {
       "name": "pediatric-interviewer-esp32",
@@ -2279,10 +2339,11 @@
       "poster_url": "/posters/pediatric-interviewer-esp32.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "63e2f13b3c2e0427f9371375d3acdc4f870baa364a97e6be3e8dd91a462a0fee",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 682938,
       "video_sha256": "95a5aaec3c5165beff01e778f885c8beff2784422e86ef091b739121e4b132f3",
       "rendered_at": "2026-10-02T04:43:41.267Z",
@@ -2294,7 +2355,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "63e2f13b3c2e0427f9371375d3acdc4f870baa364a97e6be3e8dd91a462a0fee"
     },
     {
       "name": "raleigh-travel",
@@ -2329,10 +2391,11 @@
       "poster_url": "/posters/raleigh-travel.png",
       "demo_title": "The structure, without the contents.",
       "demo_note": "Metadata and repository structure only. Private content is not shown.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Sensitive contents withheld. This film describes purpose and structure only.",
-      "composition_sha256": "5b92bf8441f96956c2a3fbb1d8f9702eb3875e53cd18e8cacba7f9c91245020f",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 643832,
       "video_sha256": "78869f6934440ec85da5d3c654ca10c78112ba10e26f56214be6bf0724059e2c",
       "rendered_at": "2026-10-02T04:43:47.466Z",
@@ -2344,7 +2407,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "5b92bf8441f96956c2a3fbb1d8f9702eb3875e53cd18e8cacba7f9c91245020f"
     },
     {
       "name": "react-hook-form-mantine",
@@ -2407,10 +2471,11 @@
       "poster_url": "/posters/react-hook-form-mantine.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "9a9a0c05b7c3b9174d5720f99f1ea0a0041f810afc58a31894c0c6d0a8feff8a",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 635759,
       "video_sha256": "27f87daf4f4c016fbf22296ebfd45712ff309ea77afd825b479fb636e51f836f",
       "rendered_at": "2026-10-02T04:36:32.866Z",
@@ -2422,7 +2487,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "9a9a0c05b7c3b9174d5720f99f1ea0a0041f810afc58a31894c0c6d0a8feff8a"
     },
     {
       "name": "reminder",
@@ -2468,10 +2534,11 @@
       "poster_url": "/posters/reminder.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "78619d55573bd79840f11e707d8f6e30bafec36f557f8d1ca30e11ac5a055db0",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 632267,
       "video_sha256": "2849bc0efa2fee1cbf0e08f48bf4a15df2b082f86783a5c35ea26b9538b30e2c",
       "rendered_at": "2026-10-02T04:43:53.757Z",
@@ -2483,7 +2550,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "78619d55573bd79840f11e707d8f6e30bafec36f557f8d1ca30e11ac5a055db0"
     },
     {
       "name": "resume",
@@ -2518,10 +2586,11 @@
       "poster_url": "/posters/resume.png",
       "demo_title": "The structure, without the contents.",
       "demo_note": "Metadata and repository structure only. Private content is not shown.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Sensitive contents withheld. This film describes purpose and structure only.",
-      "composition_sha256": "a7d255d57dd730114f4346be97c084576b0375e84d6e50e8083ecaa66443f2a5",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 647505,
       "video_sha256": "7c87233798faebc0e075eb5f5572d8ffb65b261d5a00753a45eeb348482e58e3",
       "rendered_at": "2026-10-02T04:44:00.191Z",
@@ -2533,7 +2602,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "a7d255d57dd730114f4346be97c084576b0375e84d6e50e8083ecaa66443f2a5"
     },
     {
       "name": "resume-carlos",
@@ -2568,10 +2638,11 @@
       "poster_url": "/posters/resume-carlos.png",
       "demo_title": "The structure, without the contents.",
       "demo_note": "Metadata and repository structure only. Private content is not shown.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Sensitive contents withheld. This film describes purpose and structure only.",
-      "composition_sha256": "fe4b15dbc1486d3fef3fac989f967ab6998ad8500c5e3206b6b797bdd18d3d8f",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 638775,
       "video_sha256": "fe723475edcc35d673fdb069865d30289afc01ee5f641e98c85cd9e5b2033d0c",
       "rendered_at": "2026-10-02T04:44:06.422Z",
@@ -2583,7 +2654,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "fe4b15dbc1486d3fef3fac989f967ab6998ad8500c5e3206b6b797bdd18d3d8f"
     },
     {
       "name": "resume-chat",
@@ -2639,10 +2711,11 @@
       "poster_url": "/posters/resume-chat.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "70509b2d7d1e9f3ec264a4bad75661d72fa81f9e2828cf77f6d3d698a791c42d",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 612323,
       "video_sha256": "d35ee19bac1550e3d9ae7524bc5c823d83a3023e38b4167ce319229d9dfcbe16",
       "rendered_at": "2026-10-02T04:44:12.454Z",
@@ -2654,7 +2727,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "70509b2d7d1e9f3ec264a4bad75661d72fa81f9e2828cf77f6d3d698a791c42d"
     },
     {
       "name": "resume-template",
@@ -2707,10 +2781,11 @@
       "poster_url": "/posters/resume-template.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "2df1f229db8e0c8133b13bb55a6a451d256534b7120f21dbade13906fe27ea42",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 631616,
       "video_sha256": "26195667b88eac7fadaf5dd069423c5ee43bc0c4763b2dec532e239abdb029b3",
       "rendered_at": "2026-10-02T04:44:18.422Z",
@@ -2722,7 +2797,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "2df1f229db8e0c8133b13bb55a6a451d256534b7120f21dbade13906fe27ea42"
     },
     {
       "name": "resume-yani",
@@ -2757,10 +2833,11 @@
       "poster_url": "/posters/resume-yani.png",
       "demo_title": "The structure, without the contents.",
       "demo_note": "Metadata and repository structure only. Private content is not shown.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Sensitive contents withheld. This film describes purpose and structure only.",
-      "composition_sha256": "a8379ff6436e26e02b0b93e49b4690cb02b20154b5859079a9f1c08c3a271b18",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 657749,
       "video_sha256": "c74906aedc5ebd732f72c6a050220a06743dee590ec97ebe2d5ca6037f4fc1a9",
       "rendered_at": "2026-10-02T04:44:24.386Z",
@@ -2772,7 +2849,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "a8379ff6436e26e02b0b93e49b4690cb02b20154b5859079a9f1c08c3a271b18"
     },
     {
       "name": "rippling-tech-screen",
@@ -2818,10 +2896,11 @@
       "poster_url": "/posters/rippling-tech-screen.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "f6abaf4467aa59e023220293ddaee034bb3e9458c04f69db15939f58e38e22fa",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 647349,
       "video_sha256": "d87bcc1e7db54a5d4a51b854b644d23c754fa649615a51a9aff0693c5f4e3b59",
       "rendered_at": "2026-10-02T04:44:30.362Z",
@@ -2833,7 +2912,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "f6abaf4467aa59e023220293ddaee034bb3e9458c04f69db15939f58e38e22fa"
     },
     {
       "name": "samsara-java-screen-practice",
@@ -2879,10 +2959,11 @@
       "poster_url": "/posters/samsara-java-screen-practice.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "49b293edfe31c7fe71fb6a3e21150540148894c34e172f3a99ef5a42fba633cd",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 657869,
       "video_sha256": "1f0eec0d6d759a991981cc94d8f3e234452ddbedb67e751cb3875b0d4e596ad9",
       "rendered_at": "2026-10-02T04:44:36.406Z",
@@ -2894,7 +2975,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "49b293edfe31c7fe71fb6a3e21150540148894c34e172f3a99ef5a42fba633cd"
     },
     {
       "name": "second-helping-meal-remixer",
@@ -2961,7 +3043,7 @@
       "poster_url": "/posters/second-helping-meal-remixer.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "PROPOSAL \u00b7 UNMERGED",
+      "change_state": "PROPOSAL · UNMERGED",
       "pr": {
         "repo": "second-helping-meal-remixer",
         "number": 1,
@@ -2973,7 +3055,8 @@
         "title": "Build offline meal remixer with transparent cooking paths"
       },
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "2a64d314a040179c974976ab27b26b7ec97968209713271e752fc8370c091d03",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 664738,
       "video_sha256": "d44628974bfabd8ce09c781276b4afcb10ad5592dc65007c8664d3341cfa0026",
       "rendered_at": "2026-10-02T04:44:42.365Z",
@@ -2985,7 +3068,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "2a64d314a040179c974976ab27b26b7ec97968209713271e752fc8370c091d03"
     },
     {
       "name": "set-and-signal",
@@ -3047,7 +3131,7 @@
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
       "change": "Retain queued edits when local storage fails.",
-      "change_state": "PROPOSAL \u00b7 UNMERGED",
+      "change_state": "PROPOSAL · UNMERGED",
       "pr": {
         "repo": "set-and-signal",
         "number": 50,
@@ -3061,7 +3145,8 @@
         "title": "fix: preserve training sync queue on storage failures"
       },
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "529d0af5924341747edbe80da9be2ed61fdf37b589ff1db70ef0306f469139e9",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 703035,
       "video_sha256": "aa7ea6818896508c80c64277619cae8211b8f9655e2cd6d5f251f838b28668d7",
       "rendered_at": "2026-10-02T04:44:48.351Z",
@@ -3073,7 +3158,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "529d0af5924341747edbe80da9be2ed61fdf37b589ff1db70ef0306f469139e9"
     },
     {
       "name": "shipshape-mcp",
@@ -3133,10 +3219,11 @@
       "poster_url": "/posters/shipshape-mcp.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "df3261f35437db9cc55d9e00945b39133d497f47e0fa3c4d1513c4775ab9f37a",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 643425,
       "video_sha256": "9b078bb9e875dc3affe9d35b7f75e9daf0d7d7f356d9915aaffafaf055dbb849",
       "rendered_at": "2026-10-02T04:36:39.179Z",
@@ -3148,7 +3235,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "df3261f35437db9cc55d9e00945b39133d497f47e0fa3c4d1513c4775ab9f37a"
     },
     {
       "name": "snaphaul",
@@ -3205,10 +3293,11 @@
       "poster_url": "/posters/snaphaul.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "137e0af92d7f24293d7a2a25db166cd328d7869c60221007e2869ac0d6424226",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 611896,
       "video_sha256": "ccaa642bad3e5fa8928c7f5c760bc09454e0a36ca8117dfa0bda298f429294c4",
       "rendered_at": "2026-10-02T04:44:54.309Z",
@@ -3220,7 +3309,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "137e0af92d7f24293d7a2a25db166cd328d7869c60221007e2869ac0d6424226"
     },
     {
       "name": "software-eng",
@@ -3266,10 +3356,11 @@
       "poster_url": "/posters/software-eng.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "28a21bceb218444efde4f45c177508ee713b767a6f00f4397e67329e6a8a5406",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 610820,
       "video_sha256": "9095f198a75c2c6ce762f55cf6b1c6aa6e2bb5957b8136b2b92a20e757d7d3b2",
       "rendered_at": "2026-10-02T04:45:00.266Z",
@@ -3281,7 +3372,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "28a21bceb218444efde4f45c177508ee713b767a6f00f4397e67329e6a8a5406"
     },
     {
       "name": "spoonworld",
@@ -3347,7 +3439,7 @@
       "poster_url": "/posters/spoonworld.png",
       "demo_title": "The useful moment.",
       "demo_note": "Pinned source screenshot. The film does not run or verify the application.",
-      "change_state": "PROPOSAL \u00b7 UNMERGED",
+      "change_state": "PROPOSAL · UNMERGED",
       "pr": {
         "repo": "spoonworld",
         "number": 1,
@@ -3359,6 +3451,8 @@
         "title": "Build Spoonworld: an offline ingredient ecology toy"
       },
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "source_still": {
         "name": "spoonworld",
         "path": "evidence/desktop-bubble-ferry.png",
@@ -3368,7 +3462,6 @@
         "url": "https://github.com/aranlucas/spoonworld/blob/1652e07f18d46a0eae1301fd17dc8793f7e8f18c/evidence/desktop-bubble-ferry.png",
         "kind": "Source screenshot; local illustration, not a live application capture"
       },
-      "composition_sha256": "2ce07dddd3d7a596f08333bd4d344f77124686d73330778c79af28b2479c5950",
       "video_bytes": 1517289,
       "video_sha256": "57ffa627e371c188d6b4a3566fd9a85147b3f4bb33994b1b5e04fd15ae07d664",
       "rendered_at": "2026-10-02T04:45:06.794Z",
@@ -3380,7 +3473,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "2ce07dddd3d7a596f08333bd4d344f77124686d73330778c79af28b2479c5950"
     },
     {
       "name": "spring-todo-api",
@@ -3433,10 +3527,11 @@
       "poster_url": "/posters/spring-todo-api.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "18e2f93530e0e40d3265ffe5cf6e6a3606b96d4f4078bc9eb936ba219237bf71",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 656165,
       "video_sha256": "3cde379c0e93ad5258799b77073e6fec968594e082e95e0e4be0e60561286898",
       "rendered_at": "2026-10-02T04:45:12.809Z",
@@ -3448,7 +3543,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "18e2f93530e0e40d3265ffe5cf6e6a3606b96d4f4078bc9eb936ba219237bf71"
     },
     {
       "name": "symphony",
@@ -3494,10 +3590,11 @@
       "poster_url": "/posters/symphony.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "5af03f45636b1f24337af459a842522451908338fed61f6a0a5137adc98c4a0c",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 593208,
       "video_sha256": "2488200d36955e95d7862966dfabad438d4aad5404847239cad6b996fb2e8e36",
       "rendered_at": "2026-10-02T04:45:18.771Z",
@@ -3509,7 +3606,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "5af03f45636b1f24337af459a842522451908338fed61f6a0a5137adc98c4a0c"
     },
     {
       "name": "system-design-chatgpt",
@@ -3575,10 +3673,11 @@
       "poster_url": "/posters/system-design-chatgpt.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "934ad790c7ad6f105a1950435cc3b49d0426e2aa3368bf47768dd3cb614eb2c4",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 684118,
       "video_sha256": "bc8cb96e61a3983a31c333a4ed5629db63b73f835b0abf1638660e605271fb7b",
       "rendered_at": "2026-10-02T04:45:24.724Z",
@@ -3590,7 +3689,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "934ad790c7ad6f105a1950435cc3b49d0426e2aa3368bf47768dd3cb614eb2c4"
     },
     {
       "name": "system-design-companion",
@@ -3656,10 +3756,11 @@
       "poster_url": "/posters/system-design-companion.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "ab1920b6bdb02c985a001c2c1c85884977695b6c54ec96abfeafd82aed88bb8e",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 634758,
       "video_sha256": "57778cc9263d1bfd5d355256a613f3076ba40b111e2fb8eda7de5bc6ce3febe4",
       "rendered_at": "2026-10-02T04:45:30.693Z",
@@ -3671,7 +3772,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "ab1920b6bdb02c985a001c2c1c85884977695b6c54ec96abfeafd82aed88bb8e"
     },
     {
       "name": "trading-mcp",
@@ -3708,7 +3810,7 @@
       "demo_title": "The structure, without the contents.",
       "demo_note": "Metadata and repository structure only. Private content is not shown.",
       "change": "A proposal changes unavailable-data handling.",
-      "change_state": "PROPOSAL \u00b7 UNMERGED",
+      "change_state": "PROPOSAL · UNMERGED",
       "pr": {
         "repo": "trading-mcp",
         "number": 28,
@@ -3722,7 +3824,8 @@
         "title": "fix: guard technical analysis against unavailable history"
       },
       "limit": "No financial values, holdings, trades or live providers are shown. Proposal remains unmerged.",
-      "composition_sha256": "6ea84766fe695d9c0a6283f3427b4314a00aa0a93752f230df397642d07ca4b5",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 727444,
       "video_sha256": "a6dc3aaf8d28e434cb807a13baa626060d1bde73cb2d130274b99fa9bcccf858",
       "rendered_at": "2026-10-02T04:45:36.681Z",
@@ -3734,7 +3837,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "6ea84766fe695d9c0a6283f3427b4314a00aa0a93752f230df397642d07ca4b5"
     },
     {
       "name": "traillib",
@@ -3784,10 +3888,11 @@
       "poster_url": "/posters/traillib.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "249b95a615646cb0ac00af2375cd354e78597faff3f53310894d7001fb105a10",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 661196,
       "video_sha256": "bf0d2864f06df877301b4e78563cfc6b062fbb4ae8948d9a04e93180e54310d9",
       "rendered_at": "2026-10-02T04:45:42.643Z",
@@ -3799,7 +3904,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "249b95a615646cb0ac00af2375cd354e78597faff3f53310894d7001fb105a10"
     },
     {
       "name": "traverse",
@@ -3859,7 +3965,7 @@
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
       "change": "Generation-aware ingestion and retry-safe report publication.",
-      "change_state": "PROPOSAL \u00b7 UNMERGED",
+      "change_state": "PROPOSAL · UNMERGED",
       "pr": {
         "repo": "traverse",
         "number": 12,
@@ -3873,7 +3979,8 @@
         "title": "Fix ingestion job races and retry-safe report publication"
       },
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "8c8a08c82606b18dae1f9086081e7066c28b126b5341dbb5f4a6851368af8821",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 790965,
       "video_sha256": "4c5f822723e4553acb8825a11200023d844f51581ef3a9c3626c697d6232ce18",
       "rendered_at": "2026-10-02T04:45:48.615Z",
@@ -3885,7 +3992,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "8c8a08c82606b18dae1f9086081e7066c28b126b5341dbb5f4a6851368af8821"
     },
     {
       "name": "trvl",
@@ -3946,10 +4054,11 @@
       "poster_url": "/posters/trvl.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "b9281f785ce3454571fef0240657eb0b6e05ada2f49642ca3799b839e3a09baf",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 670932,
       "video_sha256": "339839300375ad59387ce2e868a6893fe6d2e10195b524947dfae7cd1c9cca5c",
       "rendered_at": "2026-10-02T04:45:54.596Z",
@@ -3961,7 +4070,8 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
-      "codec": "VP8 / WebM"
+      "codec": "VP8 / WebM",
+      "composition_sha256": "b9281f785ce3454571fef0240657eb0b6e05ada2f49642ca3799b839e3a09baf"
     },
     {
       "name": "vienna-travel",
@@ -4021,10 +4131,11 @@
       "poster_url": "/posters/vienna-travel.png",
       "demo_title": "The useful moment.",
       "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
-      "change_state": "SOURCE CAPTURE \u00b7 DEPLOYMENT UNVERIFIED",
+      "change_state": "SOURCE CAPTURE · DEPLOYMENT UNVERIFIED",
       "pr": null,
       "limit": "Code and README captured at the pinned SHA. A merge is not evidence of deployment.",
-      "composition_sha256": "51ff0c7e82894a29bf3d27b4192e2aa8b129d2466721bc0237b0e76ebe547d3c",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "snapshot_id": "original",
       "video_bytes": 701414,
       "video_sha256": "6214ea3285f8ecdd39180fe89ac71a2000230106f1a826306a06f3bf6213db05",
       "rendered_at": "2026-10-02T04:46:00.618Z",
@@ -4036,40 +4147,486 @@
       ],
       "capture_engine": "@hyperframes/engine@0.8.107",
       "encoder": "mediabunny@1.61.0 / WebCodecs",
+      "codec": "VP8 / WebM",
+      "composition_sha256": "51ff0c7e82894a29bf3d27b4192e2aa8b129d2466721bc0237b0e76ebe547d3c"
+    },
+    {
+      "name": "trailbraid",
+      "full_name": "aranlucas/trailbraid",
+      "visibility": "private",
+      "default_branch": "main",
+      "source_sha": "2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+      "captured_at": "2026-10-02T06:09:45.514287+00:00",
+      "snapshot_id": "follow-up-1",
+      "commit_date": "2026-10-02T06:01:02Z",
+      "commit_message": "Build Trailbraid: local GPX comparison and elevation exploration (#1)",
+      "source_url": "https://github.com/aranlucas/trailbraid/commit/2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+      "review_mode": "README-and-structure",
+      "root_file_count": 14,
+      "root_directory_count": 5,
+      "root_names": [
+        ".github",
+        ".gitignore",
+        "DEPENDENCIES.md",
+        "DESIGN.md",
+        "LICENSE",
+        "PRODUCT.md",
+        "README.md",
+        "SECURITY.md",
+        "THIRD_PARTY_NOTICES.txt",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "public",
+        "railway.json",
+        "scripts",
+        "src",
+        "tests",
+        "tsconfig.json",
+        "wrangler.toml"
+      ],
+      "readme_path": "README.md",
+      "package_path": "package.json",
+      "evidence_urls": [
+        "https://github.com/aranlucas/trailbraid/commit/2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+        "https://github.com/aranlucas/trailbraid/tree/2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+        "https://github.com/aranlucas/trailbraid/blob/2ee73f9b82b9ce779fcc60100c3d5b860756259a/README.md",
+        "https://github.com/aranlucas/trailbraid/blob/2ee73f9b82b9ce779fcc60100c3d5b860756259a/package.json",
+        "https://github.com/aranlucas/trailbraid/blob/2ee73f9b82b9ce779fcc60100c3d5b860756259a/src/route.ts",
+        "https://github.com/aranlucas/trailbraid/actions/runs/36971546891",
+        "https://github.com/aranlucas/trailbraid/pull/1"
+      ],
+      "is_fork": false,
+      "capture_pr": null,
+      "purpose": "Two routes. One shared view.",
+      "description": "Compare GPX geometry and elevation windows with Turf 7.4.0, entirely in the browser.",
+      "workflow": [
+        "Compare two routes",
+        "Move the distance window",
+        "Export route notes"
+      ],
+      "genre": "outdoors",
+      "render_status": "passed",
+      "render_url": "/renders/trailbraid.webm",
+      "poster_url": "/posters/trailbraid.png",
+      "demo_title": "The useful moment.",
+      "demo_note": "Local source screenshot associated with the verified clean source checkout. Screenshot is not committed upstream; synthetic data only. Not a new runtime capture by Repository Reels.",
+      "change": "Merged: a local GPX comparison atlas.",
+      "change_state": "MERGED SOURCE CHANGE · DEPLOYMENT UNVERIFIED",
+      "pr": {
+        "repo": "trailbraid",
+        "number": 1,
+        "url": "https://github.com/aranlucas/trailbraid/pull/1",
+        "state": "closed",
+        "draft": false,
+        "merged": true,
+        "merged_at": "2026-10-02T06:01:02Z",
+        "head_sha": "c941024af297bb6777abb717c14ad70165f48934",
+        "merge_commit_sha": "2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+        "title": "Build Trailbraid: local GPX comparison and elevation exploration"
+      },
+      "limit": "Synthetic GPX routes. Raw ascent is unsmoothed; no navigation or hazard assessment. Deployment unverified.",
+      "source_still": {
+        "name": "trailbraid",
+        "path": "public/source-stills/trailbraid.png",
+        "source_sha": "2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+        "sha256": "5b5b5ecaa7aee1571a1ff00d4e4c8e31354f603d343ded08699dcbabdd621b9b",
+        "bytes": 193613,
+        "url": "https://github.com/aranlucas/trailbraid/commit/2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+        "fit": "contain",
+        "kind": "Local source screenshot associated with the verified clean source checkout. Screenshot is not committed upstream; synthetic data only. Not a new runtime capture by Repository Reels.",
+        "origin": "task-15/output/playwright/trailbraid-desktop.png",
+        "source_checkout_verified_at": "2026-10-02T06:12:59.326124+00:00"
+      },
+      "video_bytes": 1640427,
+      "video_sha256": "483e1869d60b93ca57e102915090ea5a402ec31215bde93326c6cba57e744fc7",
+      "rendered_at": "2026-10-02T06:15:48.299Z",
+      "render_seconds": 7.7,
+      "keyframes": [
+        "evidence/render/trailbraid-9.png",
+        "evidence/render/trailbraid-60.png",
+        "evidence/render/trailbraid-108.png"
+      ],
+      "capture_engine": "@hyperframes/engine@0.8.107",
+      "encoder": "mediabunny@1.61.0 / WebCodecs",
+      "codec": "VP8 / WebM",
+      "composition_sha256": "f7b48b4c4574848dfdf6993aec52e84d5598540414661b5546b0f2fa002b3fa2"
+    },
+    {
+      "name": "framebreak",
+      "full_name": "aranlucas/framebreak",
+      "visibility": "private",
+      "default_branch": "main",
+      "source_sha": "08e058989867b082c41702a11392f72177ac279a",
+      "captured_at": "2026-10-02T06:09:45.514287+00:00",
+      "snapshot_id": "follow-up-1",
+      "commit_date": "2026-10-02T06:01:12Z",
+      "commit_message": "Build Framebreak: private practice loops and silent video clips (#1)",
+      "source_url": "https://github.com/aranlucas/framebreak/commit/08e058989867b082c41702a11392f72177ac279a",
+      "review_mode": "README-and-structure",
+      "root_file_count": 14,
+      "root_directory_count": 5,
+      "root_names": [
+        ".github",
+        ".gitignore",
+        "DEPENDENCIES.md",
+        "DESIGN.md",
+        "LICENSE",
+        "PRODUCT.md",
+        "README.md",
+        "SECURITY.md",
+        "THIRD_PARTY_NOTICES.txt",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "public",
+        "railway.json",
+        "scripts",
+        "src",
+        "tests",
+        "tsconfig.json",
+        "wrangler.toml"
+      ],
+      "readme_path": "README.md",
+      "package_path": "package.json",
+      "evidence_urls": [
+        "https://github.com/aranlucas/framebreak/commit/08e058989867b082c41702a11392f72177ac279a",
+        "https://github.com/aranlucas/framebreak/tree/08e058989867b082c41702a11392f72177ac279a",
+        "https://github.com/aranlucas/framebreak/blob/08e058989867b082c41702a11392f72177ac279a/README.md",
+        "https://github.com/aranlucas/framebreak/blob/08e058989867b082c41702a11392f72177ac279a/package.json",
+        "https://github.com/aranlucas/framebreak/blob/08e058989867b082c41702a11392f72177ac279a/src/media.ts",
+        "https://github.com/aranlucas/framebreak/actions/runs/36971561588",
+        "https://github.com/aranlucas/framebreak/pull/1"
+      ],
+      "is_fork": false,
+      "capture_pr": null,
+      "purpose": "Find takeoff. Loop the landing.",
+      "description": "MediaBunny 1.61.0 powers local practice-video inspection and silent clip exports.",
+      "workflow": [
+        "Open a local video",
+        "Mark a practice attempt",
+        "Export a silent clip"
+      ],
+      "genre": "app",
+      "render_status": "passed",
+      "render_url": "/renders/framebreak.webm",
+      "poster_url": "/posters/framebreak.png",
+      "demo_title": "The useful moment.",
+      "demo_note": "Local source screenshot associated with the verified clean source checkout. Screenshot is not committed upstream; synthetic data only. Not a new runtime capture by Repository Reels.",
+      "change": "Merged: a private practice-video workbench.",
+      "change_state": "MERGED SOURCE CHANGE · DEPLOYMENT UNVERIFIED",
+      "pr": {
+        "repo": "framebreak",
+        "number": 1,
+        "url": "https://github.com/aranlucas/framebreak/pull/1",
+        "state": "closed",
+        "draft": false,
+        "merged": true,
+        "merged_at": "2026-10-02T06:01:13Z",
+        "head_sha": "9c219b537ea94897d1128ddc4d1a876dd5987c14",
+        "merge_commit_sha": "08e058989867b082c41702a11392f72177ac279a",
+        "title": "Build Framebreak: private practice loops and silent video clips"
+      },
+      "limit": "Synthetic practice video. Silent exports depend on browser codecs; time stepping is not source-frame detection. Deployment unverified.",
+      "source_still": {
+        "name": "framebreak",
+        "path": "public/source-stills/framebreak.png",
+        "source_sha": "08e058989867b082c41702a11392f72177ac279a",
+        "sha256": "eca051f8be9fefefa5c27a09af269d03edceb37b15e279be48b74b007d413e6f",
+        "bytes": 168045,
+        "url": "https://github.com/aranlucas/framebreak/commit/08e058989867b082c41702a11392f72177ac279a",
+        "fit": "contain",
+        "kind": "Local source screenshot associated with the verified clean source checkout. Screenshot is not committed upstream; synthetic data only. Not a new runtime capture by Repository Reels.",
+        "origin": "task-15/output/playwright/framebreak-desktop.png",
+        "source_checkout_verified_at": "2026-10-02T06:12:59.368305+00:00"
+      },
+      "video_bytes": 1441246,
+      "video_sha256": "bf19c8809165eba7c3da6f3477ab358883d80bf354482d45d2bafef442c1f000",
+      "rendered_at": "2026-10-02T06:15:54.709Z",
+      "render_seconds": 6.36,
+      "keyframes": [
+        "evidence/render/framebreak-9.png",
+        "evidence/render/framebreak-60.png",
+        "evidence/render/framebreak-108.png"
+      ],
+      "capture_engine": "@hyperframes/engine@0.8.107",
+      "encoder": "mediabunny@1.61.0 / WebCodecs",
+      "codec": "VP8 / WebM",
+      "composition_sha256": "6dd29df1db45ecd972fccbedafd9f5d453bd13de6ce827101af66ecdcaae1c19"
+    },
+    {
+      "name": "pocket-park",
+      "full_name": "aranlucas/pocket-park",
+      "visibility": "private",
+      "default_branch": "main",
+      "source_sha": "371252687027e7dc2119f95ffe70725ffabadd56",
+      "captured_at": "2026-10-02T06:09:45.514287+00:00",
+      "snapshot_id": "follow-up-1",
+      "commit_date": "2026-10-02T06:01:23Z",
+      "commit_message": "Build Pocket Park: five local physics momentum puzzles (#1)",
+      "source_url": "https://github.com/aranlucas/pocket-park/commit/371252687027e7dc2119f95ffe70725ffabadd56",
+      "review_mode": "README-and-structure",
+      "root_file_count": 14,
+      "root_directory_count": 5,
+      "root_names": [
+        ".github",
+        ".gitignore",
+        "DEPENDENCIES.md",
+        "DESIGN.md",
+        "LICENSE",
+        "PRODUCT.md",
+        "README.md",
+        "SECURITY.md",
+        "THIRD_PARTY_NOTICES.txt",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "public",
+        "railway.json",
+        "scripts",
+        "src",
+        "tests",
+        "tsconfig.json",
+        "wrangler.toml"
+      ],
+      "readme_path": "README.md",
+      "package_path": "package.json",
+      "evidence_urls": [
+        "https://github.com/aranlucas/pocket-park/commit/371252687027e7dc2119f95ffe70725ffabadd56",
+        "https://github.com/aranlucas/pocket-park/tree/371252687027e7dc2119f95ffe70725ffabadd56",
+        "https://github.com/aranlucas/pocket-park/blob/371252687027e7dc2119f95ffe70725ffabadd56/README.md",
+        "https://github.com/aranlucas/pocket-park/blob/371252687027e7dc2119f95ffe70725ffabadd56/package.json",
+        "https://github.com/aranlucas/pocket-park/blob/371252687027e7dc2119f95ffe70725ffabadd56/src/physics.ts",
+        "https://github.com/aranlucas/pocket-park/actions/runs/36971574455",
+        "https://github.com/aranlucas/pocket-park/pull/1"
+      ],
+      "is_fork": false,
+      "capture_pr": null,
+      "purpose": "One push. Three little rings.",
+      "description": "Five small momentum puzzles use Planck 1.5.0 for collisions and 120 Hz physics.",
+      "workflow": [
+        "Adjust the push",
+        "Collect three rings",
+        "Find a soft landing"
+      ],
+      "genre": "game",
+      "render_status": "passed",
+      "render_url": "/renders/pocket-park.webm",
+      "poster_url": "/posters/pocket-park.png",
+      "demo_title": "The useful moment.",
+      "demo_note": "Local source screenshot associated with the verified clean source checkout. Screenshot is not committed upstream; synthetic data only. Not a new runtime capture by Repository Reels.",
+      "change": "Merged: five small physics parks.",
+      "change_state": "MERGED SOURCE CHANGE · DEPLOYMENT UNVERIFIED",
+      "pr": {
+        "repo": "pocket-park",
+        "number": 1,
+        "url": "https://github.com/aranlucas/pocket-park/pull/1",
+        "state": "closed",
+        "draft": false,
+        "merged": true,
+        "merged_at": "2026-10-02T06:01:23Z",
+        "head_sha": "6ea65504447b91dc30e5e519e44eaa3e2d0a535c",
+        "merge_commit_sha": "371252687027e7dc2119f95ffe70725ffabadd56",
+        "title": "Build Pocket Park: five local physics momentum puzzles"
+      },
+      "limit": "Five abstract puck puzzles, not a skating simulation. Progress is local. Deployment unverified.",
+      "source_still": {
+        "name": "pocket-park",
+        "path": "public/source-stills/pocket-park.png",
+        "source_sha": "371252687027e7dc2119f95ffe70725ffabadd56",
+        "sha256": "27506e4bc83dffdd6a873d604f01c56706d65ffd04ff8fd48375de16cb355dfb",
+        "bytes": 123400,
+        "url": "https://github.com/aranlucas/pocket-park/commit/371252687027e7dc2119f95ffe70725ffabadd56",
+        "fit": "contain",
+        "kind": "Local source screenshot associated with the verified clean source checkout. Screenshot is not committed upstream; synthetic data only. Not a new runtime capture by Repository Reels.",
+        "origin": "task-15/output/playwright/pocket-park-desktop.png",
+        "source_checkout_verified_at": "2026-10-02T06:12:59.412015+00:00"
+      },
+      "video_bytes": 1183382,
+      "video_sha256": "19fd839521ce677ea2e9134502ec6c0a6e272cae9f298baa91eeebe782158654",
+      "rendered_at": "2026-10-02T06:16:00.816Z",
+      "render_seconds": 6.07,
+      "keyframes": [
+        "evidence/render/pocket-park-9.png",
+        "evidence/render/pocket-park-60.png",
+        "evidence/render/pocket-park-108.png"
+      ],
+      "capture_engine": "@hyperframes/engine@0.8.107",
+      "encoder": "mediabunny@1.61.0 / WebCodecs",
+      "codec": "VP8 / WebM",
+      "composition_sha256": "fd7697157b1a8fc9923ab5bc04941711b356ecb6421523ae24aae71e5e6b42a3"
+    },
+    {
+      "name": "orthogonal-router-rust-lab",
+      "full_name": "aranlucas/orthogonal-router-rust-lab",
+      "visibility": "private",
+      "default_branch": "main",
+      "source_sha": "29623e2c155c19372f0e3152cce097c669cac5c1",
+      "captured_at": "2026-10-02T06:16:41.983712+00:00",
+      "snapshot_id": "follow-up-1",
+      "commit_date": "2026-10-02T06:06:10Z",
+      "commit_message": "Merge measured compatible Rust orthogonal router experiment",
+      "source_url": "https://github.com/aranlucas/orthogonal-router-rust-lab/commit/29623e2c155c19372f0e3152cce097c669cac5c1",
+      "review_mode": "README-and-structure",
+      "root_file_count": 6,
+      "root_directory_count": 7,
+      "root_names": [
+        ".github",
+        ".gitignore",
+        "Cargo.lock",
+        "Cargo.toml",
+        "Makefile",
+        "README.md",
+        "THIRD_PARTY.md",
+        "artifacts",
+        "docs",
+        "fixtures",
+        "scripts",
+        "src",
+        "tests"
+      ],
+      "readme_path": "README.md",
+      "package_path": "Cargo.toml",
+      "evidence_urls": [
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/commit/29623e2c155c19372f0e3152cce097c669cac5c1",
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/tree/29623e2c155c19372f0e3152cce097c669cac5c1",
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/blob/29623e2c155c19372f0e3152cce097c669cac5c1/README.md",
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/blob/29623e2c155c19372f0e3152cce097c669cac5c1/docs/results.md",
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/blob/29623e2c155c19372f0e3152cce097c669cac5c1/Cargo.toml",
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/actions/runs/36971957867",
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/pull/1"
+      ],
+      "is_fork": false,
+      "capture_pr": null,
+      "purpose": "Same routes. New kernel.",
+      "description": "A Rust diagram-router port measured against its unchanged TypeScript reference.",
+      "workflow": [
+        "Replay a diagram",
+        "Compare exact paths",
+        "Inspect measurements"
+      ],
+      "genre": "library",
+      "render_status": "passed",
+      "render_url": "/renders/orthogonal-router-rust-lab.webm",
+      "poster_url": "/posters/orthogonal-router-rust-lab.png",
+      "demo_title": "The useful moment.",
+      "demo_note": "Illustrated source workflow. Synthetic data; no live application or provider call.",
+      "change": "Merged: a measured compatibility lab.",
+      "change_state": "MERGED SOURCE CHANGE · DEPLOYMENT UNVERIFIED",
+      "pr": {
+        "repo": "orthogonal-router-rust-lab",
+        "number": 1,
+        "url": "https://github.com/aranlucas/orthogonal-router-rust-lab/pull/1",
+        "state": "closed",
+        "draft": false,
+        "merged": true,
+        "merged_at": "2026-10-02T06:06:11Z",
+        "head_sha": "9f7b981f708a61642ab20ab0c1b03eb6255603f7",
+        "merge_commit_sha": "29623e2c155c19372f0e3152cce097c669cac5c1",
+        "title": "Measure a compatible Rust port of the complete orthogonal router"
+      },
+      "limit": "675 synthetic diagrams matched the reference exactly. Sampled checks do not prove all-input equivalence. Production routing is unchanged.",
+      "composition_sha256": "c423e12df7b7169ebb0d9291b4bd5b6cfffa887b8a14c10e51a8b3584c5da112",
+      "video_bytes": 796876,
+      "video_sha256": "bc104ccfe46785345773982344a9898c56e81658b7a69fe98be17f53aff538eb",
+      "rendered_at": "2026-10-02T06:18:30.793Z",
+      "render_seconds": 6.29,
+      "keyframes": [
+        "evidence/render/orthogonal-router-rust-lab-9.png",
+        "evidence/render/orthogonal-router-rust-lab-60.png",
+        "evidence/render/orthogonal-router-rust-lab-108.png"
+      ],
+      "capture_engine": "@hyperframes/engine@0.8.107",
+      "encoder": "mediabunny@1.61.0 / WebCodecs",
       "codec": "VP8 / WebM"
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "original",
+      "captured_at": "2026-10-02T04:25:24.864Z",
+      "names": [
+        ".dotfiles",
+        "agents",
+        "agents-mobile",
+        "ai-shopping-mcp",
+        "better-bracket",
+        "cavity-game",
+        "delivery-dash",
+        "documentation",
+        "elsewhere-by-post",
+        "garmin-friend-finder",
+        "grocery-agent-mobile",
+        "happy-birthday-yani",
+        "holdfast-local",
+        "janella-cookbook",
+        "keyboard-studio",
+        "lanternwake",
+        "leavewell-departure-planner",
+        "leetcode",
+        "live-auction",
+        "lucas-plugins",
+        "lucasarango.space",
+        "machine-learning",
+        "multiplayer-chat",
+        "neetcode-submissions",
+        "obsidian",
+        "onsite-lab",
+        "oral-board-local-lab",
+        "oral-boards",
+        "pantry-pulse",
+        "paper-options-lab",
+        "pediatric-interviewer-esp32",
+        "raleigh-travel",
+        "react-hook-form-mantine",
+        "reminder",
+        "resume",
+        "resume-carlos",
+        "resume-chat",
+        "resume-template",
+        "resume-yani",
+        "rippling-tech-screen",
+        "samsara-java-screen-practice",
+        "second-helping-meal-remixer",
+        "set-and-signal",
+        "shipshape-mcp",
+        "snaphaul",
+        "software-eng",
+        "spoonworld",
+        "spring-todo-api",
+        "symphony",
+        "system-design-chatgpt",
+        "system-design-companion",
+        "trading-mcp",
+        "traillib",
+        "traverse",
+        "trvl",
+        "vienna-travel"
+      ]
+    },
+    {
+      "id": "follow-up-1",
+      "captured_at": "2026-10-02T06:09:45.514287+00:00",
+      "names": [
+        "trailbraid",
+        "framebreak",
+        "pocket-park",
+        "orthogonal-router-rust-lab"
+      ]
     }
   ],
   "inventory_audit": {
     "captured_at": "2026-10-02T05:09:40.159911Z",
     "total_owned_repositories": 61,
-    "included_films": 56,
-    "pending": [
-      {
-        "name": "orthogonal-router-rust-lab",
-        "url": "https://github.com/aranlucas/orthogonal-router-rust-lab",
-        "reason": "Created after the source snapshot; source has not been reviewed for a film."
-      },
-      {
-        "name": "pocket-park",
-        "url": "https://github.com/aranlucas/pocket-park",
-        "reason": "Created after the source snapshot; source has not been reviewed for a film."
-      },
-      {
-        "name": "framebreak",
-        "url": "https://github.com/aranlucas/framebreak",
-        "reason": "Created after the source snapshot; source has not been reviewed for a film."
-      },
-      {
-        "name": "trailbraid",
-        "url": "https://github.com/aranlucas/trailbraid",
-        "reason": "Created after the source snapshot; source has not been reviewed for a film."
-      }
-    ],
+    "included_films": 60,
+    "pending": [],
     "excluded": [
       {
         "name": "repository-reels",
         "reason": "This collection itself; excluded to avoid recursive coverage."
       }
-    ]
+    ],
+    "reconciled_at": "2026-10-02T06:16:41.983712+00:00",
+    "note": "Film coverage reconciled against the original dated inventory; not a fresh account inventory."
   }
 }

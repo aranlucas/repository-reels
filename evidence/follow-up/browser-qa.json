@@ -1,0 +1,86 @@
+{
+  "captured_at": "2026-10-02T06:28:47.931Z",
+  "flows": [
+    {
+      "film": "framebreak",
+      "playback": 12,
+      "scroll_width": 1440,
+      "source_urls": [
+        "https://github.com/aranlucas/framebreak/commit/08e058989867b082c41702a11392f72177ac279a",
+        "https://github.com/aranlucas/framebreak/tree/08e058989867b082c41702a11392f72177ac279a",
+        "https://github.com/aranlucas/framebreak/blob/08e058989867b082c41702a11392f72177ac279a/README.md",
+        "https://github.com/aranlucas/framebreak/blob/08e058989867b082c41702a11392f72177ac279a/package.json",
+        "https://github.com/aranlucas/framebreak/blob/08e058989867b082c41702a11392f72177ac279a/src/media.ts",
+        "https://github.com/aranlucas/framebreak/actions/runs/36971561588",
+        "https://github.com/aranlucas/framebreak/pull/1"
+      ],
+      "state": "Evidence\n\nPinned README + source structure.\n\nInspect sources\nCaptured commit ↗\nPinned tree ↗\nSource evidence ↗\nSource evidence ↗\nSource evidence ↗\nSource evidence ↗\nChange status ↗\nState\n\nmerged source change / deployment unverified.\n\nSynthetic practice video. Silent exports depend on browser codecs; time stepping is not source-frame detection. Deployment unverified.\n\nFollow-up source snapshot: 01/10/2026, 23:09:45 Pacific.",
+      "viewport": {
+        "height": 960,
+        "width": 1440
+      }
+    },
+    {
+      "film": "trailbraid",
+      "playback": 12,
+      "scroll_width": 1440,
+      "source_urls": [
+        "https://github.com/aranlucas/trailbraid/commit/2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+        "https://github.com/aranlucas/trailbraid/tree/2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+        "https://github.com/aranlucas/trailbraid/blob/2ee73f9b82b9ce779fcc60100c3d5b860756259a/README.md",
+        "https://github.com/aranlucas/trailbraid/blob/2ee73f9b82b9ce779fcc60100c3d5b860756259a/package.json",
+        "https://github.com/aranlucas/trailbraid/blob/2ee73f9b82b9ce779fcc60100c3d5b860756259a/src/route.ts",
+        "https://github.com/aranlucas/trailbraid/actions/runs/36971546891",
+        "https://github.com/aranlucas/trailbraid/pull/1"
+      ],
+      "state": "Evidence\n\nPinned README + source structure.\n\nInspect sources\nCaptured commit ↗\nPinned tree ↗\nSource evidence ↗\nSource evidence ↗\nSource evidence ↗\nSource evidence ↗\nChange status ↗\nState\n\nmerged source change / deployment unverified.\n\nSynthetic GPX routes. Raw ascent is unsmoothed; no navigation or hazard assessment. Deployment unverified.\n\nFollow-up source snapshot: 01/10/2026, 23:09:45 Pacific.",
+      "viewport": {
+        "height": 960,
+        "width": 1440
+      }
+    },
+    {
+      "film": "orthogonal-router-rust-lab",
+      "playback": 12,
+      "scroll_width": 1440,
+      "source_urls": [
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/commit/29623e2c155c19372f0e3152cce097c669cac5c1",
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/tree/29623e2c155c19372f0e3152cce097c669cac5c1",
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/blob/29623e2c155c19372f0e3152cce097c669cac5c1/README.md",
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/blob/29623e2c155c19372f0e3152cce097c669cac5c1/docs/results.md",
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/blob/29623e2c155c19372f0e3152cce097c669cac5c1/Cargo.toml",
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/actions/runs/36971957867",
+        "https://github.com/aranlucas/orthogonal-router-rust-lab/pull/1"
+      ],
+      "state": "Evidence\n\nPinned README + source structure.\n\nInspect sources\nCaptured commit ↗\nPinned tree ↗\nSource evidence ↗\nSource evidence ↗\nSource evidence ↗\nSource evidence ↗\nChange status ↗\nState\n\nmerged source change / deployment unverified.\n\n675 synthetic diagrams matched the reference exactly. Sampled checks do not prove all-input equivalence. Production routing is unchanged.\n\nFollow-up source snapshot: 01/10/2026, 23:16:41 Pacific.",
+      "viewport": {
+        "height": 960,
+        "width": 1440
+      }
+    },
+    {
+      "film": "pocket-park",
+      "playback": 12,
+      "scroll_width": 390,
+      "source_urls": [
+        "https://github.com/aranlucas/pocket-park/commit/371252687027e7dc2119f95ffe70725ffabadd56",
+        "https://github.com/aranlucas/pocket-park/tree/371252687027e7dc2119f95ffe70725ffabadd56",
+        "https://github.com/aranlucas/pocket-park/blob/371252687027e7dc2119f95ffe70725ffabadd56/README.md",
+        "https://github.com/aranlucas/pocket-park/blob/371252687027e7dc2119f95ffe70725ffabadd56/package.json",
+        "https://github.com/aranlucas/pocket-park/blob/371252687027e7dc2119f95ffe70725ffabadd56/src/physics.ts",
+        "https://github.com/aranlucas/pocket-park/actions/runs/36971574455",
+        "https://github.com/aranlucas/pocket-park/pull/1"
+      ],
+      "state": "Evidence\n\nPinned README + source structure.\n\nInspect sources\nCaptured commit ↗\nPinned tree ↗\nSource evidence ↗\nSource evidence ↗\nSource evidence ↗\nSource evidence ↗\nChange status ↗\nState\n\nmerged source change / deployment unverified.\n\nFive abstract puck puzzles, not a skating simulation. Progress is local. Deployment unverified.\n\nFollow-up source snapshot: 01/10/2026, 23:09:45 Pacific.",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  ],
+  "console": [],
+  "download": {
+    "name": "framebreak.webm",
+    "hash_matched_manifest": true
+  }
+}

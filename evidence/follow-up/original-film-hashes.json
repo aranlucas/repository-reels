@@ -1,0 +1,341 @@
+{
+  "captured_at": "2026-10-02T04:25:24.864Z",
+  "films": [
+    {
+      "name": ".dotfiles",
+      "source_sha": "2e7079f8d3c087982fea90c645b2fb77d356fe19",
+      "composition_sha256": "cbe805e14ee68fddb926199e1c57a85ce31d862df3e6ec6a00cf0a8878fe42d6",
+      "video_sha256": "dc712705527f7f361ff021626135dc0440863815f49e828a8ee96920b2bc60b0"
+    },
+    {
+      "name": "agents",
+      "source_sha": "3988caa9495c0f129c68ba6158863f9c0f3dd403",
+      "composition_sha256": "a7c8a70d280fe83481669e477defbcdc1d4cf14b66c633a7ca2c7d47484bbf24",
+      "video_sha256": "65d54aedf29cda58ad96d7e16e84ec77c11539209dae42d6ada2f33a1e16d323"
+    },
+    {
+      "name": "agents-mobile",
+      "source_sha": "0592d8fc221254797ed4e67b9ce28c04d7f50b30",
+      "composition_sha256": "29c7287275d5fda64c25367d6e1f6e0590dde06f816b7e196e597916c4c71e86",
+      "video_sha256": "29219453c0318e843774512424447565b0764dc7114686a74e779029217a9fc3"
+    },
+    {
+      "name": "ai-shopping-mcp",
+      "source_sha": "51baddb29fa7b20b13d657809fffdcc7040dc2d9",
+      "composition_sha256": "d3a4469b08b7f483df71d33cabee9d37b6b553fd04cbaffa5901c1034216bfd9",
+      "video_sha256": "618da11b35be4a14be1ecb0a641d8a75b5da76a12287923ce95932b1314ee34d"
+    },
+    {
+      "name": "better-bracket",
+      "source_sha": "4ad5c67cdc32d60ca715009e8761ce02371261a2",
+      "composition_sha256": "40bcaa316ce94eec12e0ff6eee888ced2c8ec76bccf9d3d44d3d96f7385ff835",
+      "video_sha256": "11603f4f9a524a47a59e11feec090938d21c4c09dd449cf716bd7719e7d0ce67"
+    },
+    {
+      "name": "cavity-game",
+      "source_sha": "1686ca7f4341fc96508b10e94906cb5e8a76b642",
+      "composition_sha256": "b13595d54843ddda5287bb05476d8ec64425781c2022f724383efe26a4770992",
+      "video_sha256": "b81be8446b6ae082914cd2bfc234f020c176b671940fcbfba91b6b3688e16f5a"
+    },
+    {
+      "name": "delivery-dash",
+      "source_sha": "8297c4b163a69dc6e3489240746976a0e419bdd3",
+      "composition_sha256": "95c39c00d9d8477de4dee0346deb0ec91d84b888faf7b336b4900785a71f3d1f",
+      "video_sha256": "0a18559f8ec8c4849f6b8922f34c4c167a480fe71ca16b7625c41aaae5466346"
+    },
+    {
+      "name": "documentation",
+      "source_sha": "e72275539b45afb58e58f2f331279bb197fbe801",
+      "composition_sha256": "5a3bf1d8d55151de60c602441f0ee635880ec10cdd7f5359c88734d2e79c7891",
+      "video_sha256": "836b911225e8dc9c411d558de51040071e8fda95b295f51e69d10c5f04c3109a"
+    },
+    {
+      "name": "elsewhere-by-post",
+      "source_sha": "1ce3178449ca80663352022a1df8ef41e009ad76",
+      "composition_sha256": "ee46bc53aa6a795b8431b9f3c79e739b84c4fe166829464ff9f530dce184bc82",
+      "video_sha256": "df29999d3bd7693d107812e80df6acf01355a4b1c9903d28d902219784c8c9c4"
+    },
+    {
+      "name": "garmin-friend-finder",
+      "source_sha": "14dec8548cb5cd453c2daa80c4d1d980382036b2",
+      "composition_sha256": "244e0e696a19142fb50dd69bc19439974b22b2603bde2646fe244849b3b2e1cb",
+      "video_sha256": "053c3b6a248695e92860394d3bf44ef4c3c10a18c65e8f4ff0f268c7aaf03dac"
+    },
+    {
+      "name": "grocery-agent-mobile",
+      "source_sha": "fb99c3ccb4f64bc9aed0753bd219b752cf9f0116",
+      "composition_sha256": "85b455a1c9cdb1f9066bbfbb7e050c394e82d28b568798dc4a0711219a2fc895",
+      "video_sha256": "5ba3d3e2a0539b62002b4ece4fe267cfc0b9b29784bece14c91e2b2aefea6980"
+    },
+    {
+      "name": "happy-birthday-yani",
+      "source_sha": "ccf60f62a71bc7d70ba51bb629f271e7e2501b39",
+      "composition_sha256": "f9aa20f1de954891e86cfba67d9fb364fa4893842c54073eca9a4a4ee4711409",
+      "video_sha256": "d5450f4b04c6a37c0555780c9596b15467ef9c3a4a33b8100ae71fa13f1bfc53"
+    },
+    {
+      "name": "holdfast-local",
+      "source_sha": "cd95ee3958759517f4c05514c7bf8e06f2d86bf7",
+      "composition_sha256": "ef7759716aa18605d51d7afcd76362143836da7009b2a44b57cadd76c7001378",
+      "video_sha256": "4e49629166dea622f485c21b4222467883398b176a9a789baf1600ce9a87a037"
+    },
+    {
+      "name": "janella-cookbook",
+      "source_sha": "d4a1f45e0b6b3ba51d0f0504caa70301a3afb523",
+      "composition_sha256": "6f2ebd670e17c6aa2d169603b198d3898c537e92d6e78e0d7371be0a263b4602",
+      "video_sha256": "a8755f55604cabc0d0acbaac2fe86dcd7577c209790a88c3ffec91e171abf986"
+    },
+    {
+      "name": "keyboard-studio",
+      "source_sha": "46c4b088b33c9516f829eb6bf4ecf72ece594555",
+      "composition_sha256": "56944ca3326d447a90c7f9b4d24eb363de2db88c9b6cd9cd532bd468e27794b5",
+      "video_sha256": "3f2f041ced78261abd56f1857a40e809f484ec88e0c9035b8fe90501979fe303"
+    },
+    {
+      "name": "lanternwake",
+      "source_sha": "d4828e8cad100f2ff6bb10a532d6c1049e3cb7e3",
+      "composition_sha256": "4187baf02314f80082d20a4eac86841b99a82554a631fb68662fbf101ebab8e6",
+      "video_sha256": "aa7dfe23887581c70820a973d5fc094b71808206fde92ec0c7ebbe0385977b12"
+    },
+    {
+      "name": "leavewell-departure-planner",
+      "source_sha": "7ff01fdeb0b2236b3ea8ce0f211e9d07c359d9d3",
+      "composition_sha256": "b4929d0fb05172749fcf2358b901d01e8677b500d7a425bd660213985ded3d09",
+      "video_sha256": "0ea5c070ca2f9b8ea99b546848caac19e7178433b15d471aca3613e124a56b67"
+    },
+    {
+      "name": "leetcode",
+      "source_sha": "35b179644761c84205b37f8451fdc7cb50e487cc",
+      "composition_sha256": "7f85e42c8d025a9082dce20173343bdc57de3633a62154513b54a5111b8796a3",
+      "video_sha256": "438b592ec475cdff117b5c2136d27e6e0d87d46dcfbade06ba49eaa0f16d370c"
+    },
+    {
+      "name": "live-auction",
+      "source_sha": "887bc6a704737a2b4d3cf2e39bd0a3635964e1fd",
+      "composition_sha256": "e81077b1c9d4bb7b199ca4537ddaae91390e43fc7cdd7a08cee9aa130dc2298b",
+      "video_sha256": "09feacd64cbf73ae979ba5663a9467517ceeb91d29450e678066482cb8cb583f"
+    },
+    {
+      "name": "lucas-plugins",
+      "source_sha": "6eff4a13e3f51a04b36597af9fa8863f84ee0086",
+      "composition_sha256": "92c6b140b05f17cc7fe5e66d1c95c595fbd5b78c43f71d400e6719f03d35441c",
+      "video_sha256": "7611ae1652948013183ebc3320834dc400fdd08825837fa4061df9321efb7203"
+    },
+    {
+      "name": "lucasarango.space",
+      "source_sha": "571d263d7409da1b071b7e3f7b2c1fd9e4db0b96",
+      "composition_sha256": "233982d2453186cbc58eadf62d5ac7c1b5545f0b150b805fdc75dc5dec4f3ec7",
+      "video_sha256": "89af06f247f6d4e4fbfbf3810643fd187506e311cb4ee2d9a0ee18e46a2eb83e"
+    },
+    {
+      "name": "machine-learning",
+      "source_sha": "9880c123d4359ae39a6951d52594a15ea5635bdb",
+      "composition_sha256": "a7763a1942666c0bbbd771ceece410a9abef3f90138d8e945d5a899ce478d9ad",
+      "video_sha256": "24483e8c022c98f1ad7b0846a137bfc2e5aaf5c7c0baa115ea3f5e0b86657032"
+    },
+    {
+      "name": "multiplayer-chat",
+      "source_sha": "3ea04c19392a09eb546b037fdd210a7f81776363",
+      "composition_sha256": "cf65b668d53a54e77cf44a75bc04a9e33dbfd81b3b2573313114265823b9841b",
+      "video_sha256": "0e55ffb8a561f7a39067446d47bdec0c5612f7af5eaf8037ccc013108818deef"
+    },
+    {
+      "name": "neetcode-submissions",
+      "source_sha": "a515d83fa08d04f308b3946da393c0e3a222b995",
+      "composition_sha256": "6c15bb99919bd55859e5fbe6e86f9aa986e8be948e01d66f968b59d4f178cd10",
+      "video_sha256": "20199ec8b34967e48121078eac5e4b74b8fef1672db5244e3d6c04676cddf992"
+    },
+    {
+      "name": "obsidian",
+      "source_sha": "9c31e8ef7a3d37a072cb21cb71fe4b3dc97dc010",
+      "composition_sha256": "2a362ac02a35a119d128fb4d7e9c1da2849e09550df24a8f28765583d49aeabb",
+      "video_sha256": "addc1d08dbda83cfe35c175e9f5dfb6442e0d5d27cd8146e5df83a06f6c65eb7"
+    },
+    {
+      "name": "onsite-lab",
+      "source_sha": "d9a03a5384803520f8cd1dfd4c77982fe08dfdaa",
+      "composition_sha256": "eb85c2be9aca3779a4d1b951a212cdf30c5c5d156b68ef8a9da4f4da42265427",
+      "video_sha256": "cbda2adaf2c48a665ed05e592c48d2dcb81575f7928f8367235fcdf541923a00"
+    },
+    {
+      "name": "oral-board-local-lab",
+      "source_sha": "410fa40c77bd98594a1ef7f1fc61a9c1374a193e",
+      "composition_sha256": "ace1ded54c5482c14bfe77fcd2e32785198813315f1cbb4c72afb0a6f794ee25",
+      "video_sha256": "feb8d606168c2af06ad5da5c57f5d52246579c97f08f69fafaa6a8271b9a98ec"
+    },
+    {
+      "name": "oral-boards",
+      "source_sha": "8282f5eab239aa960c0c7debe398f8c7d10fc260",
+      "composition_sha256": "be1825acdd15c8deb5613491c68c3a2d38a991fee504eaffe880b2d02a89a6c6",
+      "video_sha256": "d0e944f84d31cde9058dbb40754efbe01132162de91f95bca6626349bc63cfd1"
+    },
+    {
+      "name": "pantry-pulse",
+      "source_sha": "ebc693291ee6139e59eb3d47aefbb054dc961c4c",
+      "composition_sha256": "ca00decd9acdfbb0546149c487f63a5824ebd31ce7fd0e286c516f88bb97ebc8",
+      "video_sha256": "aeebb28e2143df094b0dc3140db300ae2eaa13b467966171bf855c4c589eaecf"
+    },
+    {
+      "name": "paper-options-lab",
+      "source_sha": "6a3a7758879613f52691e4b195429c3fced49846",
+      "composition_sha256": "e3b1123e1ac0f940c2164735d45029343381b0b5facdf289ff1b154775f424e2",
+      "video_sha256": "e1a355c052c5e69592f1c0f53c11dd6bc456ca02de0755c5474acfa4d1f68e3a"
+    },
+    {
+      "name": "pediatric-interviewer-esp32",
+      "source_sha": "fce2e3abbc2d1096ed05ea671af882a641f54a3d",
+      "composition_sha256": "63e2f13b3c2e0427f9371375d3acdc4f870baa364a97e6be3e8dd91a462a0fee",
+      "video_sha256": "95a5aaec3c5165beff01e778f885c8beff2784422e86ef091b739121e4b132f3"
+    },
+    {
+      "name": "raleigh-travel",
+      "source_sha": "06e13e2942fba620b5abc274f8d2b18dfb7d48a2",
+      "composition_sha256": "5b92bf8441f96956c2a3fbb1d8f9702eb3875e53cd18e8cacba7f9c91245020f",
+      "video_sha256": "78869f6934440ec85da5d3c654ca10c78112ba10e26f56214be6bf0724059e2c"
+    },
+    {
+      "name": "react-hook-form-mantine",
+      "source_sha": "51db6c6c8a4022b8715646fb9cdfb6661917f13d",
+      "composition_sha256": "9a9a0c05b7c3b9174d5720f99f1ea0a0041f810afc58a31894c0c6d0a8feff8a",
+      "video_sha256": "27f87daf4f4c016fbf22296ebfd45712ff309ea77afd825b479fb636e51f836f"
+    },
+    {
+      "name": "reminder",
+      "source_sha": "56243275c24e81d93cdf7e9b3bb4f3a558ed15ba",
+      "composition_sha256": "78619d55573bd79840f11e707d8f6e30bafec36f557f8d1ca30e11ac5a055db0",
+      "video_sha256": "2849bc0efa2fee1cbf0e08f48bf4a15df2b082f86783a5c35ea26b9538b30e2c"
+    },
+    {
+      "name": "resume",
+      "source_sha": "99edaebfc4df913260ae6f55978f47e898e14db3",
+      "composition_sha256": "a7d255d57dd730114f4346be97c084576b0375e84d6e50e8083ecaa66443f2a5",
+      "video_sha256": "7c87233798faebc0e075eb5f5572d8ffb65b261d5a00753a45eeb348482e58e3"
+    },
+    {
+      "name": "resume-carlos",
+      "source_sha": "68b482f69d6c4744518bb9183b33e5817f501fe3",
+      "composition_sha256": "fe4b15dbc1486d3fef3fac989f967ab6998ad8500c5e3206b6b797bdd18d3d8f",
+      "video_sha256": "fe723475edcc35d673fdb069865d30289afc01ee5f641e98c85cd9e5b2033d0c"
+    },
+    {
+      "name": "resume-chat",
+      "source_sha": "536bdf25f8adc252feb0f1ad0baa46090d9e9afc",
+      "composition_sha256": "70509b2d7d1e9f3ec264a4bad75661d72fa81f9e2828cf77f6d3d698a791c42d",
+      "video_sha256": "d35ee19bac1550e3d9ae7524bc5c823d83a3023e38b4167ce319229d9dfcbe16"
+    },
+    {
+      "name": "resume-template",
+      "source_sha": "d8191aa541c18ed4460a63adeaceacd9b5cc5f97",
+      "composition_sha256": "2df1f229db8e0c8133b13bb55a6a451d256534b7120f21dbade13906fe27ea42",
+      "video_sha256": "26195667b88eac7fadaf5dd069423c5ee43bc0c4763b2dec532e239abdb029b3"
+    },
+    {
+      "name": "resume-yani",
+      "source_sha": "69e64e59b04d1631c80838d33d08dd3a50fe4837",
+      "composition_sha256": "a8379ff6436e26e02b0b93e49b4690cb02b20154b5859079a9f1c08c3a271b18",
+      "video_sha256": "c74906aedc5ebd732f72c6a050220a06743dee590ec97ebe2d5ca6037f4fc1a9"
+    },
+    {
+      "name": "rippling-tech-screen",
+      "source_sha": "1f597bb9e43741684e5b0a0da6562c5d50cc17d0",
+      "composition_sha256": "f6abaf4467aa59e023220293ddaee034bb3e9458c04f69db15939f58e38e22fa",
+      "video_sha256": "d87bcc1e7db54a5d4a51b854b644d23c754fa649615a51a9aff0693c5f4e3b59"
+    },
+    {
+      "name": "samsara-java-screen-practice",
+      "source_sha": "d8a867d7b0dba491b38764ec0a7e2d592e779db7",
+      "composition_sha256": "49b293edfe31c7fe71fb6a3e21150540148894c34e172f3a99ef5a42fba633cd",
+      "video_sha256": "1f0eec0d6d759a991981cc94d8f3e234452ddbedb67e751cb3875b0d4e596ad9"
+    },
+    {
+      "name": "second-helping-meal-remixer",
+      "source_sha": "6a242cf5d384a68e3f66ca3b154b1ce3adc88069",
+      "composition_sha256": "2a64d314a040179c974976ab27b26b7ec97968209713271e752fc8370c091d03",
+      "video_sha256": "d44628974bfabd8ce09c781276b4afcb10ad5592dc65007c8664d3341cfa0026"
+    },
+    {
+      "name": "set-and-signal",
+      "source_sha": "a75f7ad6e64a90f6f5beeaac749be8684012826c",
+      "composition_sha256": "529d0af5924341747edbe80da9be2ed61fdf37b589ff1db70ef0306f469139e9",
+      "video_sha256": "aa7ea6818896508c80c64277619cae8211b8f9655e2cd6d5f251f838b28668d7"
+    },
+    {
+      "name": "shipshape-mcp",
+      "source_sha": "44edc86d46cd8190cc1ab81b811a47a31e897237",
+      "composition_sha256": "df3261f35437db9cc55d9e00945b39133d497f47e0fa3c4d1513c4775ab9f37a",
+      "video_sha256": "9b078bb9e875dc3affe9d35b7f75e9daf0d7d7f356d9915aaffafaf055dbb849"
+    },
+    {
+      "name": "snaphaul",
+      "source_sha": "cc7826581a7f72200a3273a0a6613cfcb060975d",
+      "composition_sha256": "137e0af92d7f24293d7a2a25db166cd328d7869c60221007e2869ac0d6424226",
+      "video_sha256": "ccaa642bad3e5fa8928c7f5c760bc09454e0a36ca8117dfa0bda298f429294c4"
+    },
+    {
+      "name": "software-eng",
+      "source_sha": "6e2d420ca78983e6036c5c98ade6c2557a353b27",
+      "composition_sha256": "28a21bceb218444efde4f45c177508ee713b767a6f00f4397e67329e6a8a5406",
+      "video_sha256": "9095f198a75c2c6ce762f55cf6b1c6aa6e2bb5957b8136b2b92a20e757d7d3b2"
+    },
+    {
+      "name": "spoonworld",
+      "source_sha": "1652e07f18d46a0eae1301fd17dc8793f7e8f18c",
+      "composition_sha256": "2ce07dddd3d7a596f08333bd4d344f77124686d73330778c79af28b2479c5950",
+      "video_sha256": "57ffa627e371c188d6b4a3566fd9a85147b3f4bb33994b1b5e04fd15ae07d664"
+    },
+    {
+      "name": "spring-todo-api",
+      "source_sha": "081168fd4b88727c112d4b4996ea071b7be227d4",
+      "composition_sha256": "18e2f93530e0e40d3265ffe5cf6e6a3606b96d4f4078bc9eb936ba219237bf71",
+      "video_sha256": "3cde379c0e93ad5258799b77073e6fec968594e082e95e0e4be0e60561286898"
+    },
+    {
+      "name": "symphony",
+      "source_sha": "d7175380e0f0fee76fc04ae6be5b8c988017fb15",
+      "composition_sha256": "5af03f45636b1f24337af459a842522451908338fed61f6a0a5137adc98c4a0c",
+      "video_sha256": "2488200d36955e95d7862966dfabad438d4aad5404847239cad6b996fb2e8e36"
+    },
+    {
+      "name": "system-design-chatgpt",
+      "source_sha": "ba0825f5eeed07c9bfb2862e3ee40bbe2581c0e3",
+      "composition_sha256": "934ad790c7ad6f105a1950435cc3b49d0426e2aa3368bf47768dd3cb614eb2c4",
+      "video_sha256": "bc8cb96e61a3983a31c333a4ed5629db63b73f835b0abf1638660e605271fb7b"
+    },
+    {
+      "name": "system-design-companion",
+      "source_sha": "97fecae5b779d971791d7548790f79f6b8a9b855",
+      "composition_sha256": "ab1920b6bdb02c985a001c2c1c85884977695b6c54ec96abfeafd82aed88bb8e",
+      "video_sha256": "57778cc9263d1bfd5d355256a613f3076ba40b111e2fb8eda7de5bc6ce3febe4"
+    },
+    {
+      "name": "trading-mcp",
+      "source_sha": "83f26bf86f529d71e5f54ca9b6d4b5cc704497d1",
+      "composition_sha256": "6ea84766fe695d9c0a6283f3427b4314a00aa0a93752f230df397642d07ca4b5",
+      "video_sha256": "a6dc3aaf8d28e434cb807a13baa626060d1bde73cb2d130274b99fa9bcccf858"
+    },
+    {
+      "name": "traillib",
+      "source_sha": "2163d7053ad65d6b7f60dc78560b7b7567125250",
+      "composition_sha256": "249b95a615646cb0ac00af2375cd354e78597faff3f53310894d7001fb105a10",
+      "video_sha256": "bf0d2864f06df877301b4e78563cfc6b062fbb4ae8948d9a04e93180e54310d9"
+    },
+    {
+      "name": "traverse",
+      "source_sha": "498ddb2e6c2a6eb4f491881a4332e1baa1577859",
+      "composition_sha256": "8c8a08c82606b18dae1f9086081e7066c28b126b5341dbb5f4a6851368af8821",
+      "video_sha256": "4c5f822723e4553acb8825a11200023d844f51581ef3a9c3626c697d6232ce18"
+    },
+    {
+      "name": "trvl",
+      "source_sha": "d760de5ffac9788003c6acb3eccd32eb503acb85",
+      "composition_sha256": "b9281f785ce3454571fef0240657eb0b6e05ada2f49642ca3799b839e3a09baf",
+      "video_sha256": "339839300375ad59387ce2e868a6893fe6d2e10195b524947dfae7cd1c9cca5c"
+    },
+    {
+      "name": "vienna-travel",
+      "source_sha": "d1a961a2a52751f3d7fa06c8a2bd7952aac219f9",
+      "composition_sha256": "51ff0c7e82894a29bf3d27b4192e2aa8b129d2466721bc0237b0e76ebe547d3c",
+      "video_sha256": "6214ea3285f8ecdd39180fe89ac71a2000230106f1a826306a06f3bf6213db05"
+    }
+  ]
+}

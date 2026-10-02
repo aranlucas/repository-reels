@@ -1,0 +1,418 @@
+{
+  "captured_at": "2026-10-02T06:16:41.983712+00:00",
+  "name": "orthogonal-router-rust-lab",
+  "sha": "29623e2c155c19372f0e3152cce097c669cac5c1",
+  "private": true,
+  "default_branch": "main",
+  "commit_date": "2026-10-02T06:06:10Z",
+  "commit_message": "Merge measured compatible Rust orthogonal router experiment",
+  "pr": {
+    "number": 1,
+    "html_url": "https://github.com/aranlucas/orthogonal-router-rust-lab/pull/1",
+    "state": "closed",
+    "draft": false,
+    "merged": true,
+    "merged_at": "2026-10-02T06:06:11Z",
+    "merge_commit_sha": "29623e2c155c19372f0e3152cce097c669cac5c1",
+    "title": "Measure a compatible Rust port of the complete orthogonal router"
+  },
+  "head_sha": "9f7b981f708a61642ab20ab0c1b03eb6255603f7",
+  "main_ci": [
+    {
+      "url": "https://github.com/aranlucas/orthogonal-router-rust-lab/actions/runs/36971957867",
+      "head_sha": "29623e2c155c19372f0e3152cce097c669cac5c1",
+      "conclusion": "success"
+    }
+  ],
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94c3a553847187ea40758bc25f3a857fcc649dab",
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/trees/94c3a553847187ea40758bc25f3a857fcc649dab"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e8eaac70d4d5ba01abcaa16e2620c028c0e43970",
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/trees/e8eaac70d4d5ba01abcaa16e2620c028c0e43970"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8680fd5d3ac5a14f26e1f5b554f3b0fe15ee17f9",
+      "size": 1757,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/8680fd5d3ac5a14f26e1f5b554f3b0fe15ee17f9"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f712216a65b7a6d84b0f824c110d44a7e617ca55",
+      "size": 71,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/f712216a65b7a6d84b0f824c110d44a7e617ca55"
+    },
+    {
+      "path": "Cargo.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52bc5a33a645ee439b5bddb1d613b6becac17702",
+      "size": 2678,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/52bc5a33a645ee439b5bddb1d613b6becac17702"
+    },
+    {
+      "path": "Cargo.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c31cb9ebd9d7f307ccfca103ed4c7334859f9460",
+      "size": 398,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/c31cb9ebd9d7f307ccfca103ed4c7334859f9460"
+    },
+    {
+      "path": "Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5e886f35387ba6a278d8bf0b4c15345bcbd13ff",
+      "size": 312,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/b5e886f35387ba6a278d8bf0b4c15345bcbd13ff"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1d4eaafca764c846fb4d790ea6cec395e7dd621",
+      "size": 3732,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/b1d4eaafca764c846fb4d790ea6cec395e7dd621"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1ca2a59931723abe4e543aca65e3d4202a18eea",
+      "size": 2052,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/b1ca2a59931723abe4e543aca65e3d4202a18eea"
+    },
+    {
+      "path": "artifacts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1d68ddcd627b447ea88b01e1ac43efccddc52db6",
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/trees/1d68ddcd627b447ea88b01e1ac43efccddc52db6"
+    },
+    {
+      "path": "artifacts/benchmark-before-reuse-raw.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a91b9321f0ac8aa408a63fdaf5664d10d1e31a0e",
+      "size": 54596,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/a91b9321f0ac8aa408a63fdaf5664d10d1e31a0e"
+    },
+    {
+      "path": "artifacts/benchmark-before-reuse-summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0587ec8d421207806e4c4e79822a1afa136424fb",
+      "size": 9202,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/0587ec8d421207806e4c4e79822a1afa136424fb"
+    },
+    {
+      "path": "artifacts/benchmark-raw.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08d46c22620ed207eb97c5e99a977dacdf5a6b7b",
+      "size": 55219,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/08d46c22620ed207eb97c5e99a977dacdf5a6b7b"
+    },
+    {
+      "path": "artifacts/benchmark-summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "806ebf90c0a5ac42321b5ddd0aad5846ae2dc0d9",
+      "size": 10160,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/806ebf90c0a5ac42321b5ddd0aad5846ae2dc0d9"
+    },
+    {
+      "path": "artifacts/dependencies.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e5d9bd9b9a8818b6ecaae38dde9abffa13ceab7",
+      "size": 2419,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/0e5d9bd9b9a8818b6ecaae38dde9abffa13ceab7"
+    },
+    {
+      "path": "artifacts/differential.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8642c784a59c445a1700f04f4ec699d0e91eac88",
+      "size": 492,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/8642c784a59c445a1700f04f4ec699d0e91eac88"
+    },
+    {
+      "path": "artifacts/linux-ci",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "685e6e0b10ae1b6fdbd0f7fea2e63bb3fe5df36a",
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/trees/685e6e0b10ae1b6fdbd0f7fea2e63bb3fe5df36a"
+    },
+    {
+      "path": "artifacts/linux-ci/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0205c48a28d89a0e97ecb5b891bbc5862dc85b70",
+      "size": 1607,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/0205c48a28d89a0e97ecb5b891bbc5862dc85b70"
+    },
+    {
+      "path": "artifacts/linux-ci/benchmark-evidence-bb63359fcce5bc99ee3e1766fe5e02af0540224f",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed112aaa08eacdac4905f867385758da720603aa",
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/trees/ed112aaa08eacdac4905f867385758da720603aa"
+    },
+    {
+      "path": "artifacts/linux-ci/benchmark-evidence-bb63359fcce5bc99ee3e1766fe5e02af0540224f/benchmark-raw.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a1911f90828e2a004141a6c5532fd8c0332989d",
+      "size": 24148,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/7a1911f90828e2a004141a6c5532fd8c0332989d"
+    },
+    {
+      "path": "artifacts/linux-ci/benchmark-evidence-bb63359fcce5bc99ee3e1766fe5e02af0540224f/benchmark-summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4de4544d4045541ba24a0d5549d1c6f7119dc040",
+      "size": 9903,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/4de4544d4045541ba24a0d5549d1c6f7119dc040"
+    },
+    {
+      "path": "artifacts/linux-ci/benchmark-evidence-bb63359fcce5bc99ee3e1766fe5e02af0540224f/differential.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8642c784a59c445a1700f04f4ec699d0e91eac88",
+      "size": 492,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/8642c784a59c445a1700f04f4ec699d0e91eac88"
+    },
+    {
+      "path": "artifacts/mac-kernel-summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91be2a8e1fd108ff3f9c69756d51af79cd9964ad",
+      "size": 2779,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/91be2a8e1fd108ff3f9c69756d51af79cd9964ad"
+    },
+    {
+      "path": "artifacts/node-dense.cpuprofile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf3e577d18f407ec454cc814c8911d7568d3f435",
+      "size": 164279,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/bf3e577d18f407ec454cc814c8911d7568d3f435"
+    },
+    {
+      "path": "artifacts/profile-summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fec4d8d2cee843ab48b1ea85e8ede6b30992ea96",
+      "size": 2195,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/fec4d8d2cee843ab48b1ea85e8ede6b30992ea96"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a4b91d6dcdaa38d3c8ebb5f5bf32be134c0e200b",
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/trees/a4b91d6dcdaa38d3c8ebb5f5bf32be134c0e200b"
+    },
+    {
+      "path": "docs/candidates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b86fe6e9fd5a0bc82f1704f67c07bcba08e0e501",
+      "size": 2651,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/b86fe6e9fd5a0bc82f1704f67c07bcba08e0e501"
+    },
+    {
+      "path": "docs/contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f277f3c282f74f90a704ea9cbb97d02d2383db1",
+      "size": 4295,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/0f277f3c282f74f90a704ea9cbb97d02d2383db1"
+    },
+    {
+      "path": "docs/migration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa46b2493c3dea6ed031b219fcf51a28dff16503",
+      "size": 2684,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/fa46b2493c3dea6ed031b219fcf51a28dff16503"
+    },
+    {
+      "path": "docs/results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3f1ccda5f558e44e3c895efedcb51e5882b96ea",
+      "size": 7453,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/a3f1ccda5f558e44e3c895efedcb51e5882b96ea"
+    },
+    {
+      "path": "fixtures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ade29aa001eb87a2c70a41fa7f068d12a65f93cd",
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/trees/ade29aa001eb87a2c70a41fa7f068d12a65f93cd"
+    },
+    {
+      "path": "fixtures/compatibility.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb0a5aeebe4e54bbb87eba25cac1462864c61866",
+      "size": 27129,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/bb0a5aeebe4e54bbb87eba25cac1462864c61866"
+    },
+    {
+      "path": "fixtures/original-route-orthogonal.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4f3514e73c5b7fe003ccea4805204ba18c04af2",
+      "size": 23827,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/c4f3514e73c5b7fe003ccea4805204ba18c04af2"
+    },
+    {
+      "path": "fixtures/simple.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a96c87094912cc6b2b24bd5ddb3a04b6251791fd",
+      "size": 206,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/a96c87094912cc6b2b24bd5ddb3a04b6251791fd"
+    },
+    {
+      "path": "fixtures/workloads",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14dd75cc93d15d0a18d956dfac6f1775595609d2",
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/trees/14dd75cc93d15d0a18d956dfac6f1775595609d2"
+    },
+    {
+      "path": "fixtures/workloads/degenerate.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07e4c17f77e78e10ad3b4d0bda8515a583bff425",
+      "size": 565,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/07e4c17f77e78e10ad3b4d0bda8515a583bff425"
+    },
+    {
+      "path": "fixtures/workloads/dense.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b4c5ae9164f0c7d404f7393ee383aac9d88725f",
+      "size": 8340,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/3b4c5ae9164f0c7d404f7393ee383aac9d88725f"
+    },
+    {
+      "path": "fixtures/workloads/medium.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6eb88e2e81108e0a22bc40ce42a19975b948d468",
+      "size": 4936,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/6eb88e2e81108e0a22bc40ce42a19975b948d468"
+    },
+    {
+      "path": "fixtures/workloads/small.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "182edbe4f9388a93eaaa313c6ae9b7e0747b180b",
+      "size": 1897,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/182edbe4f9388a93eaaa313c6ae9b7e0747b180b"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d9a16ea2145a62d3c7c975543a0ec80274223d27",
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/trees/d9a16ea2145a62d3c7c975543a0ec80274223d27"
+    },
+    {
+      "path": "scripts/baseline.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a04dcdfa3ffcda9196cb3eba48833de858fdb64e",
+      "size": 966,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/a04dcdfa3ffcda9196cb3eba48833de858fdb64e"
+    },
+    {
+      "path": "scripts/benchmark.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e19d91ae57535ae84a6bb58e91951f136d82c9bf",
+      "size": 6570,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/e19d91ae57535ae84a6bb58e91951f136d82c9bf"
+    },
+    {
+      "path": "scripts/differential.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fad43cc79793d89adc84c74e5ab64fe1066051bc",
+      "size": 5898,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/fad43cc79793d89adc84c74e5ab64fe1066051bc"
+    },
+    {
+      "path": "scripts/profile.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36864c62f1541547f253d24c94cfd2eee984539b",
+      "size": 1535,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/36864c62f1541547f253d24c94cfd2eee984539b"
+    },
+    {
+      "path": "scripts/workloads.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6e2b8138c7442ba0a9830aa999cbf30870d9eb7",
+      "size": 2801,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/c6e2b8138c7442ba0a9830aa999cbf30870d9eb7"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e256f85e3c1c26d595795d9e2bc26d6f9260910",
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/trees/4e256f85e3c1c26d595795d9e2bc26d6f9260910"
+    },
+    {
+      "path": "src/lib.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3130a608e014ad193e6f1073d8ac36fdd11c6349",
+      "size": 29634,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/3130a608e014ad193e6f1073d8ac36fdd11c6349"
+    },
+    {
+      "path": "src/main.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a25dec9482fd15518b1dc98a05fafaf984f91eb",
+      "size": 3982,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/9a25dec9482fd15518b1dc98a05fafaf984f91eb"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b63cf429e002b856d9bc73772f87205b105cd385",
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/trees/b63cf429e002b856d9bc73772f87205b105cd385"
+    },
+    {
+      "path": "tests/contract.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bf1069043d13d4812a620e6d651afedd6b34693",
+      "size": 571,
+      "url": "https://api.github.com/repos/aranlucas/orthogonal-router-rust-lab/git/blobs/0bf1069043d13d4812a620e6d651afedd6b34693"
+    }
+  ]
+}
