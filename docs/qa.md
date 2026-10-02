@@ -25,6 +25,8 @@ In-app Chromium, desktop 1440×960 and mobile layout 390×844:
 - Captured browser warning/error log was empty.
 - Poster CSS in upstream player 0.8.107 omitted image width/height. Mobile QA exposed cropping; app-owned shadow styling now gives the poster 100% width/height. Corrected desktop/mobile screenshots are saved.
 - Temporary viewport override reset after testing. Existing source project tabs and files were not changed.
+- Local serving checks passed for byte-range video responses, encoded path traversal rejection and missing-file responses.
+- Portable ZIP CRC and manifest checks passed. The three smaller Library collection ZIPs reconstruct the exact same assets and all 56 films. Three previews and all three collection ZIPs have confirmed native Library identities, preserved on their original local files.
 
 Screenshots are actual browser output, not generated design imagery: `evidence/browser/desktop.jpg` and `mobile.jpg`. `docs/design-concept.png` is explicitly a generated concept.
 

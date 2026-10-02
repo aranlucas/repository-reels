@@ -6,7 +6,13 @@ Private screening room for 56 source-pinned repository films, rendered locally w
 
 ## Open the collection
 
-The portable ZIP in Lucas's Library includes a built screening room and all films. Unzip it, enter its directory, and run `node scripts/serve.mjs` with Node 22.12 or newer. Open **http://127.0.0.1:4313**. No package installation is needed for that bundle. Stop with Ctrl-C. If another instance owns port 4313, use that instance or stop it before starting another.
+The portable collection in Lucas's Library includes a built screening room and all films. Extract these three ZIPs into the same parent directory; all share one `repository-reels/` folder:
+
+- `repository-reels--collection-app.zip`
+- `repository-reels--collection-films-A.zip`
+- `repository-reels--collection-films-B.zip`
+
+Enter that folder and run `node scripts/serve.mjs` with Node 22.12 or newer. Open **http://127.0.0.1:4313**. No package installation is needed for that bundle. Stop with Ctrl-C. If another instance owns port 4313, use that instance or stop it before starting another. A single complete ZIP is also available in the local `artifacts/` directory. Three separate Library preview films showcase the forms library, Shipshape and Lanternwake.
 
 From this private repository's implementation branch:
 
