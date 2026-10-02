@@ -1,0 +1,125 @@
+{
+  "captured_at": "2026-10-02T04:26:16.775Z",
+  "prs": [
+    {
+      "repo": "agents",
+      "number": 298,
+      "url": "https://github.com/aranlucas/agents/pull/298",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "merged_at": "2026-10-02T02:58:57Z",
+      "head_sha": "16f202fbe0ccca3082c531777f957f301058aa60",
+      "merge_commit_sha": "3988caa9495c0f129c68ba6158863f9c0f3dd403",
+      "title": "Fix active-run ownership and atomic saved-list edits"
+    },
+    {
+      "repo": "agents-mobile",
+      "number": 32,
+      "url": "https://github.com/aranlucas/agents-mobile/pull/32",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "merged_at": null,
+      "head_sha": "a2f9a557cace2dcd957cbd768a9061de7d0610bc",
+      "merge_commit_sha": "b2b0fac7337c84570af06fe6d57fbe87f626cf1e",
+      "title": "Fix resumable Health Connect sync and visible chat failures"
+    },
+    {
+      "repo": "ai-shopping-mcp",
+      "number": 152,
+      "url": "https://github.com/aranlucas/ai-shopping-mcp/pull/152",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "merged_at": "2026-10-02T03:56:37Z",
+      "head_sha": "5da312949bf057b36411b80c63cc47b5f450bb1a",
+      "merge_commit_sha": "51baddb29fa7b20b13d657809fffdcc7040dc2d9",
+      "title": "Bound catalog requests and shopping-list enrichment"
+    },
+    {
+      "repo": "garmin-friend-finder",
+      "number": 24,
+      "url": "https://github.com/aranlucas/garmin-friend-finder/pull/24",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "merged_at": null,
+      "head_sha": "b85438c3e24d255c863069072035397c2d333a3f",
+      "merge_commit_sha": "a7fcf6944c59be4efe3579ee88f155ab0309a622",
+      "title": "Authenticate location ownership (device migration required)"
+    },
+    {
+      "repo": "onsite-lab",
+      "number": 29,
+      "url": "https://github.com/aranlucas/onsite-lab/pull/29",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "merged_at": null,
+      "head_sha": "47062362f63e1ea01917c2788a984caef22e59a7",
+      "merge_commit_sha": "92a7fa80c3737c8dbb243a0d4a4ccd81bdd69bd5",
+      "title": "fix: preserve autosaves across navigation and serialize Written completion"
+    },
+    {
+      "repo": "pantry-pulse",
+      "number": 25,
+      "url": "https://github.com/aranlucas/pantry-pulse/pull/25",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "merged_at": "2026-10-02T03:26:04Z",
+      "head_sha": "b1e5dd8693e3487922fbbda538f07129be85f9c1",
+      "merge_commit_sha": "ebc693291ee6139e59eb3d47aefbb054dc961c4c",
+      "title": "fix: preserve concurrent stock changes when linking items"
+    },
+    {
+      "repo": "set-and-signal",
+      "number": 50,
+      "url": "https://github.com/aranlucas/set-and-signal/pull/50",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "merged_at": null,
+      "head_sha": "16e4e925bcecadf6e166eaa03c9ce6d62ca9f7d1",
+      "merge_commit_sha": "2c9b92e631a3e74a91f161484a849e52ca8b096b",
+      "title": "fix: preserve training sync queue on storage failures"
+    },
+    {
+      "repo": "trading-mcp",
+      "number": 28,
+      "url": "https://github.com/aranlucas/trading-mcp/pull/28",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "merged_at": null,
+      "head_sha": "09b55dba23f0f0e5129ca29bf5a215864ea9a727",
+      "merge_commit_sha": "8acd2ebd06d936ea426b37fd97bd6883986332d9",
+      "title": "fix: guard technical analysis against unavailable history"
+    },
+    {
+      "repo": "traverse",
+      "number": 12,
+      "url": "https://github.com/aranlucas/traverse/pull/12",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "merged_at": null,
+      "head_sha": "15c700fbf8254254e86bb7e987fb1ac7530a8543",
+      "merge_commit_sha": "938d2fdf6d3d3edff53a4ec3e851ad2a119d35f1",
+      "title": "Fix ingestion job races and retry-safe report publication"
+    },
+    {
+      "repo": "delivery-dash",
+      "number": 47,
+      "url": "https://github.com/aranlucas/delivery-dash/pull/47",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "merged_at": "2026-10-02T03:04:35Z",
+      "head_sha": "d59e1c9768373fa58fbb0f4f616c255e4d09f873",
+      "merge_commit_sha": "8297c4b163a69dc6e3489240746976a0e419bdd3",
+      "title": "Preserve Worker secrets with the current Cloudflare CLI"
+    }
+  ]
+}

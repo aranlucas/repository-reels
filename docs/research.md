@@ -1,0 +1,31 @@
+# Why these libraries, and what the capture means
+
+Captured during October 1, 2026 Pacific evening (October 2 UTC). Fresh primary GitHub daily, weekly and weekly JavaScript Trending HTML was fetched directly. Trending is a discovery signal, not a quality score; stars were not used to rank usefulness.
+
+| Rank | Library and evidence | Fit, maintenance and limits |
+| --- | --- | --- |
+| 1 | [HyperFrames](https://github.com/heygen-com/hyperframes), [v0.8.107](https://github.com/heygen-com/hyperframes/releases/tag/v0.8.107), [engine](https://github.com/heygen-com/hyperframes/blob/main/packages/engine/README.md), [player](https://github.com/heygen-com/hyperframes/blob/main/packages/player/README.md) | Present on the fresh daily page. A small deterministic HTML film is a useful, distinct experience. Official package/source/contract were inspected; 0.8.107 is pinned. The installed engine types/source were more precise than examples in its README. |
+| 2 | [Three.js](https://github.com/mrdoob/three.js), [r186](https://github.com/mrdoob/three.js/releases/tag/r186) | Present on the fresh weekly JavaScript page; maintained release dated September 24. Good for playful worlds and physical interactions. Not selected because multiple new game tasks were already assigned. |
+| 3 | [Univer](https://github.com/dream-num/univer), [releases](https://github.com/dream-num/univer/releases) | Present on the fresh weekly page; v1.0.3 dated September 29. Useful embedded document/spreadsheet experiences. Apache-2.0 core; Pro features have separate scope/licensing. |
+| 4 | [MarkItDown](https://github.com/microsoft/markitdown), [v0.1.8](https://github.com/microsoft/markitdown/releases/tag/v0.1.8) | Practical local document conversion; maintained September 21 release. It was a parent-provided earlier weekly example, not a member of this freshly captured weekly list. |
+| 5 | [VoiceStudio](https://github.com/debpalash/VoiceStudio), [releases](https://github.com/debpalash/VoiceStudio/releases) | Present on the fresh weekly page; v0.5.6 dated September 23. A heavier local model/runtime footprint made it a poor choice for the shared Mac tonight. |
+
+Sources: [daily Trending](https://github.com/trending), [weekly Trending](https://github.com/trending?since=weekly), [weekly JavaScript Trending](https://github.com/trending/javascript?since=weekly). Parent-provided gods-eye-view and MarkItDown examples came from an older capture and were not represented as current weekly results.
+
+The chosen idea became a private screening room: short source-backed films about all 47 original owned repositories plus nine new prototypes. The earlier Linepress skating-film draft was stopped when the parent explicitly changed this task to repository films. Existing Lanternwake, postcard, ingredient ecology, receipt, departure and meal projects were not recreated.
+
+## Deliberate encoder choice
+
+The actual HyperFrames engine loads each composition, seeks its `window.__hf = {duration, seek}` contract, and captures 144 PNG frames. Its PNG mode deliberately clears root backgrounds for alpha composition. Opaque scene backgrounds are therefore explicit and covered by a regression check.
+
+The existing Playwright FFmpeg had a PNG encoder but no PNG decoder. No full FFmpeg was on PATH or installed as a Homebrew formula. Rather than download a large media runtime, [MediaBunny](https://github.com/Vanilagy/mediabunny) [1.61.0](https://github.com/Vanilagy/mediabunny/releases/tag/v1.61.0) was reviewed and pinned. It feeds the captured PNGs through a local canvas, WebCodecs VP8 encoding and WebM muxing with explicit timestamps. [The official media-source contract](https://mediabunny.dev/guide/media-sources) governs backpressure. One browser process serves both capture and encoding pages; no external encoder service or AI provider is used.
+
+MediaBunny was a subsequent engineering choice, not a claim about this Trending capture. Its package is MPL-2.0 and has two type-only dependencies. Installed library files are unmodified. HyperFrames' repository has an Apache-2.0 license; the player's README footer has a conflicting MIT label. Consult the actual upstream license for reuse. Third-party packages come from the official npm registry, pinned by package-lock integrity, with lifecycle scripts disabled. The installation audit reported zero vulnerabilities. That audit is a snapshot, not a complete security assessment.
+
+## Evidence and truthfulness
+
+The manifest pins every source SHA and source citation. Default-branch bootstrap-only prototypes use inspected same-repository PR heads; their PR state is labeled. A merged PR does not establish deployment. Garmin's missing account/device migration remains explicitly release blocked.
+
+Films describe source-backed workflows. Three game films use inspected, pinned screenshots already present in those source repositories and explicitly label them as source screenshots. They do not claim to run or verify those games. Other workflow scenes are illustrations. Sensitive repositories use purpose and metadata/structure only; there are no resumes, corpus documents, medical details, account data, credentials, real financial values, private photos or precise location records in the films.
+
+No repository instructions were executed. No unrelated application was deployed, changed, or recreated. Source capture and PR states are historical snapshots; run the explicit refresh workflow to obtain a later snapshot.

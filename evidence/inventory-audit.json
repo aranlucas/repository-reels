@@ -1,0 +1,33 @@
+{
+  "captured_at": "2026-10-02T05:09:40.159911Z",
+  "total_owned_repositories": 61,
+  "included_films": 56,
+  "pending": [
+    {
+      "name": "orthogonal-router-rust-lab",
+      "url": "https://github.com/aranlucas/orthogonal-router-rust-lab",
+      "reason": "Created after the source snapshot; source has not been reviewed for a film."
+    },
+    {
+      "name": "pocket-park",
+      "url": "https://github.com/aranlucas/pocket-park",
+      "reason": "Created after the source snapshot; source has not been reviewed for a film."
+    },
+    {
+      "name": "framebreak",
+      "url": "https://github.com/aranlucas/framebreak",
+      "reason": "Created after the source snapshot; source has not been reviewed for a film."
+    },
+    {
+      "name": "trailbraid",
+      "url": "https://github.com/aranlucas/trailbraid",
+      "reason": "Created after the source snapshot; source has not been reviewed for a film."
+    }
+  ],
+  "excluded": [
+    {
+      "name": "repository-reels",
+      "reason": "This collection itself; excluded to avoid recursive coverage."
+    }
+  ]
+}
