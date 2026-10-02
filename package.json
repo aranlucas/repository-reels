@@ -1,0 +1,31 @@
+{
+  "name": "repository-reels",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4313 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4313 --strictPort",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm test && npm run build",
+    "render": "node scripts/render.mjs",
+    "compose": "node scripts/compose.mjs",
+    "verify": "node scripts/verify.mjs",
+    "serve": "node scripts/serve.mjs",
+    "decode": "node scripts/decode.mjs"
+  },
+  "dependencies": {
+    "@hyperframes/engine": "0.8.107",
+    "@hyperframes/player": "0.8.107",
+    "mediabunny": "1.61.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.2"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}
