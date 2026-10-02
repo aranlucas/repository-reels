@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-10-02T05:14:09.054Z",
+  "verified_at": "2026-10-02T06:21:02.156Z",
   "complete": true,
   "library": "mediabunny@1.61.0",
   "clips": [
@@ -667,6 +667,54 @@
       "name": "vienna-travel",
       "source_sha": "d1a961a2a52751f3d7fa06c8a2bd7952aac219f9",
       "video_sha256": "6214ea3285f8ecdd39180fe89ac71a2000230106f1a826306a06f3bf6213db05",
+      "width": 960,
+      "height": 540,
+      "codec": "vp8",
+      "duration": 12,
+      "frames": 144,
+      "keyframes": 12,
+      "status": "passed"
+    },
+    {
+      "name": "trailbraid",
+      "source_sha": "2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+      "video_sha256": "483e1869d60b93ca57e102915090ea5a402ec31215bde93326c6cba57e744fc7",
+      "width": 960,
+      "height": 540,
+      "codec": "vp8",
+      "duration": 12,
+      "frames": 144,
+      "keyframes": 12,
+      "status": "passed"
+    },
+    {
+      "name": "framebreak",
+      "source_sha": "08e058989867b082c41702a11392f72177ac279a",
+      "video_sha256": "bf19c8809165eba7c3da6f3477ab358883d80bf354482d45d2bafef442c1f000",
+      "width": 960,
+      "height": 540,
+      "codec": "vp8",
+      "duration": 12,
+      "frames": 144,
+      "keyframes": 12,
+      "status": "passed"
+    },
+    {
+      "name": "pocket-park",
+      "source_sha": "371252687027e7dc2119f95ffe70725ffabadd56",
+      "video_sha256": "19fd839521ce677ea2e9134502ec6c0a6e272cae9f298baa91eeebe782158654",
+      "width": 960,
+      "height": 540,
+      "codec": "vp8",
+      "duration": 12,
+      "frames": 144,
+      "keyframes": 12,
+      "status": "passed"
+    },
+    {
+      "name": "orthogonal-router-rust-lab",
+      "source_sha": "29623e2c155c19372f0e3152cce097c669cac5c1",
+      "video_sha256": "bc104ccfe46785345773982344a9898c56e81658b7a69fe98be17f53aff538eb",
       "width": 960,
       "height": 540,
       "codec": "vp8",

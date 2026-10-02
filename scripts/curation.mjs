@@ -1,6 +1,10 @@
 // Reviewed product descriptions only. No repository text is inserted into scripts.
 // Each tuple: purpose headline, source-backed description, illustrated workflow, genre.
 export const curation = {
+  'orthogonal-router-rust-lab': ['Same routes. New kernel.', 'A Rust diagram-router port measured against its unchanged TypeScript reference.', ['Replay a diagram', 'Compare exact paths', 'Inspect measurements'], 'library'],
+  trailbraid: ['Two routes. One shared view.', 'Compare GPX geometry and elevation windows with Turf 7.4.0, entirely in the browser.', ['Compare two routes', 'Move the distance window', 'Export route notes'], 'outdoors'],
+  framebreak: ['Find takeoff. Loop the landing.', 'MediaBunny 1.61.0 powers local practice-video inspection and silent clip exports.', ['Open a local video', 'Mark a practice attempt', 'Export a silent clip'], 'app'],
+  'pocket-park': ['One push. Three little rings.', 'Five small momentum puzzles use Planck 1.5.0 for collisions and 120 Hz physics.', ['Adjust the push', 'Collect three rings', 'Find a soft landing'], 'game'],
   'elsewhere-by-post': ['Turn a place. Swap the world.', 'Six postcard puzzles with quarter-turn roads, stamps and compass-sensitive echo doors.', ['Turn a postcard', 'Align an echo', 'Send the courier'], 'game'],
   'holdfast-local': ['Keep the proof.', 'A local receipt cabinet with recorded return/warranty timelines and proof-packet exports.', ['Import a receipt', 'Verify the policy', 'Export the proof'], 'app'],
   lanternwake: ['Borrow help from yourself.', 'A quiet four-room puzzle where rewinding leaves echoes of your earlier walks.', ['Walk to a pad', 'Leave an echo', 'Reach the bell'], 'game'],
@@ -59,6 +63,10 @@ export const curation = {
   'vienna-travel': ['Coffee. Lakes. Alpine trails.', 'A ten-day Austrian travel guide with maps, timeline and packing interfaces.', ['Explore the route', 'Open a day', 'Review the pack'], 'outdoors'],
 };
 export const changes = {
+ 'orthogonal-router-rust-lab':'Merged: a measured compatibility lab.',
+ trailbraid:'Merged: a local GPX comparison atlas.',
+ framebreak:'Merged: a private practice-video workbench.',
+ 'pocket-park':'Merged: five small physics parks.',
  agents:'Active-run ownership and atomic saved-list edits.',
  'agents-mobile':'Resumable sync and visible submission failures.',
  'ai-shopping-mcp':'Bounded catalog requests and list enrichment.',

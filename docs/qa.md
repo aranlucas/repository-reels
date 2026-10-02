@@ -31,3 +31,18 @@ In-app Chromium, desktop 1440×960 and mobile layout 390×844:
 Screenshots are actual browser output, not generated design imagery: `evidence/browser/desktop.jpg` and `mobile.jpg`. `docs/design-concept.png` is explicitly a generated concept.
 
 Limitations: no Safari/Firefox or physical-device QA; no source application runtime, authenticated-device workflow, live provider or deployment verification. Small film annotations are best viewed on desktop/landscape. Source and PR states are frozen snapshots; newer repositories are pending, not silently called complete.
+
+## Four-film follow-up
+
+Four later source pins were verified independently as private merged main commits with exact-main CI success. The original 56 clip records (apart from explicit original capture labels), composition bytes and video bytes remained unchanged. Original source review, PR-state capture and dated inventory audit were retained.
+
+- All 60 films passed rendering, full decode and container/hash/timing verification: 8,640 actual frames, including 576 new frames.
+- Eleven tests passed, including preservation, separately dated sources, inventory reconciliation and local screenshot provenance; production build passed.
+- Three supplied synthetic local source screenshots were inspected and associated with clean source checkouts matching their exact merged SHAs. They are not committed screenshot files in those upstream repositories. This task did not rerun the source applications.
+- Actual desktop 1440×960 completed all 12 seconds for Framebreak, Trailbraid and the Rust lab. Actual mobile layout 390×844 completed Pocket Park. Each source selection updated the URL, SHA, follow-up timestamp, disclosure and source/CI links correctly.
+- Document width equaled viewport width in all four flows. Browser warning/error log was empty.
+- Browser-downloaded Framebreak SHA-256 matched the manifest; no user video was used.
+- Desktop/mobile screenshots and structured flow data are saved in `evidence/browser/follow-up-*.jpg` and `evidence/follow-up/browser-qa.json`. The temporary viewport was reset.
+- The four-film portable supplement updates the screening room when extracted over the three original Library collection ZIPs. It does not replace the original film bytes.
+
+The Rust film describes the pinned native compatibility experiment and its 675-diagram sampled result. Production routing remains unchanged. It makes no Worker, WASM, deployed-speedup or all-input equivalence claim. Coverage resolves the four pending names in the historical 61-repository audit; it is not a new account inventory.

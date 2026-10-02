@@ -1,0 +1,41 @@
+{
+  "captured_at": "2026-10-02T06:09:45.514287+00:00",
+  "stills": [
+    {
+      "name": "trailbraid",
+      "path": "public/source-stills/trailbraid.png",
+      "source_sha": "2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+      "sha256": "5b5b5ecaa7aee1571a1ff00d4e4c8e31354f603d343ded08699dcbabdd621b9b",
+      "bytes": 193613,
+      "url": "https://github.com/aranlucas/trailbraid/commit/2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+      "fit": "contain",
+      "kind": "Local source screenshot associated with the verified clean source checkout. Screenshot is not committed upstream; synthetic data only. Not a new runtime capture by Repository Reels.",
+      "origin": "task-15/output/playwright/trailbraid-desktop.png",
+      "source_checkout_verified_at": "2026-10-02T06:12:59.326124+00:00"
+    },
+    {
+      "name": "framebreak",
+      "path": "public/source-stills/framebreak.png",
+      "source_sha": "08e058989867b082c41702a11392f72177ac279a",
+      "sha256": "eca051f8be9fefefa5c27a09af269d03edceb37b15e279be48b74b007d413e6f",
+      "bytes": 168045,
+      "url": "https://github.com/aranlucas/framebreak/commit/08e058989867b082c41702a11392f72177ac279a",
+      "fit": "contain",
+      "kind": "Local source screenshot associated with the verified clean source checkout. Screenshot is not committed upstream; synthetic data only. Not a new runtime capture by Repository Reels.",
+      "origin": "task-15/output/playwright/framebreak-desktop.png",
+      "source_checkout_verified_at": "2026-10-02T06:12:59.368305+00:00"
+    },
+    {
+      "name": "pocket-park",
+      "path": "public/source-stills/pocket-park.png",
+      "source_sha": "371252687027e7dc2119f95ffe70725ffabadd56",
+      "sha256": "27506e4bc83dffdd6a873d604f01c56706d65ffd04ff8fd48375de16cb355dfb",
+      "bytes": 123400,
+      "url": "https://github.com/aranlucas/pocket-park/commit/371252687027e7dc2119f95ffe70725ffabadd56",
+      "fit": "contain",
+      "kind": "Local source screenshot associated with the verified clean source checkout. Screenshot is not committed upstream; synthetic data only. Not a new runtime capture by Repository Reels.",
+      "origin": "task-15/output/playwright/pocket-park-desktop.png",
+      "source_checkout_verified_at": "2026-10-02T06:12:59.412015+00:00"
+    }
+  ]
+}

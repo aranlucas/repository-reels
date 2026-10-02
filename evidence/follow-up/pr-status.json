@@ -1,0 +1,53 @@
+{
+  "captured_at": "2026-10-02T06:09:45.514287+00:00",
+  "prs": [
+    {
+      "repo": "trailbraid",
+      "number": 1,
+      "url": "https://github.com/aranlucas/trailbraid/pull/1",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "merged_at": "2026-10-02T06:01:02Z",
+      "head_sha": "c941024af297bb6777abb717c14ad70165f48934",
+      "merge_commit_sha": "2ee73f9b82b9ce779fcc60100c3d5b860756259a",
+      "title": "Build Trailbraid: local GPX comparison and elevation exploration"
+    },
+    {
+      "repo": "framebreak",
+      "number": 1,
+      "url": "https://github.com/aranlucas/framebreak/pull/1",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "merged_at": "2026-10-02T06:01:13Z",
+      "head_sha": "9c219b537ea94897d1128ddc4d1a876dd5987c14",
+      "merge_commit_sha": "08e058989867b082c41702a11392f72177ac279a",
+      "title": "Build Framebreak: private practice loops and silent video clips"
+    },
+    {
+      "repo": "pocket-park",
+      "number": 1,
+      "url": "https://github.com/aranlucas/pocket-park/pull/1",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "merged_at": "2026-10-02T06:01:23Z",
+      "head_sha": "6ea65504447b91dc30e5e519e44eaa3e2d0a535c",
+      "merge_commit_sha": "371252687027e7dc2119f95ffe70725ffabadd56",
+      "title": "Build Pocket Park: five local physics momentum puzzles"
+    },
+    {
+      "repo": "orthogonal-router-rust-lab",
+      "number": 1,
+      "url": "https://github.com/aranlucas/orthogonal-router-rust-lab/pull/1",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "merged_at": "2026-10-02T06:06:11Z",
+      "head_sha": "9f7b981f708a61642ab20ab0c1b03eb6255603f7",
+      "merge_commit_sha": "29623e2c155c19372f0e3152cce097c669cac5c1",
+      "title": "Measure a compatible Rust port of the complete orthogonal router"
+    }
+  ]
+}
