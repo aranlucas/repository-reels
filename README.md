@@ -4,6 +4,20 @@ Private screening room for 56 source-pinned repository films, rendered locally w
 
 ![Desktop screening room](evidence/browser/desktop.jpg)
 
+## Technology stack
+
+| Component | Version or requirement | Role |
+| --- | --- | --- |
+| React + React DOM | 19.3.0 | Screening-room interface, collection search and film selection. |
+| Vite | 8.3.2 | Development server and production browser build. |
+| HyperFrames engine + player | 0.8.107 | Deterministic HTML-to-frame rendering and embedded film playback. |
+| MediaBunny | 1.61.0 | Local WebCodecs VP8 encoding, WebM muxing and media verification. |
+| Node.js | 22.12 or newer | Local scripts and the built-in HTTP server, including video byte-range responses. |
+
+The screening room runs locally at **http://127.0.0.1:4313**. It does not use Vercel hosting or the Vercel AI SDK, and it does not depend on TanStack Start or TanStack Router. Exact package versions are recorded in [package.json](package.json) and [package-lock.json](package-lock.json).
+
+These stack details describe Repository Reels. The individual projects featured in the films have their own stacks; rendering a film does not change their frameworks or deployment setup.
+
 ## Open the collection
 
 The portable collection in Lucas's Library includes a built screening room and all films. Extract these three ZIPs into the same parent directory; all share one `repository-reels/` folder:
@@ -22,7 +36,7 @@ npm run build
 npm run serve
 ```
 
-The films, posters, source stills, generated compositions and verification evidence are committed deliberately so a fresh clone works. `dist/` and the portable ZIP are build artifacts. The honest bootstrap remains on the original `main` commit; implementation is delivered through its reviewable PR.
+The films, posters, source stills, generated compositions and verification evidence are committed deliberately so a fresh clone works. `dist/` and the portable ZIP are build artifacts. Repository history begins with an honest bootstrap; implementation is delivered through its reviewable PR.
 
 ## Exact coverage
 
