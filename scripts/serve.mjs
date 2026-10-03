@@ -1,5 +1,82 @@
-import { createServer } from 'node:http';
-import { readFile,stat } from 'node:fs/promises';
-import { resolve,extname,sep } from 'node:path';
-const root=resolve('dist'),mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.webm':'video/webm','.json':'application/json','.png':'image/png','.svg':'image/svg+xml'};
-const server=createServer(async(req,res)=>{try{const url=new URL(req.url,'http://127.0.0.1'),file=resolve(root,'.'+decodeURIComponent(url.pathname==='/'?'/index.html':url.pathname));if(!file.startsWith(root+sep)){res.writeHead(403);res.end();return;}const size=(await stat(file)).size,data=await readFile(file);res.setHeader('Content-Type',mime[extname(file)]||'application/octet-stream');res.setHeader('Cache-Control','no-store');if(req.headers.range){const match=/^bytes=(\d+)-(\d*)$/.exec(req.headers.range);if(!match){res.writeHead(416);res.end();return;}const start=Number(match[1]),end=match[2]?Math.min(Number(match[2]),size-1):size-1;if(start>=size||end<start){res.writeHead(416);res.end();return;}res.writeHead(206,{'Content-Range':`bytes ${start}-${end}/${size}`,'Accept-Ranges':'bytes','Content-Length':end-start+1});res.end(data.subarray(start,end+1));}else{res.setHeader('Content-Length',size);res.setHeader('Accept-Ranges','bytes');res.end(data);}}catch{res.writeHead(404);res.end('Not found');}});server.listen(4313,'127.0.0.1',()=>console.log('Private screening room: http://127.0.0.1:4313'));
+import { createServer } from "node:http";
+import { readFile, stat } from "node:fs/promises";
+import { resolve, extname, sep } from "node:path";
+
+const root = resolve("dist"),
+  mime = {
+    ".html": "text/html",
+    ".js": "text/javascript",
+    ".css": "text/css",
+    ".webm": "video/webm",
+    ".json": "application/json",
+    ".png": "image/png",
+    ".svg": "image/svg+xml",
+  };
+
+const server = createServer(async (req, res) => {
+  try {
+    const url = new URL(req.url, "http://127.0.0.1"),
+      file = resolve(
+        root,
+        "." +
+          decodeURIComponent(
+            url.pathname === "/" ? "/index.html" : url.pathname,
+          ),
+      );
+
+    if (!file.startsWith(root + sep)) {
+      res.writeHead(403);
+      res.end();
+
+      return;
+    }
+
+    const size = (await stat(file)).size,
+      data = await readFile(file);
+
+    res.setHeader(
+      "Content-Type",
+      mime[extname(file)] || "application/octet-stream",
+    );
+    res.setHeader("Cache-Control", "no-store");
+
+    if (req.headers.range) {
+      const match = /^bytes=(\d+)-(\d*)$/.exec(req.headers.range);
+
+      if (!match) {
+        res.writeHead(416);
+        res.end();
+
+        return;
+      }
+
+      const start = Number(match[1]),
+        end = match[2] ? Math.min(Number(match[2]), size - 1) : size - 1;
+
+      if (start >= size || end < start) {
+        res.writeHead(416);
+        res.end();
+
+        return;
+      }
+
+      res.writeHead(206, {
+        "Content-Range": `bytes ${start}-${end}/${size}`,
+        "Accept-Ranges": "bytes",
+        "Content-Length": end - start + 1,
+      });
+      res.end(data.subarray(start, end + 1));
+    } else {
+      res.setHeader("Content-Length", size);
+      res.setHeader("Accept-Ranges", "bytes");
+      res.end(data);
+    }
+  } catch {
+    res.writeHead(404);
+    res.end("Not found");
+  }
+});
+
+server.listen(4313, "127.0.0.1", () =>
+  console.log("Private screening room: http://127.0.0.1:4313"),
+);
