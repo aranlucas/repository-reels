@@ -14,8 +14,7 @@
     "verify": "node scripts/verify.mjs",
     "serve": "node scripts/serve.mjs",
     "decode": "node scripts/decode.mjs",
-    "lint": "oxlint .",
-    "dev:direct": "vite --host 127.0.0.1 --port 4313 --strictPort"
+    "lint": "oxlint ."
   },
   "dependencies": {
     "@hyperframes/engine": "0.8.107",

@@ -95,8 +95,8 @@ npm run check
 
 ## Local URLs with Portless
 
-The Vite development page gets an allocated backend port instead of the regular
-script's fixed port 4313. Portless supplies Vite's port and strict-port arguments.
+The Vite development page gets an allocated backend port.
+Portless supplies Vite's port and strict-port arguments.
 
 The standard development command uses [Portless](https://github.com/vercel-labs/portless).
 Install its pinned CLI once with Node.js 24 or newer, then run this repository's command after the
@@ -112,9 +112,8 @@ Use the URL printed by Portless if you have changed its proxy port, TLS, or TLD.
 Linked Git worktrees get a branch prefix, so each checkout has its own origin.
 The first HTTPS run can request local administrator permission to bind port 443,
 trust its development certificate, and synchronize local hostnames. Ctrl+C stops
-the child server and removes its route. The direct fallback below starts the
-server without the proxy.
+the child server and removes its route.
 
-Use `npm run dev:direct` for the existing fixed-port workflow. Rendering, composition,
+Rendering, composition,
 verification, and `npm run serve` retain their existing commands and inputs; this
 command only changes how the Vite preview is reached.
