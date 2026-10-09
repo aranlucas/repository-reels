@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "ignorePatterns": [
+    "compositions/**",
+    "evidence/**",
+    "manifest.json",
+    "public/data/**",
+    "tools/oxlint/anti-slop/vendor/**",
+    "pnpm-lock.yaml"
+  ]
+}

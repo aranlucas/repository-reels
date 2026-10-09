@@ -8,28 +8,32 @@
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1 --port 4313 --strictPort",
     "test": "node --test tests/*.test.mjs",
-    "check": "npm run lint && npm test && npm run build",
+    "check": "pnpm lint && pnpm format:check && pnpm test && pnpm build",
     "render": "node scripts/render.mjs",
     "compose": "node scripts/compose.mjs",
     "verify": "node scripts/verify.mjs",
     "serve": "node scripts/serve.mjs",
     "decode": "node scripts/decode.mjs",
-    "lint": "oxlint ."
+    "lint": "oxlint .",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check"
   },
   "dependencies": {
-    "@hyperframes/engine": "0.8.107",
-    "@hyperframes/player": "0.8.107",
-    "mediabunny": "1.61.0",
+    "@hyperframes/engine": "0.8.143",
+    "@hyperframes/player": "0.8.143",
+    "mediabunny": "1.61.3",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "vite": "8.3.2",
-    "oxlint": "1.86.0",
-    "@oxlint/plugins": "1.86.0",
-    "portless": "0.15.7"
+    "@oxlint/plugins": "1.87.0",
+    "oxfmt": "0.72.0",
+    "oxlint": "1.87.0",
+    "portless": "0.15.7",
+    "vite": "8.3.4"
   },
   "engines": {
     "node": ">=22.12"
-  }
+  },
+  "packageManager": "pnpm@12.4.2"
 }

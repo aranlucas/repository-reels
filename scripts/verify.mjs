@@ -1,12 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
-import {
-  Input,
-  ALL_FORMATS,
-  BufferSource,
-  EncodedPacketSink,
-} from "mediabunny";
+import { Input, ALL_FORMATS, BufferSource, EncodedPacketSink } from "mediabunny";
 
 const manifest = JSON.parse(await readFile("manifest.json", "utf8")),
   partial = process.argv.includes("--samples"),
@@ -34,15 +29,9 @@ if (manifest.inventory_audit) {
     manifest.clips.length + audit.pending.length + audit.excluded.length,
   );
 
-  const names = [...manifest.clips, ...audit.pending, ...audit.excluded].map(
-    (c) => c.name,
-  );
+  const names = [...manifest.clips, ...audit.pending, ...audit.excluded].map((c) => c.name);
 
-  assert.equal(
-    new Set(names).size,
-    names.length,
-    "Coverage categories cannot overlap",
-  );
+  assert.equal(new Set(names).size, names.length, "Coverage categories cannot overlap");
 }
 
 for (const clip of manifest.clips.filter((c) => c.render_status === "passed")) {
@@ -79,10 +68,7 @@ for (const clip of manifest.clips.filter((c) => c.render_status === "passed")) {
     assert.equal(width, manifest.width);
     assert.equal(height, manifest.height);
     assert.equal(codec, "vp8");
-    assert.ok(
-      Math.abs(duration - manifest.duration) < 0.01,
-      `${clip.name}: duration ${duration}`,
-    );
+    assert.ok(Math.abs(duration - manifest.duration) < 0.01, `${clip.name}: duration ${duration}`);
     assert.equal(stats.packetCount, manifest.fps * manifest.duration);
     assert.ok(Math.abs(stats.averagePacketRate - manifest.fps) < 0.01);
     const sink = new EncodedPacketSink(track);
@@ -161,10 +147,7 @@ const evidence = {
   clips: results,
 };
 
-await writeFile(
-  "evidence/verification-media.json",
-  JSON.stringify(evidence, null, 2) + "\n",
-);
+await writeFile("evidence/verification-media.json", JSON.stringify(evidence, null, 2) + "\n");
 
 console.log(
   `Verified ${results.length} videos: VP8, 960×540, 12 seconds, 144 frames, source and media hashes.`,

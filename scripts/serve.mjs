@@ -18,10 +18,7 @@ const server = createServer(async (req, res) => {
     const url = new URL(req.url, "http://127.0.0.1"),
       file = resolve(
         root,
-        "." +
-          decodeURIComponent(
-            url.pathname === "/" ? "/index.html" : url.pathname,
-          ),
+        "." + decodeURIComponent(url.pathname === "/" ? "/index.html" : url.pathname),
       );
 
     if (!file.startsWith(root + sep)) {
@@ -34,10 +31,7 @@ const server = createServer(async (req, res) => {
     const size = (await stat(file)).size,
       data = await readFile(file);
 
-    res.setHeader(
-      "Content-Type",
-      mime[extname(file)] || "application/octet-stream",
-    );
+    res.setHeader("Content-Type", mime[extname(file)] || "application/octet-stream");
     res.setHeader("Cache-Control", "no-store");
 
     if (req.headers.range) {

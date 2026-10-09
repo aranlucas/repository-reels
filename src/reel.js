@@ -1,18 +1,13 @@
 const escape = (value) =>
   String(value).replace(
     /[&<>"']/g,
-    (c) =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
-        c
-      ],
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
   );
 
 export function validateReel(reel) {
-  if (!reel || !/^[a-zA-Z0-9_.-]+$/.test(reel.name))
-    throw new Error("Invalid repository name");
+  if (!reel || !/^[a-zA-Z0-9_.-]+$/.test(reel.name)) throw new Error("Invalid repository name");
 
-  if (!/^[a-f0-9]{40}$/.test(reel.source_sha))
-    throw new Error("A pinned source SHA is required");
+  if (!/^[a-f0-9]{40}$/.test(reel.source_sha)) throw new Error("A pinned source SHA is required");
 
   if (reel.visibility !== "private" && reel.visibility !== "public")
     throw new Error("Repository visibility is required");
@@ -28,9 +23,7 @@ export function validateReel(reel) {
   if (
     !Array.isArray(reel.evidence_urls) ||
     !reel.evidence_urls.length ||
-    reel.evidence_urls.some(
-      (url) => !url.startsWith("https://github.com/aranlucas/"),
-    )
+    reel.evidence_urls.some((url) => !url.startsWith("https://github.com/aranlucas/"))
   )
     throw new Error("Owned-repository evidence links required");
 
@@ -40,10 +33,7 @@ export function validateReel(reel) {
   )
     throw new Error("Source still must be an embedded PNG");
 
-  if (
-    reel.source_still_data &&
-    reel.review_mode === "metadata-and-structure-only"
-  )
+  if (reel.source_still_data && reel.review_mode === "metadata-and-structure-only")
     throw new Error("Protected contents cannot have source screenshots");
 
   return reel;
@@ -137,10 +127,7 @@ function seekRuntime() {
 
 function workflowGraphic(reel) {
   const nodes = reel.workflow
-    .map(
-      (s, i) =>
-        `<div class="node ${i === 1 ? "active" : ""}">${escape(s)}</div>`,
-    )
+    .map((s, i) => `<div class="node ${i === 1 ? "active" : ""}">${escape(s)}</div>`)
     .join('<span class="arrow">→</span>');
 
   if (reel.name === "delivery-dash")
@@ -177,9 +164,7 @@ export function makeReel(input) {
 
   const sample = special
     ? '&lt;TextInput<br>&nbsp; name="displayName"<br>&nbsp; control={control}<br>/&gt;'
-    : reel.workflow
-        .map((s) => e(s))
-        .join('<br><span class="code-arrow">↓</span><br>');
+    : reel.workflow.map((s) => e(s)).join('<br><span class="code-arrow">↓</span><br>');
 
   const privacy =
     reel.review_mode === "metadata-and-structure-only"

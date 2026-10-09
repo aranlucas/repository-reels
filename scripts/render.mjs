@@ -17,22 +17,16 @@ const args = process.argv.slice(2),
 
 const selected = requested.length
   ? manifest.clips.filter((clip) => requested.includes(clip.name))
-  : manifest.clips.filter(
-      (clip) => clip.render_status !== "passed" || args.includes("--force"),
-    );
+  : manifest.clips.filter((clip) => clip.render_status !== "passed" || args.includes("--force"));
 
-if (
-  requested.some((name) => !manifest.clips.some((clip) => clip.name === name))
-)
+if (requested.some((name) => !manifest.clips.some((clip) => clip.name === name)))
   throw new Error("Unknown repository in selection");
 
 const chrome =
   process.env.REELS_CHROME ||
   "/Users/lucas/Library/Caches/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-mac-arm64/chrome-headless-shell";
 
-const encoderModule = await readFile(
-  "node_modules/mediabunny/dist/bundles/mediabunny.mjs",
-);
+const encoderModule = await readFile("node_modules/mediabunny/dist/bundles/mediabunny.mjs");
 
 const encoderHtml = `<!doctype html><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; img-src data:; connect-src 'none'; style-src 'unsafe-inline'"><canvas width="${manifest.width}" height="${manifest.height}"></canvas><script type="module">
 import { Output, WebMOutputFormat, BufferTarget, CanvasSource, Quality } from '/mediabunny.mjs';
@@ -62,9 +56,7 @@ try {
   lock = await open(".render.lock", "wx");
   await lock.writeFile(String(process.pid));
 } catch {
-  throw new Error(
-    "Another renderer owns .render.lock. Never run concurrent batches.",
-  );
+  throw new Error("Another renderer owns .render.lock. Never run concurrent batches.");
 }
 
 let currentHtml = "",
@@ -121,10 +113,7 @@ async function bounded(promise, label, ms = 30000) {
     return await Promise.race([
       promise,
       new Promise((_, reject) => {
-        timer = setTimeout(
-          () => reject(new Error(`${label} exceeded ${ms}ms`)),
-          ms,
-        );
+        timer = setTimeout(() => reject(new Error(`${label} exceeded ${ms}ms`)), ms);
       }),
     ]);
   } finally {
@@ -156,9 +145,7 @@ try {
 
     console.log(`Rendering ${clip.name} (${index + 1}/${selected.length})`);
     currentHtml = await readFile(`compositions/${clip.name}.html`, "utf8");
-    clip.composition_sha256 = createHash("sha256")
-      .update(currentHtml)
-      .digest("hex");
+    clip.composition_sha256 = createHash("sha256").update(currentHtml).digest("hex");
 
     try {
       session = await bounded(
@@ -199,16 +186,14 @@ try {
           15000,
         );
 
-        if (!buffer?.length)
-          throw new Error("HyperFrames captured an empty frame");
+        if (!buffer?.length) throw new Error("HyperFrames captured an empty frame");
 
         if ([9, 60, 108].includes(frame)) {
           const path = `evidence/render/${clip.name}-${frame}.png`;
           await writeFile(path, buffer);
           keyframes.push(path);
 
-          if (frame === 9)
-            await writeFile(`public/posters/${clip.name}.png`, buffer);
+          if (frame === 9) await writeFile(`public/posters/${clip.name}.png`, buffer);
         }
 
         await bounded(
@@ -249,9 +234,7 @@ try {
         codec: "VP8 / WebM",
       });
       delete clip.render_error;
-      console.log(
-        `Passed ${clip.name}: ${bytes.length} bytes, ${clip.render_seconds}s`,
-      );
+      console.log(`Passed ${clip.name}: ${bytes.length} bytes, ${clip.render_seconds}s`);
     } catch (error) {
       clip.render_status = "failed";
       clip.render_error = error.message;
@@ -259,9 +242,7 @@ try {
       console.error(`Failed ${clip.name}: ${error.message}`);
     } finally {
       if (encoderPage) {
-        await bounded(encoderPage.close(), "Close encoder", 5000).catch(
-          () => {},
-        );
+        await bounded(encoderPage.close(), "Close encoder", 5000).catch(() => {});
         encoderPage = null;
       }
 
@@ -291,5 +272,4 @@ console.log(
   ),
 );
 
-if (selected.some((clip) => clip.render_status === "failed"))
-  process.exitCode = 1;
+if (selected.some((clip) => clip.render_status === "failed")) process.exitCode = 1;

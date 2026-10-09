@@ -23,10 +23,7 @@ for (const [name, path] of Object.entries(candidates)) {
 
   const { stdout } = await run(
     "gh",
-    [
-      "api",
-      `repos/${source.full_name}/contents/${path}?ref=${source.source_sha}`,
-    ],
+    ["api", `repos/${source.full_name}/contents/${path}?ref=${source.source_sha}`],
     { timeout: 30000, maxBuffer: 12 * 1024 * 1024 },
   );
 
@@ -34,21 +31,17 @@ for (const [name, path] of Object.entries(candidates)) {
   let content = asset.content;
 
   if (asset.encoding !== "base64") {
-    const blob = await run(
-      "gh",
-      ["api", `repos/${source.full_name}/git/blobs/${asset.sha}`],
-      { timeout: 30000, maxBuffer: 12 * 1024 * 1024 },
-    );
+    const blob = await run("gh", ["api", `repos/${source.full_name}/git/blobs/${asset.sha}`], {
+      timeout: 30000,
+      maxBuffer: 12 * 1024 * 1024,
+    });
 
     content = JSON.parse(blob.stdout).content;
   }
 
   const bytes = Buffer.from(content, "base64");
 
-  if (
-    bytes.length > 8 * 1024 * 1024 ||
-    bytes.subarray(0, 8).toString("hex") !== "89504e470d0a1a0a"
-  )
+  if (bytes.length > 8 * 1024 * 1024 || bytes.subarray(0, 8).toString("hex") !== "89504e470d0a1a0a")
     throw new Error("Invalid or oversized source PNG");
   await writeFile(`public/source-stills/${name}.png`, bytes);
   stills.push({
@@ -65,6 +58,5 @@ for (const [name, path] of Object.entries(candidates)) {
 
 await writeFile(
   "evidence/source-stills.json",
-  JSON.stringify({ captured_at: new Date().toISOString(), stills }, null, 2) +
-    "\n",
+  JSON.stringify({ captured_at: new Date().toISOString(), stills }, null, 2) + "\n",
 );

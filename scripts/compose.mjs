@@ -3,29 +3,20 @@ import { makeReel } from "../src/reel.js";
 import { curation, changes } from "./curation.mjs";
 import { createHash } from "node:crypto";
 
-const previous = JSON.parse(
-  await readFile("manifest.json", "utf8").catch(() => '{"clips":[]}'),
-);
+const previous = JSON.parse(await readFile("manifest.json", "utf8").catch(() => '{"clips":[]}'));
 
-const capture = JSON.parse(
-  await readFile("evidence/source-review.json", "utf8"),
-);
+const capture = JSON.parse(await readFile("evidence/source-review.json", "utf8"));
 
-const statuses = JSON.parse(
-  await readFile("evidence/pr-status.json", "utf8"),
-).prs;
+const statuses = JSON.parse(await readFile("evidence/pr-status.json", "utf8")).prs;
 
 const missing = capture.repos
   .filter((source) => !curation[source.name])
   .map((source) => source.name);
 
-if (missing.length)
-  throw new Error(`Review curation before composing: ${missing.join(", ")}`);
+if (missing.length) throw new Error(`Review curation before composing: ${missing.join(", ")}`);
 
 const stills = JSON.parse(
-  await readFile("evidence/source-stills.json", "utf8").catch(
-    () => '{"stills":[]}',
-  ),
+  await readFile("evidence/source-stills.json", "utf8").catch(() => '{"stills":[]}'),
 ).stills;
 
 const manifest = {
@@ -64,9 +55,7 @@ for (const source of capture.repos) {
     render_status: "pending",
     render_url: `/renders/${source.name}.webm`,
     poster_url: `/posters/${source.name}.png`,
-    demo_title: protectedContent
-      ? "The structure, without the contents."
-      : "The useful moment.",
+    demo_title: protectedContent ? "The structure, without the contents." : "The useful moment.",
     demo_note: protectedContent
       ? "Metadata and repository structure only. Private content is not shown."
       : "Illustrated source workflow. Synthetic data; no live application or provider call.",
@@ -102,9 +91,7 @@ for (const source of capture.repos) {
       `https://github.com/${source.full_name}/blob/${source.source_sha}/src/mcp.ts`,
     );
 
-  const still = stills.find(
-    (s) => s.name === clip.name && s.source_sha === clip.source_sha,
-  );
+  const still = stills.find((s) => s.name === clip.name && s.source_sha === clip.source_sha);
 
   let stillData;
 
@@ -113,11 +100,8 @@ for (const source of capture.repos) {
     clip.evidence_urls.push(still.url);
     stillData =
       "data:image/png;base64," +
-      (await readFile(`public/source-stills/${clip.name}.png`)).toString(
-        "base64",
-      );
-    clip.demo_note =
-      "Pinned source screenshot. The film does not run or verify the application.";
+      (await readFile(`public/source-stills/${clip.name}.png`)).toString("base64");
+    clip.demo_note = "Pinned source screenshot. The film does not run or verify the application.";
   }
 
   const html = makeReel({ ...clip, source_still_data: stillData }),
@@ -146,9 +130,6 @@ for (const source of capture.repos) {
 
 await writeFile("manifest.json", JSON.stringify(manifest, null, 2) + "\n");
 
-await writeFile(
-  "public/data/manifest.json",
-  JSON.stringify(manifest, null, 2) + "\n",
-);
+await writeFile("public/data/manifest.json", JSON.stringify(manifest, null, 2) + "\n");
 
 console.log(`Composed ${manifest.clips.length} private, source-pinned reels.`);
