@@ -24,15 +24,14 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
 
-      - name: Set up pnpm and Node.js
+      - name: Set up pnpm, Node.js and dependencies
         uses: pnpm/setup@fbda4c85fc2e1e08721cd8763afea8f48d60f024 # v3.0.0
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: "true"
         with:
           node-version-file: .node-version
           cache: true
-          install: false
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile --ignore-scripts
+          require-lockfile: true
 
       - parallel:
           - name: Lint
