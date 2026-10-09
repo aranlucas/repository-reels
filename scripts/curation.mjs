@@ -343,8 +343,7 @@ export const changes = {
   agents: "Active-run ownership and atomic saved-list edits.",
   "agents-mobile": "Resumable sync and visible submission failures.",
   "ai-shopping-mcp": "Bounded catalog requests and list enrichment.",
-  "garmin-friend-finder":
-    "Authenticated ownership proposal. Device migration still required.",
+  "garmin-friend-finder": "Authenticated ownership proposal. Device migration still required.",
   "onsite-lab": "Autosave retention and serialized completion proposal.",
   "pantry-pulse": "Concurrent inventory corrections guarded atomically.",
   "set-and-signal": "Retain queued edits when local storage fails.",

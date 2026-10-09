@@ -2,18 +2,12 @@ import { createServer } from "node:http";
 import { readFile, writeFile, open, unlink } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import assert from "node:assert/strict";
-import {
-  createCaptureSession,
-  closeCaptureSession,
-  closeBrowserPool,
-} from "@hyperframes/engine";
+import { createCaptureSession, closeCaptureSession, closeBrowserPool } from "@hyperframes/engine";
 
 // Media processing only: decode every frame, in one local browser, without playing any source application.
 const manifest = JSON.parse(await readFile("manifest.json", "utf8"));
 
-const module = await readFile(
-  "node_modules/mediabunny/dist/bundles/mediabunny.mjs",
-);
+const module = await readFile("node_modules/mediabunny/dist/bundles/mediabunny.mjs");
 
 const html = `<!doctype html><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'"><script type="module">
 import {Input,ALL_FORMATS,UrlSource,CanvasSink} from '/mediabunny.mjs';

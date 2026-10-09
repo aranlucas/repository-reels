@@ -6,8 +6,7 @@ import "./style.css";
 function ScreeningRoom() {
   const [manifest, setManifest] = useState(null),
     [selected, setSelected] = useState(
-      new URLSearchParams(location.search).get("repo") ||
-        "react-hook-form-mantine",
+      new URLSearchParams(location.search).get("repo") || "react-hook-form-mantine",
     ),
     [query, setQuery] = useState(""),
     [error, setError] = useState(""),
@@ -24,8 +23,7 @@ function ScreeningRoom() {
       .catch((e) => setError(e.message));
   }, []);
 
-  const clip =
-    manifest?.clips.find((c) => c.name === selected) || manifest?.clips[0];
+  const clip = manifest?.clips.find((c) => c.name === selected) || manifest?.clips[0];
 
   useEffect(() => {
     const element = player.current;
@@ -35,8 +33,7 @@ function ScreeningRoom() {
     posterStyle.textContent = ".hfp-poster{width:100%;height:100%}";
     element.shadowRoot?.append(posterStyle);
 
-    const onError = (e) =>
-      setError(e.detail?.message || "This film could not be played.");
+    const onError = (e) => setError(e.detail?.message || "This film could not be played.");
 
     element.addEventListener("error", onError);
 
@@ -46,8 +43,7 @@ function ScreeningRoom() {
     };
   }, [clip?.name]);
 
-  const count =
-    manifest?.clips.filter((c) => c.render_status === "passed").length || 0;
+  const count = manifest?.clips.filter((c) => c.render_status === "passed").length || 0;
 
   const priority = [
     "react-hook-form-mantine",
@@ -62,10 +58,7 @@ function ScreeningRoom() {
         const ai = priority.indexOf(a.name),
           bi = priority.indexOf(b.name);
 
-        return (
-          (ai < 0 ? 100 : ai) - (bi < 0 ? 100 : bi) ||
-          a.name.localeCompare(b.name)
-        );
+        return (ai < 0 ? 100 : ai) - (bi < 0 ? 100 : bi) || a.name.localeCompare(b.name);
       })
     : [];
 
@@ -115,11 +108,7 @@ function ScreeningRoom() {
                 >
                   <span>{c.name}</span>
                   <span
-                    aria-label={
-                      c.render_status === "passed"
-                        ? "render passed"
-                        : "not rendered"
-                    }
+                    aria-label={c.render_status === "passed" ? "render passed" : "not rendered"}
                   >
                     {c.render_status === "passed" ? "↗" : "·"}
                   </span>
@@ -131,17 +120,14 @@ function ScreeningRoom() {
             {manifest?.inventory_audit && (
               <>
                 <br />
-                {manifest.inventory_audit.pending.length} newer repositories
-                awaiting films.
+                {manifest.inventory_audit.pending.length} newer repositories awaiting films.
               </>
             )}
           </p>
         </aside>
         <main>
           <h1>Source. Into motion.</h1>
-          <p className="lead">
-            Short, truthful films about what each project does.
-          </p>
+          <p className="lead">Short, truthful films about what each project does.</p>
           {error && (
             <div role="alert" className="error">
               {error}
@@ -220,9 +206,7 @@ function ScreeningRoom() {
                 </section>
                 <section>
                   <h2>State</h2>
-                  <p>
-                    {clip.change_state.replaceAll(" · ", " / ").toLowerCase()}.
-                  </p>
+                  <p>{clip.change_state.replaceAll(" · ", " / ").toLowerCase()}.</p>
                   <p className="limit">{clip.limit}</p>
                   <p className="limit">
                     Source snapshot:{" "}

@@ -6,15 +6,15 @@ Private screening room for 56 source-pinned repository films, rendered locally w
 
 ## Technology stack
 
-| Component | Version or requirement | Role |
-| --- | --- | --- |
-| React + React DOM | 19.3.0 | Screening-room interface, collection search and film selection. |
-| Vite | 8.3.2 | Development server and production browser build. |
-| HyperFrames engine + player | 0.8.107 | Deterministic HTML-to-frame rendering and embedded film playback. |
-| MediaBunny | 1.61.0 | Local WebCodecs VP8 encoding, WebM muxing and media verification. |
-| Node.js | 22.12 or newer | Local scripts and the built-in HTTP server, including video byte-range responses. |
+| Component                   | Version or requirement | Role                                                                              |
+| --------------------------- | ---------------------- | --------------------------------------------------------------------------------- |
+| React + React DOM           | 19.3.0                 | Screening-room interface, collection search and film selection.                   |
+| Vite                        | 8.3.2                  | Development server and production browser build.                                  |
+| HyperFrames engine + player | 0.8.107                | Deterministic HTML-to-frame rendering and embedded film playback.                 |
+| MediaBunny                  | 1.61.0                 | Local WebCodecs VP8 encoding, WebM muxing and media verification.                 |
+| Node.js                     | 22.12 or newer         | Local scripts and the built-in HTTP server, including video byte-range responses. |
 
-The built screening room runs locally at **http://127.0.0.1:4313**; `npm run dev` serves the source at **https://repository-reels.localhost** through [Portless](https://github.com/vercel-labs/portless) (a dev dependency); its first run may ask for `sudo` to bind port 443 and trust a local certificate. It does not use Vercel hosting or the Vercel AI SDK, and it does not depend on TanStack Start or TanStack Router. Exact package versions are recorded in [package.json](package.json) and [package-lock.json](package-lock.json).
+The built screening room runs locally at **http://127.0.0.1:4313**; `pnpm dev` serves the source at **https://repository-reels.localhost** through [Portless](https://github.com/vercel-labs/portless) (a dev dependency); its first run may ask for `sudo` to bind port 443 and trust a local certificate. It does not use Vercel hosting or the Vercel AI SDK, and it does not depend on TanStack Start or TanStack Router. Exact package versions are recorded in [package.json](package.json) and [pnpm-lock.yaml](pnpm-lock.yaml).
 
 These stack details describe Repository Reels. The individual projects featured in the films have their own stacks; rendering a film does not change their frameworks or deployment setup.
 
@@ -31,9 +31,9 @@ Enter that folder and run `node scripts/serve.mjs` with Node 22.12 or newer. Ope
 From this private repository's implementation branch:
 
 ```sh
-npm ci --ignore-scripts --no-fund
-npm run build
-npm run serve
+pnpm install --frozen-lockfile --ignore-scripts
+pnpm build
+pnpm serve
 ```
 
 The films, posters, source stills, generated compositions and verification evidence are committed deliberately so a fresh clone works. `dist/` and the portable ZIP are build artifacts. Repository history begins with an honest bootstrap; implementation is delivered through its reviewable PR.
@@ -61,13 +61,13 @@ Sensitive projects use purpose and metadata/structure only. Resumes, vault conte
 ## Validation and browser evidence
 
 ```sh
-npm run check
-npm run verify
+pnpm check
+pnpm verify
 ```
 
 Seven contract/privacy regression tests and the production build pass. `verify` checks every file's composition/video hashes, container readability, VP8 track, dimensions, duration, 144 packets, timing, seekable keyframes and three PNG scene captures. It also requires a complete full-decode report tied to those exact media hashes.
 
-`npm run decode` separately decodes **all 8,064 frames** through Chromium WebCodecs and MediaBunny, verifies frame order/dimensions/duration, and samples all three scenes for blank/black output. [Full decode evidence](evidence/verification-decode.json) and [media evidence](evidence/verification-media.json) are committed. Hosted CI verifies the hash-bound decode evidence; it does not download Chromium or rerun the browser decoder.
+`pnpm decode` separately decodes **all 8,064 frames** through Chromium WebCodecs and MediaBunny, verifies frame order/dimensions/duration, and samples all three scenes for blank/black output. [Full decode evidence](evidence/verification-decode.json) and [media evidence](evidence/verification-media.json) are committed. Hosted CI verifies the hash-bound decode evidence; it does not download Chromium or rerun the browser decoder.
 
 Actual in-app Chromium QA at 1440×960 and 390×844 covered search, selection, playback through 0:12, source disclosure, source-linked URLs and an actual downloaded film whose hash matched the manifest. Both viewports have no document-level horizontal overflow. Console error/warning capture was empty. A mobile poster-cropping defect in player 0.8.107 was found and fixed by sizing its shadow poster to the player bounds; library files are unmodified. [Desktop](evidence/browser/desktop.jpg), [mobile](evidence/browser/mobile.jpg), and [QA notes](docs/qa.md) are saved. Safari, Firefox and physical mobile devices were not tested. Desktop/landscape viewing makes the film's small source annotations easier to read.
 
@@ -79,15 +79,15 @@ The browser renderer and full decoder use one existing Chromium process, no brow
 # Read-only GitHub capture using existing gh authorization. Never configure credentials here.
 node scripts/refresh-evidence.mjs
 # Inspect the new source evidence and add/review scripts/curation.mjs before composing.
-npm run compose
+pnpm compose
 # Review any source-still changes separately; protected projects cannot include screenshots.
-npm run render
-npm run decode
-npm run verify
-npm run check
+pnpm render
+pnpm decode
+pnpm verify
+pnpm check
 ```
 
-`compose` refuses an uncurated repository and preserves a passed render only when the composition hash is unchanged. An explicit `npm run render -- name --force` rerenders one film. Capture and verification evidence must be refreshed together; old decode evidence cannot validate changed media. The refresh script updates a fixed set of relevant PRs plus bootstrap implementation PR heads; human review is still required for a newly relevant PR. Update the inventory audit for a new source snapshot.
+`compose` refuses an uncurated repository and preserves a passed render only when the composition hash is unchanged. An explicit `pnpm render name --force` rerenders one film. Capture and verification evidence must be refreshed together; old decode evidence cannot validate changed media. The refresh script updates a fixed set of relevant PRs plus bootstrap implementation PR heads; human review is still required for a newly relevant PR. Update the inventory audit for a new source snapshot.
 
 ## Libraries and research
 

@@ -13,13 +13,9 @@ async function api(path) {
   return JSON.parse(stdout);
 }
 
-const previous = JSON.parse(
-  await readFile("evidence/source-review.json", "utf8"),
-);
+const previous = JSON.parse(await readFile("evidence/source-review.json", "utf8"));
 
-const oldPrs = JSON.parse(
-  await readFile("evidence/pr-status.json", "utf8"),
-).prs;
+const oldPrs = JSON.parse(await readFile("evidence/pr-status.json", "utf8")).prs;
 
 const { stdout } = await run(
   "gh",
@@ -41,9 +37,7 @@ const owned = JSON.parse(stdout),
   omissions = [];
 
 const protect = new Set(
-  previous.repos
-    .filter((r) => r.review_mode === "metadata-and-structure-only")
-    .map((r) => r.name),
+  previous.repos.filter((r) => r.review_mode === "metadata-and-structure-only").map((r) => r.name),
 );
 
 protect.add("oral-board-local-lab");
@@ -54,8 +48,7 @@ for (const repo of owned.sort((a, b) => a.name.localeCompare(b.name))) {
   if (repo.name === "repository-reels") {
     omissions.push({
       name: repo.name,
-      reason:
-        "This collection/pipeline itself; excluded to avoid recursive self-coverage.",
+      reason: "This collection/pipeline itself; excluded to avoid recursive self-coverage.",
     });
     continue;
   }
@@ -83,9 +76,7 @@ for (const repo of owned.sort((a, b) => a.name.localeCompare(b.name))) {
     root = await api(`repos/${full_name}/contents?ref=${source_sha}`);
 
     if (root.length <= 2 && !root.some((r) => r.type === "dir")) {
-      const proposals = await api(
-          `repos/${full_name}/pulls?state=open&per_page=10`,
-        ),
+      const proposals = await api(`repos/${full_name}/pulls?state=open&per_page=10`),
         proposal = proposals.find((p) => p.head.repo?.full_name === full_name);
 
       if (!proposal) {
@@ -125,9 +116,7 @@ for (const repo of owned.sort((a, b) => a.name.localeCompare(b.name))) {
     commit_date: branch.commit.commit.author.date,
     commit_message: branch.commit.commit.message.split("\n")[0],
     source_url: `https://github.com/${full_name}/commit/${source_sha}`,
-    review_mode: protect.has(repo.name)
-      ? "metadata-and-structure-only"
-      : "README-and-structure",
+    review_mode: protect.has(repo.name) ? "metadata-and-structure-only" : "README-and-structure",
     capture_pr,
   };
 
@@ -135,17 +124,10 @@ for (const repo of owned.sort((a, b) => a.name.localeCompare(b.name))) {
     root ||= await api(`repos/${full_name}/contents?ref=${source_sha}`);
     entry.root_file_count = root.filter((r) => r.type === "file").length;
     entry.root_directory_count = root.filter((r) => r.type === "dir").length;
-    entry.readme_path =
-      root.find((r) => /^readme\.md$/i.test(r.name))?.path || null;
+    entry.readme_path = root.find((r) => /^readme\.md$/i.test(r.name))?.path || null;
     entry.package_path =
       root.find((r) =>
-        [
-          "package.json",
-          "go.mod",
-          "pom.xml",
-          "pyproject.toml",
-          "Cargo.toml",
-        ].includes(r.name),
+        ["package.json", "go.mod", "pom.xml", "pyproject.toml", "Cargo.toml"].includes(r.name),
       )?.path || null;
 
     if (!protect.has(repo.name)) entry.root_names = root.map((r) => r.name);
@@ -167,9 +149,7 @@ for (const repo of owned.sort((a, b) => a.name.localeCompare(b.name))) {
     entry.source_url,
     `https://github.com/${full_name}/tree/${source_sha}`,
     ...(entry.readme_path && !protect.has(repo.name)
-      ? [
-          `https://github.com/${full_name}/blob/${source_sha}/${entry.readme_path}`,
-        ]
+      ? [`https://github.com/${full_name}/blob/${source_sha}/${entry.readme_path}`]
       : []),
   ];
   repos.push(entry);
@@ -203,9 +183,7 @@ await writeFile(
   JSON.stringify(
     {
       captured_at,
-      repos: repos.map(
-        ({ root_names: _rootNames, evidence_urls: _evidenceUrls, ...r }) => r,
-      ),
+      repos: repos.map(({ root_names: _rootNames, evidence_urls: _evidenceUrls, ...r }) => r),
       omissions,
     },
     null,
@@ -215,8 +193,7 @@ await writeFile(
 
 await writeFile(
   "evidence/pr-status.json",
-  JSON.stringify({ captured_at: new Date().toISOString(), prs }, null, 2) +
-    "\n",
+  JSON.stringify({ captured_at: new Date().toISOString(), prs }, null, 2) + "\n",
 );
 
 console.log(

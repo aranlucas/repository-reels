@@ -11,16 +11,12 @@ const reel = {
   description: "A source-backed description.",
   workflow: ["Read", "Review", "Use"],
   genre: "library",
-  evidence_urls: [
-    "https://github.com/aranlucas/safe-repo/tree/" + "a".repeat(40),
-  ],
+  evidence_urls: ["https://github.com/aranlucas/safe-repo/tree/" + "a".repeat(40)],
 };
 
 test("requires a pinned SHA and owned source citations", () => {
   assert.throws(() => validateReel({ ...reel, source_sha: "main" }));
-  assert.throws(() =>
-    validateReel({ ...reel, evidence_urls: ["https://example.com"] }),
-  );
+  assert.throws(() => validateReel({ ...reel, evidence_urls: ["https://example.com"] }));
 });
 
 test("content cannot break out of markup or inject a script", () => {
@@ -65,9 +61,7 @@ test("metadata-only clips label withheld contents", () => {
 });
 
 test("source screenshots must be embedded PNGs and never protected contents", () => {
-  assert.throws(() =>
-    makeReel({ ...reel, source_still_data: "https://evil.test/image.png" }),
-  );
+  assert.throws(() => makeReel({ ...reel, source_still_data: "https://evil.test/image.png" }));
   assert.throws(() =>
     makeReel({
       ...reel,
