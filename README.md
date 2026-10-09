@@ -14,7 +14,7 @@ Private screening room for 56 source-pinned repository films, rendered locally w
 | MediaBunny | 1.61.0 | Local WebCodecs VP8 encoding, WebM muxing and media verification. |
 | Node.js | 22.12 or newer | Local scripts and the built-in HTTP server, including video byte-range responses. |
 
-The screening room runs locally at **http://127.0.0.1:4313**. It does not use Vercel hosting or the Vercel AI SDK, and it does not depend on TanStack Start or TanStack Router. Exact package versions are recorded in [package.json](package.json) and [package-lock.json](package-lock.json).
+The built screening room runs locally at **http://127.0.0.1:4313**; `npm run dev` serves the source at **https://repository-reels.localhost** through [Portless](https://github.com/vercel-labs/portless) (a dev dependency); its first run may ask for `sudo` to bind port 443 and trust a local certificate. It does not use Vercel hosting or the Vercel AI SDK, and it does not depend on TanStack Start or TanStack Router. Exact package versions are recorded in [package.json](package.json) and [package-lock.json](package-lock.json).
 
 These stack details describe Repository Reels. The individual projects featured in the films have their own stacks; rendering a film does not change their frameworks or deployment setup.
 
