@@ -14,7 +14,7 @@ Private screening room for 56 source-pinned repository films, rendered locally w
 | MediaBunny | 1.61.0 | Local WebCodecs VP8 encoding, WebM muxing and media verification. |
 | Node.js | 22.12 or newer | Local scripts and the built-in HTTP server, including video byte-range responses. |
 
-The built screening room runs locally at **http://127.0.0.1:4313**. Source development with `npm run dev` uses Portless at the printed URL, normally `https://repository-reels.localhost`; see the setup below. It does not use Vercel hosting or the Vercel AI SDK, and it does not depend on TanStack Start or TanStack Router. Exact package versions are recorded in [package.json](package.json) and [package-lock.json](package-lock.json).
+The built screening room runs locally at **http://127.0.0.1:4313**; `npm run dev` serves the source at **https://repository-reels.localhost** through [Portless](https://github.com/vercel-labs/portless) (a dev dependency); its first run may ask for `sudo` to bind port 443 and trust a local certificate. It does not use Vercel hosting or the Vercel AI SDK, and it does not depend on TanStack Start or TanStack Router. Exact package versions are recorded in [package.json](package.json) and [package-lock.json](package-lock.json).
 
 These stack details describe Repository Reels. The individual projects featured in the films have their own stacks; rendering a film does not change their frameworks or deployment setup.
 
@@ -92,28 +92,3 @@ npm run check
 ## Libraries and research
 
 [Research and ranked shortlist](docs/research.md) records fresh primary daily/weekly GitHub Trending captures, maintenance/release evidence, license observations, stale cached examples and the selection rationale. HyperFrames **0.8.107** and MediaBunny **1.61.0** are pinned. Registry installs disable lifecycle scripts. Browser assets include [third-party notices](public/THIRD_PARTY_NOTICES.md) and the actual upstream license texts under `public/licenses/`.
-
-## Local URLs with Portless
-
-The Vite development page gets an allocated backend port.
-Portless supplies Vite's port and strict-port arguments.
-
-The standard development command uses [Portless](https://github.com/vercel-labs/portless).
-Install its pinned CLI once with Node.js 24 or newer, then run this repository's command after the
-normal dependency and environment setup:
-
-```sh
-npm install -g portless@0.15.7
-npm run dev
-```
-
-The main checkout uses `https://repository-reels.localhost` with the default proxy settings.
-Use the URL printed by Portless if you have changed its proxy port, TLS, or TLD.
-Linked Git worktrees get a branch prefix, so each checkout has its own origin.
-The first HTTPS run can request local administrator permission to bind port 443,
-trust its development certificate, and synchronize local hostnames. Ctrl+C stops
-the child server and removes its route.
-
-Rendering, composition,
-verification, and `npm run serve` retain their existing commands and inputs; this
-command only changes how the Vite preview is reached.
