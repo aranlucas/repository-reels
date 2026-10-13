@@ -16,7 +16,8 @@
     "decode": "node scripts/decode.mjs",
     "lint": "oxlint .",
     "format": "oxfmt",
-    "format:check": "oxfmt --check"
+    "format:check": "oxfmt --check",
+    "lint:fix": "oxlint --fix"
   },
   "dependencies": {
     "@hyperframes/engine": "0.8.143",
@@ -26,9 +27,11 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@aranlucas/oxforge": "^0.1.3",
     "@aranlucas/oxlint-plugin-anti-slop": "0.1.0",
-    "oxfmt": "0.72.0",
-    "oxlint": "1.87.0",
+    "oxfmt": "^0.73.0",
+    "oxlint": "^1.88.0",
+    "oxlint-tsgolint": "^7.0.2004",
     "portless": "0.15.7",
     "vite": "8.3.4"
   },
