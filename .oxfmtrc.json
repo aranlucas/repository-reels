@@ -5,7 +5,6 @@
     "evidence/**",
     "manifest.json",
     "public/data/**",
-    "tools/oxlint/anti-slop/vendor/**",
     "pnpm-lock.yaml"
   ]
 }

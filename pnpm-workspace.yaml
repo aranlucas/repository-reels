@@ -8,3 +8,5 @@ minimumReleaseAgeExclude:
   - "@hyperframes/parsers@0.8.143"
   - "@hyperframes/player@0.8.143"
   - "@hyperframes/studio-server@0.8.143"
+  - "@aranlucas/*"
+  - "@oxlint/plugins@1.88.0"
