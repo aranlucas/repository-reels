@@ -1,3 +1,5 @@
+import { runSequential } from "./serial.mjs";
+import { print } from "./output.mjs";
 import { createServer } from "node:http";
 import { readFile, writeFile, open, unlink } from "node:fs/promises";
 import { createHash } from "node:crypto";
@@ -88,7 +90,7 @@ async function bounded(promise, label, ms = 30000) {
   try {
     return await Promise.race([
       promise,
-      new Promise((_, reject) => {
+      new Promise((_resolve, reject) => {
         timer = setTimeout(() => reject(new Error(label + " timed out")), ms);
       }),
     ]);
@@ -137,9 +139,9 @@ try {
     timeout: 10000,
   });
 
-  for (const clip of manifest.clips) {
-    const bytes = await readFile(`public/renders/${clip.name}.webm`),
-      hash = createHash("sha256").update(bytes).digest("hex");
+  await runSequential(manifest.clips, async (clip) => {
+    const bytes = await readFile(`public/renders/${clip.name}.webm`);
+    const hash = createHash("sha256").update(bytes).digest("hex");
 
     assert.equal(hash, clip.video_sha256);
 
@@ -157,10 +159,10 @@ try {
       ...result,
       status: "passed",
     });
-    console.log(
+    print(
       `Decoded ${results.length}/${manifest.clips.length}: ${clip.name}, ${result.frames} frames`,
     );
-  }
+  });
 
   await writeFile(
     "evidence/verification-decode.json",
@@ -177,7 +179,10 @@ try {
     ) + "\n",
   );
 } finally {
-  if (session) await closeCaptureSession(session);
+  if (session) {
+    await closeCaptureSession(session);
+  }
+
   server.close();
   await closeBrowserPool();
   await lock.close();

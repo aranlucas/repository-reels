@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { runInNewContext } from "node:vm";
 import { makeReel, validateReel } from "../src/reel.js";
 
 const reel = {
@@ -47,7 +48,7 @@ test("all source-state claims remain separate from deployment", () => {
 test("exactly three deterministic twelve-second scenes", () => {
   const html = makeReel(reel);
   assert.equal((html.match(/section class="scene /g) || []).length, 3);
-  assert.match(html, /window\.__hf\s*=\s*\{\s*duration:\s*12,\s*seek\s*\}/);
+  assert.match(html, /__hf:\s*\{\s*duration:\s*12,\s*seek\s*\}/);
   assert.ok(html.includes('data-duration="12"'));
 });
 
@@ -73,4 +74,54 @@ test("source screenshots must be embedded PNGs and never protected contents", ()
 
 test("opaque scene backgrounds survive the engine PNG transparency rule", () => {
   assert.ok(makeReel(reel).includes(".scene{background:#f4f1e9;"));
+});
+
+test("generated runtime preserves the capture protocol and deterministic scene selection", () => {
+  const moving = [{ style: {} }, { style: {} }];
+
+  const scenes = Array.from({ length: 3 }, () => ({
+    style: {},
+    querySelectorAll: () => moving,
+  }));
+
+  const ticks = Array.from({ length: 3 }, () => ({ style: {} }));
+  const root = { dataset: {} };
+
+  const context = {
+    window: {},
+    document: {
+      querySelectorAll: (selector) => (selector === ".scene" ? scenes : ticks),
+      querySelector: (selector) => (selector === "#reel" ? root : null),
+    },
+  };
+
+  const script = makeReel(reel).match(/<script>([\s\S]*?)<\/script>/);
+
+  assert.ok(script);
+  runInNewContext(script[1], context);
+
+  const {
+    __hf: capture,
+    __timelines: timelines,
+    __player: player,
+    reelTimeline: timeline,
+  } = context.window;
+
+  assert.equal(capture.duration, 12);
+  assert.equal(player.getDuration(), 12);
+  assert.equal(timelines.reel, timeline);
+  assert.equal(timeline.duration(), 12);
+  assert.equal(root.dataset.scene, "0");
+  capture.seek(4.5);
+  assert.equal(root.dataset.scene, "1");
+  assert.equal(scenes[0].style.display, "none");
+  assert.equal(scenes[1].style.display, "flex");
+  assert.equal(ticks[1].style.background, "var(--accent)");
+  assert.equal(timeline.time(), 4.5);
+  capture.seek(12);
+  assert.equal(root.dataset.scene, "2");
+  assert.equal(timeline.time(), 11.999);
+  capture.seek(-1);
+  assert.equal(root.dataset.scene, "0");
+  assert.equal(timeline.time(), 0);
 });

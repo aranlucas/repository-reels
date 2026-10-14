@@ -1,3 +1,5 @@
+import { runSequential } from "./serial.mjs";
+import { print, printError } from "./output.mjs";
 import { createServer } from "node:http";
 import {
   createCaptureSession,
@@ -8,19 +10,21 @@ import {
 } from "@hyperframes/engine";
 import { readFile, writeFile, mkdir, open, unlink } from "node:fs/promises";
 import { createHash } from "node:crypto";
-import { resolve } from "node:path";
+import { resolve as resolvePath } from "node:path";
 
 const manifest = JSON.parse(await readFile("manifest.json", "utf8"));
 
-const args = process.argv.slice(2),
-  requested = args.filter((arg) => !arg.startsWith("--"));
+const args = process.argv.slice(2);
+
+const requested = args.filter((arg) => !arg.startsWith("--"));
 
 const selected = requested.length
   ? manifest.clips.filter((clip) => requested.includes(clip.name))
   : manifest.clips.filter((clip) => clip.render_status !== "passed" || args.includes("--force"));
 
-if (requested.some((name) => !manifest.clips.some((clip) => clip.name === name)))
+if (requested.some((name) => !manifest.clips.some((clip) => clip.name === name))) {
   throw new Error("Unknown repository in selection");
+}
 
 const chrome =
   process.env.REELS_CHROME ||
@@ -47,8 +51,11 @@ window.finishReel = async () => {
 window.encoderReady = true;
 </script>`;
 
-for (const path of ["public/renders", "public/posters", "evidence/render"])
-  await mkdir(path, { recursive: true });
+await Promise.all(
+  ["public/renders", "public/posters", "evidence/render"].map((path) =>
+    mkdir(path, { recursive: true }),
+  ),
+);
 
 let lock;
 
@@ -59,10 +66,13 @@ try {
   throw new Error("Another renderer owns .render.lock. Never run concurrent batches.");
 }
 
-let currentHtml = "",
-  session,
-  encoderPage,
-  stopping = false;
+let currentHtml = "";
+
+let session;
+
+let encoderPage;
+
+let stopping = false;
 
 const server = createServer((req, res) => {
   if (req.url === "/index.html") {
@@ -112,7 +122,7 @@ async function bounded(promise, label, ms = 30000) {
   try {
     return await Promise.race([
       promise,
-      new Promise((_, reject) => {
+      new Promise((_resolve, reject) => {
         timer = setTimeout(() => reject(new Error(`${label} exceeded ${ms}ms`)), ms);
       }),
     ]);
@@ -136,14 +146,16 @@ process.on("SIGINT", () => {
 });
 
 try {
-  for (const [index, clip] of selected.entries()) {
-    if (stopping) break;
+  await runSequential(selected.entries(), async ([index, clip]) => {
+    if (stopping) {
+      return;
+    }
 
-    const started = Date.now(),
-      output = resolve(`public/renders/${clip.name}.webm`),
-      keyframes = [];
+    const started = Date.now();
+    const output = resolvePath(`public/renders/${clip.name}.webm`);
+    const keyframes = [];
 
-    console.log(`Rendering ${clip.name} (${index + 1}/${selected.length})`);
+    print(`Rendering ${clip.name} (${index + 1}/${selected.length})`);
     currentHtml = await readFile(`compositions/${clip.name}.html`, "utf8");
     clip.composition_sha256 = createHash("sha256").update(currentHtml).digest("hex");
 
@@ -177,35 +189,44 @@ try {
         timeout: 10000,
       });
 
-      for (let frame = 0; frame < manifest.duration * manifest.fps; frame++) {
-        if (stopping) throw new Error("Render interrupted");
+      await runSequential(
+        Array.from({ length: manifest.duration * manifest.fps }, (_, frame) => frame),
+        async (frame) => {
+          if (stopping) {
+            throw new Error("Render interrupted");
+          }
 
-        const { buffer } = await bounded(
-          captureFrameToBuffer(session, frame, frame / manifest.fps),
-          `Frame ${frame}`,
-          15000,
-        );
+          const { buffer } = await bounded(
+            captureFrameToBuffer(session, frame, frame / manifest.fps),
+            `Frame ${frame}`,
+            15000,
+          );
 
-        if (!buffer?.length) throw new Error("HyperFrames captured an empty frame");
+          if (!buffer?.length) {
+            throw new Error("HyperFrames captured an empty frame");
+          }
 
-        if ([9, 60, 108].includes(frame)) {
-          const path = `evidence/render/${clip.name}-${frame}.png`;
-          await writeFile(path, buffer);
-          keyframes.push(path);
+          if ([9, 60, 108].includes(frame)) {
+            const path = `evidence/render/${clip.name}-${frame}.png`;
+            await writeFile(path, buffer);
+            keyframes.push(path);
 
-          if (frame === 9) await writeFile(`public/posters/${clip.name}.png`, buffer);
-        }
+            if (frame === 9) {
+              await writeFile(`public/posters/${clip.name}.png`, buffer);
+            }
+          }
 
-        await bounded(
-          encoderPage.evaluate(
-            (png, time) => window.addReelFrame(png, time),
-            buffer.toString("base64"),
-            frame / manifest.fps,
-          ),
-          "Encode frame",
-          15000,
-        );
-      }
+          await bounded(
+            encoderPage.evaluate(
+              (png, time) => window.addReelFrame(png, time),
+              buffer.toString("base64"),
+              frame / manifest.fps,
+            ),
+            "Encode frame",
+            15000,
+          );
+        },
+      );
 
       const base64 = await bounded(
         encoderPage.evaluate(() => window.finishReel()),
@@ -216,10 +237,12 @@ try {
         /PAGEERROR|HTTPERROR|REQUESTFAIL/i.test(line),
       );
 
-      if (browserErrors.length || diagnostics.length || session.warnings.length)
+      if (browserErrors.length || diagnostics.length || session.warnings.length) {
         throw new Error(
           `Capture diagnostics: ${JSON.stringify({ browserErrors, diagnostics, warnings: session.warnings })}`,
         );
+      }
+
       const bytes = Buffer.from(base64, "base64");
       await writeFile(output, bytes);
       Object.assign(clip, {
@@ -234,12 +257,12 @@ try {
         codec: "VP8 / WebM",
       });
       delete clip.render_error;
-      console.log(`Passed ${clip.name}: ${bytes.length} bytes, ${clip.render_seconds}s`);
+      print(`Passed ${clip.name}: ${bytes.length} bytes, ${clip.render_seconds}s`);
     } catch (error) {
       clip.render_status = "failed";
       clip.render_error = error.message;
       await unlink(output).catch(() => {});
-      console.error(`Failed ${clip.name}: ${error.message}`);
+      printError(`Failed ${clip.name}: ${error.message}`);
     } finally {
       if (encoderPage) {
         await bounded(encoderPage.close(), "Close encoder", 5000).catch(() => {});
@@ -253,16 +276,19 @@ try {
 
       await saveManifest();
     }
-  }
+  });
 } finally {
-  if (session) await closeCaptureSession(session);
+  if (session) {
+    await closeCaptureSession(session);
+  }
+
   server.close();
   await closeBrowserPool();
   await lock.close();
   await unlink(".render.lock");
 }
 
-console.log(
+print(
   JSON.stringify(
     manifest.clips.reduce((counts, clip) => {
       counts[clip.render_status] = (counts[clip.render_status] || 0) + 1;
@@ -272,4 +298,6 @@ console.log(
   ),
 );
 
-if (selected.some((clip) => clip.render_status === "failed")) process.exitCode = 1;
+if (selected.some((clip) => clip.render_status === "failed")) {
+  process.exitCode = 1;
+}

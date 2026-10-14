@@ -1,84 +1,105 @@
 const escape = (value) =>
-  String(value).replace(
+  String(value).replaceAll(
     /[&<>"']/g,
     (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
   );
 
 export function validateReel(reel) {
-  if (!reel || !/^[a-zA-Z0-9_.-]+$/.test(reel.name)) throw new Error("Invalid repository name");
+  if (!reel || !/^[a-zA-Z0-9_.-]+$/.test(reel.name)) {
+    throw new Error("Invalid repository name");
+  }
 
-  if (!/^[a-f0-9]{40}$/.test(reel.source_sha)) throw new Error("A pinned source SHA is required");
+  if (!/^[a-f0-9]{40}$/.test(reel.source_sha)) {
+    throw new Error("A pinned source SHA is required");
+  }
 
-  if (reel.visibility !== "private" && reel.visibility !== "public")
+  if (reel.visibility !== "private" && reel.visibility !== "public") {
     throw new Error("Repository visibility is required");
+  }
 
   if (
     !reel.purpose ||
     !reel.description ||
     !Array.isArray(reel.workflow) ||
     reel.workflow.length !== 3
-  )
+  ) {
     throw new Error("Reviewed purpose and workflow required");
+  }
 
   if (
     !Array.isArray(reel.evidence_urls) ||
     !reel.evidence_urls.length ||
     reel.evidence_urls.some((url) => !url.startsWith("https://github.com/aranlucas/"))
-  )
+  ) {
     throw new Error("Owned-repository evidence links required");
+  }
 
   if (
     reel.source_still_data &&
     !/^data:image\/png;base64,[A-Za-z0-9+/=]+$/.test(reel.source_still_data)
-  )
+  ) {
     throw new Error("Source still must be an embedded PNG");
+  }
 
-  if (reel.source_still_data && reel.review_mode === "metadata-and-structure-only")
+  if (reel.source_still_data && reel.review_mode === "metadata-and-structure-only") {
     throw new Error("Protected contents cannot have source screenshots");
+  }
 
   return reel;
 }
 
 function seekRuntime() {
-  const scenes = [...document.querySelectorAll(".scene")],
-    ticks = [...document.querySelectorAll(".tick")],
-    root = document.querySelector("#reel");
+  const scenes = [...document.querySelectorAll(".scene")];
+  const ticks = [...document.querySelectorAll(".tick")];
+  const root = document.querySelector("#reel");
 
-  let time = 0,
-    playing = false,
-    raf,
-    last = 0;
+  let time = 0;
+  let playing = false;
+  let raf;
+  let last = 0;
 
   function seek(t) {
     time = Math.max(0, Math.min(11.999, t));
 
-    const index = Math.floor(time / 4),
-      p = (time - index * 4) / 4;
+    const index = Math.floor(time / 4);
+    const p = (time - index * 4) / 4;
 
     root.dataset.scene = String(index);
-    scenes.forEach((el, i) => {
+
+    for (const [i, el] of scenes.entries()) {
       el.style.display = i === index ? "flex" : "none";
-    });
+    }
+
     const current = scenes[index];
-    current.querySelectorAll("[data-move]").forEach((el, i) => {
+
+    for (const [i, el] of current.querySelectorAll("[data-move]").entries()) {
       const progress = Math.max(0, Math.min(1, (p * 4 - i * 0.12) / 0.6));
       el.style.transform = `translateY(${(1 - progress) * 16}px)`;
       el.style.opacity = String(progress);
-    });
-    ticks.forEach((el, i) => {
+    }
+
+    for (const [i, el] of ticks.entries()) {
       el.style.background = i <= index ? "var(--accent)" : "#777b71";
-    });
+    }
+
     const marker = document.querySelector(".marker");
 
-    if (marker)
+    if (marker) {
       marker.style.transform = `translate(${Math.sin(p * Math.PI * 2) * 160}px,${Math.cos(p * Math.PI * 2) * 28}px) rotate(${Math.sin(p * Math.PI) * 6}deg)`;
+    }
+
     const still = document.querySelector(".source-still");
 
-    if (still) still.style.transform = `scale(${1 + p * 0.025})`;
+    if (still) {
+      still.style.transform = `scale(${1 + p * 0.025})`;
+    }
   }
 
   function tick(now) {
-    if (!playing) return;
+    if (!playing) {
+      return;
+    }
+
     const next = Math.min(12, time + (now - last) / 1000);
     last = now;
     seek(next);
@@ -102,7 +123,10 @@ function seekRuntime() {
       return timeline;
     },
     play: () => {
-      if (playing) return timeline;
+      if (playing) {
+        return timeline;
+      }
+
       playing = true;
       last = performance.now();
       raf = requestAnimationFrame(tick);
@@ -118,10 +142,13 @@ function seekRuntime() {
     paused: () => !playing,
   };
 
-  window.__timelines = { reel: timeline };
-  window.__hf = { duration: 12, seek };
-  window.__player = { getDuration: () => 12 };
-  window.reelTimeline = timeline;
+  // Register the names required by the Hyperframes capture/player protocol.
+  Object.assign(window, {
+    __timelines: { reel: timeline },
+    __hf: { duration: 12, seek },
+    __player: { getDuration: () => 12 },
+    reelTimeline: timeline,
+  });
   seek(0.7);
 }
 
@@ -130,24 +157,28 @@ function workflowGraphic(reel) {
     .map((s, i) => `<div class="node ${i === 1 ? "active" : ""}">${escape(s)}</div>`)
     .join('<span class="arrow">→</span>');
 
-  if (reel.name === "delivery-dash")
+  if (reel.name === "delivery-dash") {
     return `<div class="game-map"><div class="road road-a"></div><div class="road road-b"></div><div class="block b1"></div><div class="block b2"></div><div class="block b3"></div><div class="marker">↗</div></div><div class="flow">${nodes}</div>`;
+  }
 
-  if (reel.genre === "outdoors")
+  if (reel.genre === "outdoors") {
     return `<svg class="mountains" viewBox="0 0 700 120" aria-hidden="true"><path d="M0 120L110 32L180 84L300 0L410 95L505 33L700 120" fill="none" stroke="currentColor" stroke-width="2"/><path d="M0 110Q190 0 340 92T700 58" fill="none" stroke="var(--accent)" stroke-width="6" stroke-dasharray="8 8"/></svg><div class="flow">${nodes}</div>`;
+  }
 
-  if (reel.genre === "hardware")
+  if (reel.genre === "hardware") {
     return `<div class="hardware"><div class="device"><i></i><i></i><i></i><b></b></div><div class="flow">${nodes}</div></div>`;
+  }
 
-  if (reel.genre === "structure")
+  if (reel.genre === "structure") {
     return `<div class="structure-lines"><span></span><span></span><span></span></div><div class="flow">${nodes}</div>`;
+  }
 
   return `<div class="flow">${nodes}</div>`;
 }
 
 export function makeReel(input) {
-  const reel = validateReel(input),
-    e = escape;
+  const reel = validateReel(input);
+  const e = escape;
 
   const accent =
     {
