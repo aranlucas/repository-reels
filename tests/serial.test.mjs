@@ -1,9 +1,9 @@
-import test from "node:test";
+import { test } from "vitest";
 import assert from "node:assert/strict";
 import { setImmediate } from "node:timers/promises";
 import { runSequential } from "../scripts/serial.mjs";
 
-await test("sequential jobs preserve order and never overlap", async () => {
+test("sequential jobs preserve order and never overlap", async () => {
   let active = 0;
   const events = [];
 
@@ -20,7 +20,7 @@ await test("sequential jobs preserve order and never overlap", async () => {
   assert.equal(active, 0);
 });
 
-await test("a failed sequential job prevents subsequent work", async () => {
+test("a failed sequential job prevents subsequent work", async () => {
   const visited = [];
   const failure = new Error("provider rejected the request");
 
@@ -38,7 +38,7 @@ await test("a failed sequential job prevents subsequent work", async () => {
   assert.deepEqual(visited, [1, 2]);
 });
 
-await test("an empty batch does not invoke the action", async () => {
+test("an empty batch does not invoke the action", async () => {
   let calls = 0;
 
   await runSequential([], () => {

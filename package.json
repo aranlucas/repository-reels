@@ -7,7 +7,7 @@
     "dev": "portless run vite",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1 --port 4313 --strictPort",
-    "test": "node --test tests/*.test.mjs",
+    "test": "vitest run",
     "check": "pnpm lint && pnpm format:check && pnpm test && pnpm build",
     "render": "node scripts/render.mjs",
     "compose": "node scripts/compose.mjs",
@@ -33,7 +33,8 @@
     "oxlint": "^1.88.0",
     "oxlint-tsgolint": "^7.0.2004",
     "portless": "0.15.7",
-    "vite": "8.3.4"
+    "vite": "8.3.4",
+    "vitest": "5.0.3"
   },
   "engines": {
     "node": ">=22.12"
