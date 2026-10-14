@@ -1,25 +1,28 @@
+import { print } from "./output.mjs";
 import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { resolve, extname, sep } from "node:path";
 
-const root = resolve("dist"),
-  mime = {
-    ".html": "text/html",
-    ".js": "text/javascript",
-    ".css": "text/css",
-    ".webm": "video/webm",
-    ".json": "application/json",
-    ".png": "image/png",
-    ".svg": "image/svg+xml",
-  };
+const root = resolve("dist");
+
+const mime = {
+  ".html": "text/html",
+  ".js": "text/javascript",
+  ".css": "text/css",
+  ".webm": "video/webm",
+  ".json": "application/json",
+  ".png": "image/png",
+  ".svg": "image/svg+xml",
+};
 
 const server = createServer(async (req, res) => {
   try {
-    const url = new URL(req.url, "http://127.0.0.1"),
-      file = resolve(
-        root,
-        "." + decodeURIComponent(url.pathname === "/" ? "/index.html" : url.pathname),
-      );
+    const url = new URL(req.url, "http://127.0.0.1");
+
+    const file = resolve(
+      root,
+      "." + decodeURIComponent(url.pathname === "/" ? "/index.html" : url.pathname),
+    );
 
     if (!file.startsWith(root + sep)) {
       res.writeHead(403);
@@ -28,8 +31,8 @@ const server = createServer(async (req, res) => {
       return;
     }
 
-    const size = (await stat(file)).size,
-      data = await readFile(file);
+    const size = (await stat(file)).size;
+    const data = await readFile(file);
 
     res.setHeader("Content-Type", mime[extname(file)] || "application/octet-stream");
     res.setHeader("Cache-Control", "no-store");
@@ -44,8 +47,8 @@ const server = createServer(async (req, res) => {
         return;
       }
 
-      const start = Number(match[1]),
-        end = match[2] ? Math.min(Number(match[2]), size - 1) : size - 1;
+      const start = Number(match[1]);
+      const end = match[2] ? Math.min(Number(match[2]), size - 1) : size - 1;
 
       if (start >= size || end < start) {
         res.writeHead(416);
@@ -71,6 +74,4 @@ const server = createServer(async (req, res) => {
   }
 });
 
-server.listen(4313, "127.0.0.1", () =>
-  console.log("Private screening room: http://127.0.0.1:4313"),
-);
+server.listen(4313, "127.0.0.1", () => print("Private screening room: http://127.0.0.1:4313"));

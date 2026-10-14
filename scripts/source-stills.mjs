@@ -1,10 +1,13 @@
+import { runSequential } from "./serial.mjs";
+import { print } from "./output.mjs";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { createHash } from "node:crypto";
 
-const run = promisify(execFile),
-  review = JSON.parse(await readFile("evidence/source-review.json", "utf8"));
+const run = promisify(execFile);
+
+const review = JSON.parse(await readFile("evidence/source-review.json", "utf8"));
 
 const candidates = {
   lanternwake: "evidence/first-echo.png",
@@ -16,10 +19,12 @@ await mkdir("public/source-stills", { recursive: true });
 
 const stills = [];
 
-for (const [name, path] of Object.entries(candidates)) {
+await runSequential(Object.entries(candidates), async ([name, path]) => {
   const source = review.repos.find((r) => r.name === name);
 
-  if (!source) continue;
+  if (!source) {
+    return;
+  }
 
   const { stdout } = await run(
     "gh",
@@ -41,8 +46,13 @@ for (const [name, path] of Object.entries(candidates)) {
 
   const bytes = Buffer.from(content, "base64");
 
-  if (bytes.length > 8 * 1024 * 1024 || bytes.subarray(0, 8).toString("hex") !== "89504e470d0a1a0a")
+  if (
+    bytes.length > 8 * 1024 * 1024 ||
+    bytes.subarray(0, 8).toString("hex") !== "89504e470d0a1a0a"
+  ) {
     throw new Error("Invalid or oversized source PNG");
+  }
+
   await writeFile(`public/source-stills/${name}.png`, bytes);
   stills.push({
     name,
@@ -53,8 +63,8 @@ for (const [name, path] of Object.entries(candidates)) {
     url: `https://github.com/${source.full_name}/blob/${source.source_sha}/${path}`,
     kind: "Source screenshot; local illustration, not a live application capture",
   });
-  console.log(name, bytes.length);
-}
+  print(name, bytes.length);
+});
 
 await writeFile(
   "evidence/source-stills.json",

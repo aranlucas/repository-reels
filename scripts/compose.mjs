@@ -1,3 +1,5 @@
+import { runSequential } from "./serial.mjs";
+import { print } from "./output.mjs";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { makeReel } from "../src/reel.js";
 import { curation, changes } from "./curation.mjs";
@@ -13,7 +15,9 @@ const missing = capture.repos
   .filter((source) => !curation[source.name])
   .map((source) => source.name);
 
-if (missing.length) throw new Error(`Review curation before composing: ${missing.join(", ")}`);
+if (missing.length) {
+  throw new Error(`Review curation before composing: ${missing.join(", ")}`);
+}
 
 const stills = JSON.parse(
   await readFile("evidence/source-stills.json", "utf8").catch(() => '{"stills":[]}'),
@@ -36,13 +40,15 @@ await mkdir("compositions", { recursive: true });
 
 await mkdir("public/data", { recursive: true });
 
-for (const source of capture.repos) {
+await runSequential(capture.repos, async (source) => {
   const tuple = curation[source.name];
 
-  if (!tuple) throw new Error(`No reviewed curation for ${source.name}`);
+  if (!tuple) {
+    throw new Error(`No reviewed curation for ${source.name}`);
+  }
 
-  const [purpose, description, workflow, genre] = tuple,
-    pr = statuses.find((p) => p.repo === source.name) || source.capture_pr;
+  const [purpose, description, workflow, genre] = tuple;
+  const pr = statuses.find((p) => p.repo === source.name) || source.capture_pr;
 
   const protectedContent = source.review_mode === "metadata-and-structure-only";
 
@@ -81,15 +87,17 @@ for (const source of capture.repos) {
       "No financial values, holdings, trades or live providers are shown. Proposal remains unmerged.";
   }
 
-  if (source.name === "react-hook-form-mantine")
+  if (source.name === "react-hook-form-mantine") {
     clip.evidence_urls.push(
       `https://github.com/${source.full_name}/blob/${source.source_sha}/src/TextInput/TextInput.tsx`,
     );
+  }
 
-  if (source.name === "shipshape-mcp")
+  if (source.name === "shipshape-mcp") {
     clip.evidence_urls.push(
       `https://github.com/${source.full_name}/blob/${source.source_sha}/src/mcp.ts`,
     );
+  }
 
   const still = stills.find((s) => s.name === clip.name && s.source_sha === clip.source_sha);
 
@@ -104,9 +112,9 @@ for (const source of capture.repos) {
     clip.demo_note = "Pinned source screenshot. The film does not run or verify the application.";
   }
 
-  const html = makeReel({ ...clip, source_still_data: stillData }),
-    hash = createHash("sha256").update(html).digest("hex"),
-    old = previous.clips.find((c) => c.name === clip.name);
+  const html = makeReel({ ...clip, source_still_data: stillData });
+  const hash = createHash("sha256").update(html).digest("hex");
+  const old = previous.clips.find((c) => c.name === clip.name);
 
   if (old?.render_status === "passed" && old.composition_sha256 === hash) {
     for (const key of [
@@ -120,16 +128,17 @@ for (const source of capture.repos) {
       "encoder",
       "codec",
       "composition_sha256",
-    ])
+    ]) {
       clip[key] = old[key];
+    }
   }
 
   await writeFile(`compositions/${source.name}.html`, html);
   manifest.clips.push(clip);
-}
+});
 
 await writeFile("manifest.json", JSON.stringify(manifest, null, 2) + "\n");
 
 await writeFile("public/data/manifest.json", JSON.stringify(manifest, null, 2) + "\n");
 
-console.log(`Composed ${manifest.clips.length} private, source-pinned reels.`);
+print(`Composed ${manifest.clips.length} private, source-pinned reels.`);
