@@ -1,7 +1,7 @@
 import { test } from "vitest";
 import assert from "node:assert/strict";
 import { runInNewContext } from "node:vm";
-import { makeReel, validateReel } from "../../src/reel.js";
+import { makeReel, validateReel } from "@/reel.js";
 
 const reel = {
   name: "safe-repo",

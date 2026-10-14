@@ -1,7 +1,7 @@
 import { test } from "vitest";
 import assert from "node:assert/strict";
 import { setImmediate } from "node:timers/promises";
-import { runSequential } from "../../scripts/serial.mjs";
+import { runSequential } from "@scripts/serial.mjs";
 
 test("sequential jobs preserve order and never overlap", async () => {
   let active = 0;
