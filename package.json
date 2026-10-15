@@ -15,6 +15,7 @@
     "serve": "node scripts/serve.mjs",
     "decode": "node scripts/decode.mjs",
     "lint": "oxlint .",
+    "prepare": "husky",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "lint:fix": "oxlint --fix"
@@ -28,12 +29,23 @@
   },
   "devDependencies": {
     "@aranlucas/oxforge": "^0.2.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
     "oxfmt": "^0.73.0",
     "oxlint": "^1.88.0",
     "oxlint-tsgolint": "^7.0.2004",
     "portless": "0.15.7",
     "vite": "8.3.4",
     "vitest": "5.0.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}": [
+      "oxlint --fix",
+      "oxfmt --no-error-on-unmatched-pattern"
+    ],
+    "*.{json,jsonc,json5,css,scss,md,mdx,yml,yaml,html,toml,vue,svelte,astro,graphql}": [
+      "oxfmt --no-error-on-unmatched-pattern"
+    ]
   },
   "engines": {
     "node": ">=22.12"
