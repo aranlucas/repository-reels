@@ -185,6 +185,12 @@ importers:
       '@aranlucas/oxforge':
         specifier: ^0.2.2
         version: 0.2.2(oxfmt@0.73.0)(oxlint-tsgolint@7.0.2004)(oxlint@1.88.0(oxlint-tsgolint@7.0.2004))
+      husky:
+        specifier: ^9.1.7
+        version: 9.1.7
+      lint-staged:
+        specifier: ^17.6.0
+        version: 17.6.0
       oxfmt:
         specifier: ^0.73.0
         version: 0.73.0
@@ -199,10 +205,10 @@ importers:
         version: 0.15.7
       vite:
         specifier: 8.3.4
-        version: 8.3.4
+        version: 8.3.4(yaml@2.9.1)
       vitest:
         specifier: 5.0.3
-        version: 5.0.3(vite@8.3.4)
+        version: 5.0.3(vite@8.3.4(yaml@2.9.1))
 
 packages:
 
@@ -1203,6 +1209,11 @@ packages:
   htmlparser2@10.1.0:
     resolution: {integrity: sha512-VTZkM9GWRAtEpveh7MSF6SjjrpNVNNVJfFup7xTY3UpFtm67foy9HDVXneLtFVt4pMz5kZtgNcvCniNFb1hlEQ==}
 
+  husky@9.1.7:
+    resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   lightningcss-android-arm64@1.33.0:
     resolution: {integrity: sha512-gEpRTalKdosp4Bb8qWtc2iOgE5SeIHlpS1up9bFq2wAyYhl1UdTObYiHe98zEM9SQvSoqQZ1IQD0JNpg3Ml5pg==}
     engines: {node: '>= 12.0.0'}
@@ -1289,6 +1300,11 @@ packages:
     peerDependenciesMeta:
       canvas:
         optional: true
+
+  lint-staged@17.6.0:
+    resolution: {integrity: sha512-nOhBfYkZEwkFtNzD5pK9s9LkcWoxJ+whLzEnhqi9nl7zTB5n7tg8+9iYgMGx2Wm3VlLu8cbNj0RACzY+nWi5iQ==}
+    engines: {node: '>=22.22.1'}
+    hasBin: true
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
@@ -1427,6 +1443,10 @@ packages:
 
   std-env@4.3.0:
     resolution: {integrity: sha512-OtU/EgQ1kIm5KwqQpBC6ZEMXrZRui11w8zgfTWp8cdO9B8OaPsbA8bTHO2P+HNo1VlUTGMVBwPhydu6poeXiag==}
+
+  string-argv@0.3.2:
+    resolution: {integrity: sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==}
+    engines: {node: '>=0.6.19'}
 
   string-width@7.2.0:
     resolution: {integrity: sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==}
@@ -1586,6 +1606,11 @@ packages:
   y18n@5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
     engines: {node: '>=10'}
+
+  yaml@2.9.1:
+    resolution: {integrity: sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw==}
+    engines: {node: '>= 14.6'}
+    hasBin: true
 
   yargs-parser@22.0.0:
     resolution: {integrity: sha512-rwu/ClNdSMpkSrUb+d6BRsSkLUq1fmfsY6TOpYzTwvwkg1/NRG85KBy3kq++A8LKQwX6lsu+aWad+2khvuXrqw==}
@@ -2112,14 +2137,14 @@ snapshots:
 
   '@types/estree@1.0.9': {}
 
-  '@vitest/mocker@5.0.3(vite@8.3.4)':
+  '@vitest/mocker@5.0.3(vite@8.3.4(yaml@2.9.1))':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       '@vitest/spy': 5.0.3
       estree-walker: 3.0.3
       magic-string: 1.4.3
     optionalDependencies:
-      vite: 8.3.4
+      vite: 8.3.4(yaml@2.9.1)
 
   '@vitest/spy@5.0.3': {}
 
@@ -2285,6 +2310,8 @@ snapshots:
       domutils: 3.2.2
       entities: 7.0.1
 
+  husky@9.1.7: {}
+
   lightningcss-android-arm64@1.33.0:
     optional: true
 
@@ -2343,6 +2370,14 @@ snapshots:
       html-escaper: 3.0.3
       htmlparser2: 10.1.0
       uhyphen: 0.2.0
+
+  lint-staged@17.6.0:
+    dependencies:
+      picomatch: 4.0.7
+      string-argv: 0.3.2
+      tinyexec: 1.3.1
+    optionalDependencies:
+      yaml: 2.9.1
 
   magic-string@0.30.21:
     dependencies:
@@ -2548,6 +2583,8 @@ snapshots:
 
   std-env@4.3.0: {}
 
+  string-argv@0.3.2: {}
+
   string-width@7.2.0:
     dependencies:
       emoji-regex: 10.6.0
@@ -2584,7 +2621,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite@8.3.4:
+  vite@8.3.4(yaml@2.9.1):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
@@ -2593,11 +2630,12 @@ snapshots:
       tinyglobby: 0.2.17
     optionalDependencies:
       fsevents: 2.3.3
+      yaml: 2.9.1
 
-  vitest@5.0.3(vite@8.3.4):
+  vitest@5.0.3(vite@8.3.4(yaml@2.9.1)):
     dependencies:
       '@types/chai': 5.2.3
-      '@vitest/mocker': 5.0.3(vite@8.3.4)
+      '@vitest/mocker': 5.0.3(vite@8.3.4(yaml@2.9.1))
       chai: 6.3.0
       es-module-lexer: 2.3.2
       expect-type: 1.4.0
@@ -2608,7 +2646,7 @@ snapshots:
       tinybench: 6.2.2
       tinyexec: 1.3.1
       tinyglobby: 0.2.17
-      vite: 8.3.4
+      vite: 8.3.4(yaml@2.9.1)
       why-is-node-running: 3.2.1
     transitivePeerDependencies:
       - msw
@@ -2630,6 +2668,9 @@ snapshots:
   ws@8.22.0: {}
 
   y18n@5.0.8: {}
+
+  yaml@2.9.1:
+    optional: true
 
   yargs-parser@22.0.0: {}
 
