@@ -5,7 +5,8 @@ const escape = (value) =>
   );
 
 export function validateReel(reel) {
-  if (!reel || !/^[a-zA-Z0-9_.-]+$/.test(reel.name)) {
+  // oxlint-disable-next-line anti-slop/no-runtime-typeof -- reject non-string manifest names before the regex can coerce them
+  if (!reel || typeof reel.name !== "string" || !/^[a-zA-Z0-9_.-]+$/.test(reel.name)) {
     throw new Error("Invalid repository name");
   }
 
@@ -29,7 +30,21 @@ export function validateReel(reel) {
   if (
     !Array.isArray(reel.evidence_urls) ||
     !reel.evidence_urls.length ||
-    reel.evidence_urls.some((url) => !url.startsWith("https://github.com/aranlucas/"))
+    reel.evidence_urls.some((value) => {
+      // oxlint-disable-next-line anti-slop/no-runtime-typeof -- validate the manifest field before URL parsing can coerce it
+      if (typeof value !== "string" || !URL.canParse(value)) {
+        return true;
+      }
+
+      const url = new URL(value);
+
+      return (
+        url.origin !== "https://github.com" ||
+        url.username !== "" ||
+        url.password !== "" ||
+        !/^\/aranlucas\/[a-zA-Z0-9_.-]+(?:\/|$)/.test(url.pathname)
+      );
+    })
   ) {
     throw new Error("Owned-repository evidence links required");
   }

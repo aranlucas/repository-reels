@@ -125,3 +125,22 @@ test("generated runtime preserves the capture protocol and deterministic scene s
   assert.equal(root.dataset.scene, "0");
   assert.equal(timeline.time(), 0);
 });
+
+test("repository names must be strings and evidence must resolve to an owned repository", () => {
+  for (const name of [undefined, null, 123]) {
+    assert.throws(() => validateReel({ ...reel, name }), /Invalid repository name/);
+  }
+
+  for (const url of [
+    "https://github.com/aranlucas/../other-owner/repo",
+    "https://github.com/aranlucas/%2e%2e/other-owner/repo",
+    "https://github.com/aranlucas/",
+  ]) {
+    assert.throws(
+      () => validateReel({ ...reel, evidence_urls: [url] }),
+      /Owned-repository evidence links required/,
+    );
+  }
+
+  assert.equal(validateReel(reel), reel);
+});
