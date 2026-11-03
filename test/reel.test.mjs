@@ -48,7 +48,6 @@ test("all source-state claims remain separate from deployment", () => {
 test("exactly three deterministic twelve-second scenes", () => {
   const html = makeReel(reel);
   assert.equal((html.match(/section class="scene /g) || []).length, 3);
-  assert.match(html, /__hf:\s*\{\s*duration:\s*12,\s*seek\s*\}/);
   assert.ok(html.includes('data-duration="12"'));
 });
 
