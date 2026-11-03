@@ -4,14 +4,6 @@ Updated 2026-10-26. Proposed improvements to the private collection, after
 Digits/MCP priorities. Publishing a film or source screenshot requires a separate
 deliberate selection; this plan authorizes no public release.
 
-## Starting point
-
-At `e7aa1a4308bac5d4250576e89798ad41fbdda4e3`, the [screening room](README.md)
-contains 56 source-pinned films with search, playback, download and provenance.
-That is a dated snapshot, not current portfolio coverage. The existing pipeline
-renders and verifies media; a film illustrates a workflow and does not prove the
-source application is deployed or working.
-
 ## Ordered releases
 
 1. **Find a project by the problem it solves.** Add curated outcome tags and
@@ -43,7 +35,6 @@ what is available versus illustrated. Record search time, misunderstood claims
 and whether they follow the source or try the product. Views alone do not show
 customer value.
 
-Keep source capture, composition, rendering and validation responsibilities
-distinct. Reuse the existing HyperFrames/MediaBunny pipeline and test runner;
-add no parallel browser farm or generic refresh wrapper. Protected source
-content remains excluded from both films and planning analytics.
+Protected source content remains excluded from planning analytics as well as
+films. See [README.md](README.md) for source and privacy boundaries and the
+existing refresh workflow.

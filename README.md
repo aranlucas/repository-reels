@@ -1,34 +1,14 @@
 # Repository reels
 
-Private screening room for 56 source-pinned repository films, rendered locally with the real HyperFrames engine and encoded with MediaBunny. Each film is a silent, three-scene, 12-second VP8 WebM at 960×540 and 12 fps. Search the collection, play a film, download it, and inspect its immutable source links.
+Private screening room for source-pinned repository films. Search the collection,
+play or download a film, and inspect its source links. The films illustrate
+workflows with synthetic data; they do not test source applications or establish
+deployment. A merged source change is a separate claim from a working deployment.
 
-![Desktop screening room](evidence/browser/desktop.jpg)
+## Run locally
 
-## Technology stack
-
-| Component                   | Version or requirement | Role                                                                              |
-| --------------------------- | ---------------------- | --------------------------------------------------------------------------------- |
-| React + React DOM           | 19.3.0                 | Screening-room interface, collection search and film selection.                   |
-| Vite                        | 8.3.2                  | Development server and production browser build.                                  |
-| HyperFrames engine + player | 0.8.107                | Deterministic HTML-to-frame rendering and embedded film playback.                 |
-| MediaBunny                  | 1.61.0                 | Local WebCodecs VP8 encoding, WebM muxing and media verification.                 |
-| Node.js                     | 22.12 or newer         | Local scripts and the built-in HTTP server, including video byte-range responses. |
-
-The built screening room runs locally at **http://127.0.0.1:4313**; `pnpm dev` serves the source at **https://repository-reels.localhost** through [Portless](https://github.com/vercel-labs/portless) (a dev dependency); its first run may ask for `sudo` to bind port 443 and trust a local certificate. It does not use Vercel hosting or the Vercel AI SDK, and it does not depend on TanStack Start or TanStack Router. Exact package versions are recorded in [package.json](package.json) and [pnpm-lock.yaml](pnpm-lock.yaml).
-
-These stack details describe Repository Reels. The individual projects featured in the films have their own stacks; rendering a film does not change their frameworks or deployment setup.
-
-## Open the collection
-
-The portable collection in Lucas's Library includes a built screening room and all films. Extract these three ZIPs into the same parent directory; all share one `repository-reels/` folder:
-
-- `repository-reels--collection-app.zip`
-- `repository-reels--collection-films-A.zip`
-- `repository-reels--collection-films-B.zip`
-
-Enter that folder and run `node scripts/serve.mjs` with Node 22.12 or newer. Open **http://127.0.0.1:4313**. No package installation is needed for that bundle. Stop with Ctrl-C. If another instance owns port 4313, use that instance or stop it before starting another. A single complete ZIP is also available in the local `artifacts/` directory. Three separate Library preview films showcase the forms library, Shipshape and Lanternwake.
-
-From this private repository's implementation branch:
+Use the Node version in [.node-version](.node-version) and the pnpm version in
+[package.json](package.json).
 
 ```sh
 pnpm install --frozen-lockfile --ignore-scripts
@@ -36,59 +16,80 @@ pnpm build
 pnpm serve
 ```
 
-The films, posters, source stills, generated compositions and verification evidence are committed deliberately so a fresh clone works. `dist/` and the portable ZIP are build artifacts. Repository history begins with an honest bootstrap; implementation is delivered through its reviewable PR.
+Open **http://127.0.0.1:4313**. Stop with Ctrl-C. The server requires a built
+`dist/` directory and serves video byte ranges. A prebuilt bundle containing
+`dist/` and `scripts/` can run with `node scripts/serve.mjs` without installing
+packages. If port 4313 is occupied, use or stop the existing instance.
 
-## Exact coverage
+For the three-part Library delivery, extract `repository-reels--collection-app.zip`,
+`repository-reels--collection-films-A.zip` and `repository-reels--collection-films-B.zip`
+into the same parent directory. They share a `repository-reels/` folder; run the
+server from there. These delivery ZIPs are not tracked in this repository.
 
-The source snapshot began **October 1, 2026 at 9:25:24 pm Pacific** (`2026-10-02T04:25:24.864Z`); PR states were captured at `04:26:16.775Z`. It covers the original 47 owned repositories plus nine new prototypes. **56/56 included films rendered and fully decoded.**
+For development, `pnpm dev` uses Portless at
+**https://repository-reels.localhost**. Its first run may request `sudo` for the
+HTTPS proxy and local certificate trust.
 
-A later inventory audit at **10:09:40 pm Pacific** (`2026-10-02T05:09:40.159911Z`) found 61 owned repositories:
+## Source and privacy boundaries
 
-- 56 included films.
-- Four pending source review/films: `framebreak`, `pocket-park`, `trailbraid`, `orthogonal-router-rust-lab`, created after this source snapshot.
-- One excluded: `repository-reels`, the collection itself, to avoid recursive coverage.
+[manifest.json](manifest.json) records the dated source snapshot, source SHAs,
+review modes, media hashes and pending/excluded repositories. It is not a live
+portfolio inventory. Prototype films may pin an inspected implementation PR head
+rather than a bootstrap default branch; later merges do not replace that source.
 
-This is a dated capture, not a claim of complete coverage of every repository subsequently created. The exact list, SHA, evidence, pending/excluded names and video hash are in [manifest.json](manifest.json) and [inventory audit](evidence/inventory-audit.json).
+Sensitive projects use purpose and metadata/structure only. Keep resumes, vault
+contents, corpus documents, medical details, financial values, holdings,
+credentials, private photos and location records out of films and source stills.
+Source screenshots must match the pinned commit and be labeled as screenshots;
+they do not establish live application behavior. Preserve project-specific
+release blockers recorded in the manifest.
 
-Five bootstrap-only prototypes use inspected implementation PR heads rather than describing an empty default branch: Elsewhere, Leavewell, Paper Options, Second Helping and Spoonworld. Their proposal state is historical. Later merges do not invalidate the pinned source but are not silently substituted into this capture. Four merged source changes were checked against their exact merge commits in [merge ancestry](evidence/merge-ancestry.json).
+Keep the collection private. Publishing a film or source screenshot requires a
+separate deliberate selection. Source repositories retain their licenses and
+visibility; see [third-party notices](public/THIRD_PARTY_NOTICES.md).
 
-## What the films establish
+## Validate and refresh
 
-Workflows are source-backed illustrations using synthetic data. Lanternwake, Elsewhere and Spoonworld additionally use inspected source screenshots pinned to their commits; their scenes explicitly say **SOURCE SCREENSHOT**. These films do not run, test or establish the deployment of the source applications. A merged source change and a live deployment are separate claims. Garmin remains labeled release blocked by its account/device migration.
+`pnpm check` runs lint, formatting, tests and the browser build. `pnpm verify`
+checks composition/video hashes, container metadata, packet timing, seekable
+keyframes and scene PNGs, and requires hash-matched full-decode evidence.
+It writes `evidence/verification-media.json`; it does not decode frames itself.
+`pnpm decode` uses Chromium to decode every frame and replaces
+[the decode report](evidence/verification-decode.json). Neither check verifies
+the source applications or replaces visual review of the films.
 
-Sensitive projects use purpose and metadata/structure only. Resumes, vault contents, corpus documents, medical details, financial values, holdings, credentials, private photos and location records are withheld. No external AI provider or new paid service is used. Nothing has been publicly released or deployed.
+A fresh clone can play the committed collection, but cannot refresh source
+capture or recompose it without restoring trusted `evidence/source-review.json`
+and `evidence/pr-status.json`. These inputs are absent from this checkout.
+Restore `evidence/source-stills.json` as well to preserve the screenshot mappings
+when composing; the PNGs alone are insufficient.
 
-## Validation and browser evidence
+Once those inputs are restored, the refresh order is:
 
-```sh
-pnpm check
-pnpm verify
-```
+1. Run `node scripts/refresh-evidence.mjs` using existing read-only GitHub access.
+   It reads GitHub and replaces local capture files. Review changed sources and
+   PR states; its fixed PR list does not discover every newly relevant change.
+2. Review `scripts/curation.mjs` and any source-still changes. `pnpm compose`
+   rejects uncurated repositories and preserves passed renders only when their
+   composition hashes match. Reconcile the inventory audit for the new snapshot;
+   composition does not carry the previous audit forward.
+3. Run `pnpm render`, then `pnpm decode`, `pnpm verify` and `pnpm check`.
+   `pnpm render name --force` explicitly rerenders one film. Changed media needs
+   new decode evidence tied to its exact bytes.
 
-Seven contract/privacy regression tests and the production build pass. `verify` checks every file's composition/video hashes, container readability, VP8 track, dimensions, duration, 144 packets, timing, seekable keyframes and three PNG scene captures. It also requires a complete full-decode report tied to those exact media hashes.
+Rendering and decoding share `.render.lock` and must run sequentially. Both use
+one local Chromium process in software GPU mode. Set `REELS_CHROME` to a trusted
+installed Chromium executable; the default is a machine-specific Playwright
+headless-shell path in the scripts. They do not download a browser. If a job
+leaves a lock behind, confirm its recorded process is no longer running before
+removing it.
 
-`pnpm decode` separately decodes **all 8,064 frames** through Chromium WebCodecs and MediaBunny, verifies frame order/dimensions/duration, and samples all three scenes for blank/black output. [Full decode evidence](evidence/verification-decode.json) and [media evidence](evidence/verification-media.json) are committed. Hosted CI verifies the hash-bound decode evidence; it does not download Chromium or rerun the browser decoder.
+HyperFrames captures deterministic HTML scenes as PNG frames. Opaque scene
+backgrounds are explicit because its PNG capture clears root backgrounds.
+MediaBunny uses local WebCodecs for VP8 encoding and WebM muxing: it was chosen
+to avoid requiring a separate FFmpeg runtime with PNG decoding support.
+Engine/encoder version labels in manifests and reports are hard-coded to the
+original capture versions. Check those labels against
+[pnpm-lock.yaml](pnpm-lock.yaml) before regenerating evidence after upgrades.
 
-Actual in-app Chromium QA at 1440×960 and 390×844 covered search, selection, playback through 0:12, source disclosure, source-linked URLs and an actual downloaded film whose hash matched the manifest. Both viewports have no document-level horizontal overflow. Console error/warning capture was empty. A mobile poster-cropping defect in player 0.8.107 was found and fixed by sizing its shadow poster to the player bounds; library files are unmodified. [Desktop](evidence/browser/desktop.jpg), [mobile](evidence/browser/mobile.jpg), and [QA notes](docs/qa.md) are saved. Safari, Firefox and physical mobile devices were not tested. Desktop/landscape viewing makes the film's small source annotations easier to read.
-
-## Refresh or render later
-
-The browser renderer and full decoder use one existing Chromium process, no browser download, no browser pool, software GPU mode and a shared `.render.lock`. Set `REELS_CHROME` to a trusted installed Chromium executable on another machine; this Mac's existing Playwright headless shell is the default. Render work is sequential and bounded. Do not run render and decode together.
-
-```sh
-# Read-only GitHub capture using existing gh authorization. Never configure credentials here.
-node scripts/refresh-evidence.mjs
-# Inspect the new source evidence and add/review scripts/curation.mjs before composing.
-pnpm compose
-# Review any source-still changes separately; protected projects cannot include screenshots.
-pnpm render
-pnpm decode
-pnpm verify
-pnpm check
-```
-
-`compose` refuses an uncurated repository and preserves a passed render only when the composition hash is unchanged. An explicit `pnpm render name --force` rerenders one film. Capture and verification evidence must be refreshed together; old decode evidence cannot validate changed media. The refresh script updates a fixed set of relevant PRs plus bootstrap implementation PR heads; human review is still required for a newly relevant PR. Update the inventory audit for a new source snapshot.
-
-## Libraries and research
-
-[Research and ranked shortlist](docs/research.md) records fresh primary daily/weekly GitHub Trending captures, maintenance/release evidence, license observations, stale cached examples and the selection rationale. HyperFrames **0.8.107** and MediaBunny **1.61.0** are pinned. Registry installs disable lifecycle scripts. Browser assets include [third-party notices](public/THIRD_PARTY_NOTICES.md) and the actual upstream license texts under `public/licenses/`.
+Product priorities and proposed acceptance criteria are in [ROADMAP.md](ROADMAP.md).
