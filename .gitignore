@@ -6,3 +6,5 @@ dist/
 artifacts/
 generated_images/
 docs/HANDOFF.md
+
+.e2e/

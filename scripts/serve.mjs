@@ -1,6 +1,7 @@
 import { print } from "./output.mjs";
 import { createServer } from "node:http";
-import { readFile, stat } from "node:fs/promises";
+import { open } from "node:fs/promises";
+import { pipeline } from "node:stream/promises";
 import { resolve, extname, sep } from "node:path";
 
 const root = resolve("dist");
@@ -16,6 +17,8 @@ const mime = {
 };
 
 const server = createServer(async (req, res) => {
+  let handle;
+
   try {
     const url = new URL(req.url, "http://127.0.0.1");
 
@@ -31,46 +34,68 @@ const server = createServer(async (req, res) => {
       return;
     }
 
-    const size = (await stat(file)).size;
-    const data = await readFile(file);
+    handle = await open(file);
+    const info = await handle.stat();
+
+    if (!info.isFile()) {
+      res.writeHead(404);
+      res.end("Not found");
+
+      return;
+    }
+
+    const size = info.size;
 
     res.setHeader("Content-Type", mime[extname(file)] || "application/octet-stream");
     res.setHeader("Cache-Control", "no-store");
+    res.setHeader("Accept-Ranges", "bytes");
 
-    if (req.headers.range) {
-      const match = /^bytes=(\d+)-(\d*)$/.exec(req.headers.range);
+    let start = 0;
+    let end = size - 1;
 
-      if (!match) {
-        res.writeHead(416);
-        res.end();
+    // send would require dependencies in the documented zero-install delivery bundle.
+    // Keep only its single-byte-range contract here; Node owns streaming and cleanup.
+    if (req.headers.range && req.method !== "HEAD") {
+      const match = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range);
 
-        return;
+      if (match && (match[1] || match[2])) {
+        if (match[1]) {
+          start = Number(match[1]);
+          end = match[2] ? Math.min(Number(match[2]), size - 1) : size - 1;
+        } else {
+          start = Math.max(0, size - Number(match[2]));
+        }
+
+        if (start >= size || end < start || size === 0) {
+          res.writeHead(416, { "Content-Range": `bytes */${size}` });
+          res.end();
+
+          return;
+        }
+
+        res.statusCode = 206;
+        res.setHeader("Content-Range", `bytes ${start}-${end}/${size}`);
       }
-
-      const start = Number(match[1]);
-      const end = match[2] ? Math.min(Number(match[2]), size - 1) : size - 1;
-
-      if (start >= size || end < start) {
-        res.writeHead(416);
-        res.end();
-
-        return;
-      }
-
-      res.writeHead(206, {
-        "Content-Range": `bytes ${start}-${end}/${size}`,
-        "Accept-Ranges": "bytes",
-        "Content-Length": end - start + 1,
-      });
-      res.end(data.subarray(start, end + 1));
-    } else {
-      res.setHeader("Content-Length", size);
-      res.setHeader("Accept-Ranges", "bytes");
-      res.end(data);
     }
+
+    res.setHeader("Content-Length", Math.max(0, end - start + 1));
+
+    if (req.method === "HEAD" || size === 0) {
+      res.end();
+
+      return;
+    }
+
+    await pipeline(handle.createReadStream({ start, end, autoClose: false }), res);
   } catch {
-    res.writeHead(404);
-    res.end("Not found");
+    if (!res.headersSent && !res.destroyed) {
+      res.writeHead(404);
+      res.end("Not found");
+    } else {
+      res.destroy();
+    }
+  } finally {
+    await handle?.close();
   }
 });
 
