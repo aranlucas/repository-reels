@@ -137,7 +137,10 @@ await runSequential(
         );
         assert.equal(record.frames, manifest.fps * manifest.duration);
         assert.ok(Math.abs(record.last_end - manifest.duration) < 0.01);
-        assert.deepEqual(record.samples.map((sample) => sample.frame), sampleFrames);
+        assert.deepEqual(
+          record.samples.map((sample) => sample.frame),
+          sampleFrames,
+        );
       }
 
       results.push({

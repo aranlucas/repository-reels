@@ -76,3 +76,8 @@ and the production build, all sequential. Local whitespace review passed.
 
 PR CI run 42264542524 found five missing declaration-separating blank lines
 in new code. Corrected those lint failures; no local tests were run.
+
+PR CI run 42264707747 passed lint and found formatter differences in compose,
+decode and verify. Installed locked dependencies with scripts disabled and applied
+only the native formatter locally. Tests, build and media verification remain
+CI-only.

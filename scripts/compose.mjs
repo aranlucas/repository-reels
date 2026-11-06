@@ -105,10 +105,7 @@ await runSequential(capture.repos, async (source) => {
   if (still) {
     clip.source_still = still;
     clip.evidence_urls.push(still.url);
-    stillData = embedSourceStill(
-      await readFile(`public/source-stills/${clip.name}.png`),
-      still,
-    );
+    stillData = embedSourceStill(await readFile(`public/source-stills/${clip.name}.png`), still);
     clip.demo_note = "Pinned source screenshot. The film does not run or verify the application.";
   }
 

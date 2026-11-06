@@ -160,7 +160,10 @@ try {
       clip.name + " decoded frame count",
     );
     assert.ok(Math.abs(result.last_end - manifest.duration) < 0.01);
-    assert.deepEqual(result.samples.map((sample) => sample.frame), sampleFrames);
+    assert.deepEqual(
+      result.samples.map((sample) => sample.frame),
+      sampleFrames,
+    );
     results.push({
       name: clip.name,
       video_sha256: hash,
