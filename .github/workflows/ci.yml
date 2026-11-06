@@ -18,13 +18,14 @@ jobs:
   ci:
     if: ${{ github.event.pull_request.draft != true }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
+          fetch-depth: 0
 
       - name: Set up pnpm, Node.js and dependencies
         uses: pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4 # v3.1.1
@@ -41,6 +42,26 @@ jobs:
       - name: Format
         run: pnpm format:check
 
+      - name: Prove suffix-range regression against pre-audit server
+        run: |
+          cp scripts/serve.mjs /tmp/reels-fixed-serve.mjs
+          trap 'cp /tmp/reels-fixed-serve.mjs scripts/serve.mjs' EXIT
+          git show 44b4916:scripts/serve.mjs > scripts/serve.mjs
+          if pnpm exec vitest run test/scripts/serve.test.mjs -t 'suffix byte ranges' --reporter=json --outputFile=/tmp/reels-before.json; then
+            echo 'Pre-fix server unexpectedly accepted suffix range'
+            exit 1
+          fi
+          node --input-type=module <<'JS'
+          import { readFileSync } from 'node:fs';
+          import assert from 'node:assert/strict';
+          const report = JSON.parse(readFileSync('/tmp/reels-before.json', 'utf8'));
+          const cases = report.testResults.flatMap(result => result.assertionResults);
+          const regression = cases.find(result => result.title === 'suffix byte ranges return the final bytes for media clients');
+          assert.equal(regression?.status, 'failed');
+          assert.match(regression.failureMessages.join('\n'), /416/);
+          assert.match(regression.failureMessages.join('\n'), /206/);
+          JS
+
       - name: Test
         run: pnpm test
 
@@ -49,3 +70,19 @@ jobs:
 
       - name: Build screening room
         run: pnpm build
+
+      - name: Install browser for deterministic e2e
+        run: pnpm exec e2e-web install chromium --with-deps
+
+      - name: Collection journeys (no model or credentials)
+        run: pnpm exec e2e run --reporter list,junit
+
+      - name: Upload browser failure evidence and reports
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: reliability-e2e
+          path: .e2e
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7
