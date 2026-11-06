@@ -88,8 +88,7 @@ HyperFrames captures deterministic HTML scenes as PNG frames. Opaque scene
 backgrounds are explicit because its PNG capture clears root backgrounds.
 MediaBunny uses local WebCodecs for VP8 encoding and WebM muxing: it was chosen
 to avoid requiring a separate FFmpeg runtime with PNG decoding support.
-Engine/encoder version labels in manifests and reports are hard-coded to the
-original capture versions. Check those labels against
-[pnpm-lock.yaml](pnpm-lock.yaml) before regenerating evidence after upgrades.
+New renders and verification reports record the installed engine/encoder
+versions. Historical evidence retains the versions used for its original capture.
 
 Product priorities and proposed acceptance criteria are in [ROADMAP.md](ROADMAP.md).
