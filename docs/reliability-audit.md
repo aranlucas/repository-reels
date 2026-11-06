@@ -85,3 +85,18 @@ Pinned published @e2e-dev/web 0.15.5 (peer e2e >=0.22.1 <1) with e2e 0.23.0.
 Read the installed skill, setup, writing-tests and running guides. All installs
 used --ignore-scripts; no local tests/builds/browser runs occurred. Local static
 lint and formatting are allowed; CI results remain pending.
+
+### CI evidence and final independent review
+
+[CI run 42305982457](https://github.com/aranlucas/repository-reels/actions/runs/42305982457)
+passed for implementation head a31842e: pre-audit server produced the expected
+416-versus-206 suffix regression; all 21 Vitest tests passed; media verification
+checked 56 exact-byte films; production build passed; both deterministic e2e
+journeys passed, including actual playback advancement. The report artifact was
+uploaded. Read the job logs; no local tests or builds were run.
+
+Final independent static review checked range arithmetic, FileHandle/pipeline
+cleanup, standalone delivery, pre-fix report assertions, installed e2e APIs and
+Hyperframes Play/timeupdate behavior. It reported no further concrete findings.
+[PR #22](https://github.com/aranlucas/repository-reels/pull/22) carries this audit.
+Vercel deployment failure is excluded by user policy; no deployment is attempted.
