@@ -1,3 +1,5 @@
+import { mediaLibrary } from "../src/media-toolchain.js";
+import { sceneSampleFrames } from "../src/film-format.js";
 import { runSequential } from "./serial.mjs";
 import { print } from "./output.mjs";
 import { createServer } from "node:http";
@@ -8,6 +10,8 @@ import { createCaptureSession, closeCaptureSession, closeBrowserPool } from "@hy
 
 // Media processing only: decode every frame, in one local browser, without playing any source application.
 const manifest = JSON.parse(await readFile("manifest.json", "utf8"));
+
+const sampleFrames = sceneSampleFrames(manifest.fps);
 
 const module = await readFile("node_modules/mediabunny/dist/bundles/mediabunny.mjs");
 
@@ -22,10 +26,10 @@ window.decodeReel=async name=>{
   let frames=0,previous=-1,lastEnd=0;const samples=[];
   for await(const frame of sink.canvases()){
    if(frame.timestamp<=previous)throw new Error('Decoded timestamps are not increasing');
-   if(frame.canvas.width!==960||frame.canvas.height!==540)throw new Error('Decoded dimensions differ');
+   if(frame.canvas.width!==${manifest.width}||frame.canvas.height!==${manifest.height})throw new Error('Decoded dimensions differ');
    previous=frame.timestamp;lastEnd=frame.timestamp+frame.duration;
-   if([9,60,108].includes(frames)){
-    const pixels=frame.canvas.getContext('2d').getImageData(0,0,960,540).data;
+   if(${JSON.stringify(sampleFrames)}.includes(frames)){
+    const pixels=frame.canvas.getContext('2d').getImageData(0,0,${manifest.width},${manifest.height}).data;
     let sum=0,min=255,max=0;
     for(let i=0;i<pixels.length;i+=128){const value=(pixels[i]+pixels[i+1]+pixels[i+2])/3;sum+=value;min=Math.min(min,value);max=Math.max(max,value);}
     const luminance=sum/(pixels.length/128);
@@ -110,11 +114,11 @@ try {
       origin,
       "/tmp/task13-decode",
       {
-        width: 960,
-        height: 540,
-        fps: { num: 12, den: 1 },
+        width: manifest.width,
+        height: manifest.height,
+        fps: { num: manifest.fps, den: 1 },
         format: "png",
-        compositionDurationSeconds: 12,
+        compositionDurationSeconds: manifest.duration,
       },
       null,
       {
@@ -150,9 +154,16 @@ try {
       clip.name,
     );
 
-    assert.equal(result.frames, 144, clip.name + " decoded frame count");
-    assert.ok(Math.abs(result.last_end - 12) < 0.01);
-    assert.equal(result.samples.length, 3);
+    assert.equal(
+      result.frames,
+      manifest.fps * manifest.duration,
+      clip.name + " decoded frame count",
+    );
+    assert.ok(Math.abs(result.last_end - manifest.duration) < 0.01);
+    assert.deepEqual(
+      result.samples.map((sample) => sample.frame),
+      sampleFrames,
+    );
     results.push({
       name: clip.name,
       video_sha256: hash,
@@ -170,7 +181,7 @@ try {
       {
         verified_at: new Date().toISOString(),
         complete: true,
-        decoder: "MediaBunny 1.61.0 / Chromium WebCodecs VP8",
+        decoder: `${mediaLibrary} / Chromium WebCodecs VP8`,
         browser_version: await session.page.browser().version(),
         clips: results,
       },

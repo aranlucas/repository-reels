@@ -1,3 +1,5 @@
+import { captureEngine, mediaLibrary } from "../src/media-toolchain.js";
+import { sceneSampleFrames } from "../src/film-format.js";
 import { runSequential } from "./serial.mjs";
 import { print, printError } from "./output.mjs";
 import { createServer } from "node:http";
@@ -13,6 +15,8 @@ import { createHash } from "node:crypto";
 import { resolve as resolvePath } from "node:path";
 
 const manifest = JSON.parse(await readFile("manifest.json", "utf8"));
+
+const sampleFrames = sceneSampleFrames(manifest.fps);
 
 const args = process.argv.slice(2);
 
@@ -206,12 +210,12 @@ try {
             throw new Error("HyperFrames captured an empty frame");
           }
 
-          if ([9, 60, 108].includes(frame)) {
+          if (sampleFrames.includes(frame)) {
             const path = `evidence/render/${clip.name}-${frame}.png`;
             await writeFile(path, buffer);
             keyframes.push(path);
 
-            if (frame === 9) {
+            if (frame === sampleFrames[0]) {
               await writeFile(`public/posters/${clip.name}.png`, buffer);
             }
           }
@@ -252,8 +256,8 @@ try {
         rendered_at: new Date().toISOString(),
         render_seconds: Number(((Date.now() - started) / 1000).toFixed(2)),
         keyframes,
-        capture_engine: "@hyperframes/engine@0.8.107",
-        encoder: "mediabunny@1.61.0 / WebCodecs",
+        capture_engine: captureEngine,
+        encoder: `${mediaLibrary} / WebCodecs`,
         codec: "VP8 / WebM",
       });
       delete clip.render_error;

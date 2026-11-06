@@ -1,6 +1,8 @@
 import { runSequential } from "./serial.mjs";
 import { print } from "./output.mjs";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { compositionFormat } from "../src/film-format.js";
+import { embedSourceStill } from "../src/source-still.js";
 import { makeReel } from "../src/reel.js";
 import { curation, changes } from "./curation.mjs";
 import { createHash } from "node:crypto";
@@ -27,10 +29,7 @@ const manifest = {
   version: 1,
   private_delivery: true,
   captured_at: capture.captured_at,
-  width: 960,
-  height: 540,
-  fps: 12,
-  duration: 12,
+  ...compositionFormat,
   source: "Connected GitHub read-only inspection",
   omissions: capture.omissions || [],
   clips: [],
@@ -106,9 +105,7 @@ await runSequential(capture.repos, async (source) => {
   if (still) {
     clip.source_still = still;
     clip.evidence_urls.push(still.url);
-    stillData =
-      "data:image/png;base64," +
-      (await readFile(`public/source-stills/${clip.name}.png`)).toString("base64");
+    stillData = embedSourceStill(await readFile(`public/source-stills/${clip.name}.png`), still);
     clip.demo_note = "Pinned source screenshot. The film does not run or verify the application.";
   }
 

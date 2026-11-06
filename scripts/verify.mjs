@@ -1,3 +1,5 @@
+import { mediaLibrary } from "../src/media-toolchain.js";
+import { sceneSampleFrames } from "../src/film-format.js";
 import { runSequential } from "./serial.mjs";
 import { print } from "./output.mjs";
 import assert from "node:assert/strict";
@@ -6,6 +8,8 @@ import { createHash } from "node:crypto";
 import { Input, ALL_FORMATS, BufferSource, EncodedPacketSink } from "mediabunny";
 
 const manifest = JSON.parse(await readFile("manifest.json", "utf8"));
+
+const sampleFrames = sceneSampleFrames(manifest.fps);
 
 const partial = process.argv.includes("--samples");
 
@@ -99,7 +103,7 @@ await runSequential(
 
       assert.ok(keyframes >= 3, "Seekable keyframes across all three scenes");
 
-      await runSequential([9, 60, 108], async (frame) => {
+      await runSequential(sampleFrames, async (frame) => {
         const png = await readFile(`evidence/render/${clip.name}-${frame}.png`);
         assert.equal(png.subarray(0, 8).toString("hex"), "89504e470d0a1a0a");
         assert.equal(png.readUInt32BE(16), manifest.width);
@@ -131,9 +135,12 @@ await runSequential(
           clip.video_sha256,
           "Decode evidence must describe these exact video bytes",
         );
-        assert.equal(record.frames, 144);
-        assert.ok(Math.abs(record.last_end - 12) < 0.01);
-        assert.equal(record.samples.length, 3);
+        assert.equal(record.frames, manifest.fps * manifest.duration);
+        assert.ok(Math.abs(record.last_end - manifest.duration) < 0.01);
+        assert.deepEqual(
+          record.samples.map((sample) => sample.frame),
+          sampleFrames,
+        );
       }
 
       results.push({
@@ -157,7 +164,7 @@ await runSequential(
 const evidence = {
   verified_at: new Date().toISOString(),
   complete: !partial,
-  library: "mediabunny@1.61.0",
+  library: mediaLibrary,
   clips: results,
 };
 
