@@ -73,3 +73,6 @@ Baseline main CI succeeded for ec7293a (run 41699400335). No local tests, builds
 benchmarks, media verification or browser checks were run. The PR CI is the
 behavioral validation gate and includes lint, formatting, tests, media verification
 and the production build, all sequential. Local whitespace review passed.
+
+PR CI run 42264542524 found five missing declaration-separating blank lines
+in new code. Corrected those lint failures; no local tests were run.

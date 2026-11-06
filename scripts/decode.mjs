@@ -10,6 +10,7 @@ import { createCaptureSession, closeCaptureSession, closeBrowserPool } from "@hy
 
 // Media processing only: decode every frame, in one local browser, without playing any source application.
 const manifest = JSON.parse(await readFile("manifest.json", "utf8"));
+
 const sampleFrames = sceneSampleFrames(manifest.fps);
 
 const module = await readFile("node_modules/mediabunny/dist/bundles/mediabunny.mjs");

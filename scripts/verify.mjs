@@ -8,6 +8,7 @@ import { createHash } from "node:crypto";
 import { Input, ALL_FORMATS, BufferSource, EncodedPacketSink } from "mediabunny";
 
 const manifest = JSON.parse(await readFile("manifest.json", "utf8"));
+
 const sampleFrames = sceneSampleFrames(manifest.fps);
 
 const partial = process.argv.includes("--samples");

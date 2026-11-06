@@ -15,6 +15,7 @@ import { createHash } from "node:crypto";
 import { resolve as resolvePath } from "node:path";
 
 const manifest = JSON.parse(await readFile("manifest.json", "utf8"));
+
 const sampleFrames = sceneSampleFrames(manifest.fps);
 
 const args = process.argv.slice(2);
